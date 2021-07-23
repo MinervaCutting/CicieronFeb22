@@ -1,65 +1,27 @@
-import {
-  Typography,
-  makeStyles,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { Typography, makeStyles } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
-import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
-import RestaurantTwoToneIcon from "@material-ui/icons/RestaurantTwoTone";
-import HotelTwoToneIcon from "@material-ui/icons/HotelTwoTone";
-import WifiTwoToneIcon from "@material-ui/icons/WifiTwoTone";
-import PoolTwoToneIcon from "@material-ui/icons/PoolTwoTone";
-import QueryBuilderTwoToneIcon from "@material-ui/icons/QueryBuilderTwoTone";
-import LocalCafeTwoToneIcon from "@material-ui/icons/LocalCafeTwoTone";
-import AccessibleForwardTwoToneIcon from "@material-ui/icons/AccessibleForwardTwoTone";
+import HotelIcons from "../../utils/HotelIcons";
 
-const iconsLeft = [
-  {
-    icon: <RoomTwoToneIcon />,
-    text: "Location: 45 mins north of BCN",
-  },
-  {
-    icon: <RestaurantTwoToneIcon />,
-    text: "Gastro: 2 x Restaurants, 2 x bars",
-  },
-  {
-    icon: <WifiTwoToneIcon />,
-    text: "High Speed, available",
-  },
-  {
-    icon: <HotelTwoToneIcon />,
-    text: "Nr Rooms: 145rooms",
-  },
+const leftIconsText = [
+  "45 mins north of BCN",
+  "2 x Restaurants, 2 x bars",
+  "145rooms",
+  "High Speed, available",
 ];
 
-const iconsRight = [
-  {
-    icon: <PoolTwoToneIcon />,
-    text: "Swimming Pool: 1x outdoor, 1x thermal",
-  },
-  {
-    icon: <QueryBuilderTwoToneIcon />,
-    text: "Check in/out: 3pm / 12pm",
-  },
-  {
-    icon: <LocalCafeTwoToneIcon />,
-    text: "Meeting-rooms: 10 spaces",
-  },
-  {
-    icon: <AccessibleForwardTwoToneIcon />,
-    text: "Wheelchair accessible : Yes",
-  },
+const rightIconsText = [
+  "1x outdoor, 1x thermal",
+  "checkin/out 3pm / 12pm",
+  "10 x meeting rooms",
+  "Wheelchair accessible",
 ];
 
 export default function Camiral() {
   const classes = useStyles();
   return (
-    <div id='camiral' className={classes.root}>
+    <div className={classes.root}>
       <div className={classes.title}>
         <Typography variant='h4'>Hotel Camiral</Typography>
         <Rating name='read-only' value={5} readOnly />
@@ -104,32 +66,10 @@ export default function Camiral() {
         </Typography>
       </div>
       <Gallery images={photos} />
-      <div className={classes.icons}>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.left}
-        >
-          {iconsLeft.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.right}
-        >
-          {iconsRight.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+      <HotelIcons
+        leftIconsText={leftIconsText}
+        rightIconsText={rightIconsText}
+      />
     </div>
   );
 }

@@ -1,59 +1,21 @@
-import {
-  Typography,
-  makeStyles,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { Typography, makeStyles } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
-import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
-import RestaurantTwoToneIcon from "@material-ui/icons/RestaurantTwoTone";
-import HotelTwoToneIcon from "@material-ui/icons/HotelTwoTone";
-import WifiTwoToneIcon from "@material-ui/icons/WifiTwoTone";
-import PoolTwoToneIcon from "@material-ui/icons/PoolTwoTone";
-import QueryBuilderTwoToneIcon from "@material-ui/icons/QueryBuilderTwoTone";
-import LocalCafeTwoToneIcon from "@material-ui/icons/LocalCafeTwoTone";
-import AccessibleForwardTwoToneIcon from "@material-ui/icons/AccessibleForwardTwoTone";
+import HotelIcons from "../../utils/HotelIcons";
 
-const iconsLeft = [
-  {
-    icon: <RoomTwoToneIcon />,
-    text: "Location: Central - close to Sagrada Familia",
-  },
-  {
-    icon: <RestaurantTwoToneIcon />,
-    text: "Gastro:1 x Restaurants, 2 x bars",
-  },
-  {
-    icon: <WifiTwoToneIcon />,
-    text: "High Speed, available",
-  },
-  {
-    icon: <HotelTwoToneIcon />,
-    text: "Nr Rooms: 79 rooms",
-  },
+const leftIconsText = [
+  "Close to Sagrada Familia",
+  "1 x Restaurant, 2 x bars",
+  "79 rooms",
+  "High Speed, available",
 ];
 
-const iconsRight = [
-  {
-    icon: <PoolTwoToneIcon />,
-    text: "Swimming Pool: 1x outdoor, 1x Spa center",
-  },
-  {
-    icon: <QueryBuilderTwoToneIcon />,
-    text: "Check in/out: 3pm / 12pm",
-  },
-  {
-    icon: <LocalCafeTwoToneIcon />,
-    text: "Meeting-rooms: 1 x meeting room for 60pax",
-  },
-  {
-    icon: <AccessibleForwardTwoToneIcon />,
-    text: "Wheelchair accessible : Yes",
-  },
+const rightIconsText = [
+  "1x outdoor, 1x Spa center",
+  "checkin/out 3pm / 12pm",
+  "1 x meeting room for 60pax",
+  "Wheelchair accessible",
 ];
 
 export default function LaPedrera() {
@@ -86,32 +48,10 @@ export default function LaPedrera() {
         </Typography>
       </div>
       <Gallery images={photos} />
-      <div className={classes.icons}>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.left}
-        >
-          {iconsLeft.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.right}
-        >
-          {iconsRight.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+      <HotelIcons
+        leftIconsText={leftIconsText}
+        rightIconsText={rightIconsText}
+      />
     </div>
   );
 }

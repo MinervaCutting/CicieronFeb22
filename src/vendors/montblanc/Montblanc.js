@@ -1,59 +1,21 @@
-import {
-  Typography,
-  makeStyles,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { Typography, makeStyles } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
-import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
-import RestaurantTwoToneIcon from "@material-ui/icons/RestaurantTwoTone";
-import HotelTwoToneIcon from "@material-ui/icons/HotelTwoTone";
-import WifiTwoToneIcon from "@material-ui/icons/WifiTwoTone";
-import PoolTwoToneIcon from "@material-ui/icons/PoolTwoTone";
-import QueryBuilderTwoToneIcon from "@material-ui/icons/QueryBuilderTwoTone";
-import LocalCafeTwoToneIcon from "@material-ui/icons/LocalCafeTwoTone";
-import AccessibleForwardTwoToneIcon from "@material-ui/icons/AccessibleForwardTwoTone";
+import HotelIcons from "../../utils/HotelIcons";
 
-const iconsLeft = [
-  {
-    icon: <RoomTwoToneIcon />,
-    text: "Location: Gothic Quarter",
-  },
-  {
-    icon: <RestaurantTwoToneIcon />,
-    text: "1 x Outdoor Pool - 1x Restauant 1 piano-Bar/Lounge",
-  },
-  {
-    icon: <WifiTwoToneIcon />,
-    text: "High Speed, available",
-  },
-  {
-    icon: <HotelTwoToneIcon />,
-    text: "Nr Rooms: 157rooms",
-  },
+const leftIconsText = [
+  "Gothic Quarter",
+  "1x Restaurant 1 piano-Bar/Lounge",
+  "157rooms",
+  "High Speed, available",
 ];
 
-const iconsRight = [
-  {
-    icon: <PoolTwoToneIcon />,
-    text: "Swimming Pool: 1x outdoor",
-  },
-  {
-    icon: <QueryBuilderTwoToneIcon />,
-    text: "Check in/out: 2pm / 12pm",
-  },
-  {
-    icon: <LocalCafeTwoToneIcon />,
-    text: "Meeting-rooms: 10 spaces",
-  },
-  {
-    icon: <AccessibleForwardTwoToneIcon />,
-    text: "Wheelchair accessible : Yes",
-  },
+const rightIconsText = [
+  "1x outdoor pool",
+  "checkin/out 2pm / 12pm",
+  "2 x meeting rooms",
+  "Wheelchair accessible",
 ];
 
 export default function Montblanc() {
@@ -94,32 +56,10 @@ export default function Montblanc() {
         </Typography>
       </div>
       <Gallery images={photos} />
-      <div className={classes.icons}>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.left}
-        >
-          {iconsLeft.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-        <List
-          component='nav'
-          aria-label='main mailbox folders'
-          className={classes.right}
-        >
-          {iconsRight.map((item, i) => (
-            <ListItem key={i}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
+      <HotelIcons
+        leftIconsText={leftIconsText}
+        rightIconsText={rightIconsText}
+      />
     </div>
   );
 }
