@@ -78,11 +78,66 @@ export const vinotecatorres = {
   date: "23-Feb-2022 Lunch",
 };
 
+export const fabricamoritz = {
+  title: "Fabrica Moritz",
+  cat: "transfer",
+  unitcost: 36.5,
+  pax: 16,
+  date: "Dinner",
+};
+
+export const nuria = {
+  title: "Cafeteria Nuria",
+  cat: "meal",
+  unitcost: 26,
+  pax: 16,
+  date: "Dinner",
+};
+
+export const elglop = {
+  title: "Braseria El Glop",
+  cat: "meal",
+  unitcost: 33,
+  pax: 16,
+  date: "Dinner",
+};
+export const elarenal = {
+  title: "Beach Restaurant El Arenal",
+  cat: "transfer",
+  unitcost: 51,
+  pax: 16,
+  date: "Lunch",
+};
+
+export const corcaliu = {
+  title: "Restaurant Cor Caliu",
+  cat: "transfer",
+  unitcost: 37.5,
+  pax: 16,
+  date: "Lunch",
+};
+
+export const monchos = {
+  title: "Marina Monchos",
+  cat: "meal",
+  unitcost: 45,
+  pax: 16,
+  date: "Dinner",
+};
+
+export const mana75 = {
+  title: "Mana 75",
+  cat: "meal",
+  unitcost: 56.5,
+  pax: 16,
+  date: "Dinner",
+};
+
 //Preferred Restaurant
 export const mealEvents = {
   day1Lunch: fitora,
-  day1Dinner: cantravi,
+  day1Dinner: nuria,
   day2Lunch: julivertmeu,
-  day2Dinner: albagranados,
+  day2Dinner: mana75,
   day3Lunch: casacarmen,
 };

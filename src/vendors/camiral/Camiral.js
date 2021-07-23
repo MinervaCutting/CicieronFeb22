@@ -56,7 +56,7 @@ const iconsRight = [
   },
 ];
 
-const Camiral = () => {
+export default function Camiral() {
   const classes = useStyles();
   return (
     <div id='camiral' className={classes.root}>
@@ -132,7 +132,7 @@ const Camiral = () => {
       </div>
     </div>
   );
-};
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -155,5 +155,3 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
   },
 }));
-
-export default Camiral;

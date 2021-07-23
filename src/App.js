@@ -17,6 +17,17 @@ const theme = createTheme({
       color: "#ea5933",
     },
   },
+  overrides: {
+    MuiListItemText: {
+      dense: {
+        color: "#ea5933",
+        "&:hover": {
+          backgroundColor: "#ea5933",
+          color: "#fff",
+        },
+      },
+    },
+  },
 });
 
 function App() {

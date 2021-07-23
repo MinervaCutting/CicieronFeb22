@@ -54,7 +54,7 @@ function ImageSlider(props) {
   );
 }
 
-const Barceloneta = () => {
+export default function Barceloneta() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -86,7 +86,7 @@ const Barceloneta = () => {
       <ImageSlider />
     </div>
   );
-};
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,5 +95,3 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-export default Barceloneta;

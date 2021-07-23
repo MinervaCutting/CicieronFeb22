@@ -40,7 +40,7 @@ const images = [
   },
 ];
 
-const PicassoTour = () => {
+export default function PicassoTour() {
   const classes = useStyles();
   return (
     <div className={classes.text}>
@@ -76,7 +76,7 @@ const PicassoTour = () => {
       <ImageGallery items={images} showPlayButton={false} />
     </div>
   );
-};
+}
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -85,5 +85,3 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
-export default PicassoTour;

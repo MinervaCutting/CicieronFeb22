@@ -16,22 +16,15 @@ import accounting from "accounting";
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
 import HotelChoice from "./HotelChoice";
 import RestaurantChoice from "./RestaurantChoice";
+import SingleChoice from "./SingleChoice";
 
-const useRowStyles = makeStyles({
-  root: {
-    "& > *": {
-      borderBottom: "unset",
-    },
-  },
-});
-
-const Row = ({
+export default function Row({
   row: {
     event,
     selected,
     selected: { date, cat, pax, unitcost, rooms },
   },
-}) => {
+}) {
   const [open, setOpen] = useState(false);
   const classes = useRowStyles();
   return (
@@ -55,9 +48,11 @@ const Row = ({
         <TableCell>
           {cat === "hospitality" ? (
             <HotelChoice />
-          ) : (
+          ) : cat === "meal" ? (
             <RestaurantChoice event={event} />
-          )}
+          ) : cat === "transfer" ? (
+            <SingleChoice event={event} />
+          ) : null}
         </TableCell>
         <TableCell>{pax}</TableCell>
         <TableCell>
@@ -122,6 +117,12 @@ const Row = ({
       )}
     </>
   );
-};
+}
 
-export default Row;
+const useRowStyles = makeStyles({
+  root: {
+    "& > *": {
+      borderBottom: "unset",
+    },
+  },
+});

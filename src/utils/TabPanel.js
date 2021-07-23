@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import ElCercle from "../vendors/el_cercle/ElCercle";
+import ElGlop from "../vendors/el_glop/ElGlop";
 import Barceloneta from "../vendors/barceloneta/Barceloneta";
 
 function TabPanel(props) {
@@ -42,17 +42,9 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
-
-export default function VendorOptionsTab() {
+export default function VendorOptionsTab({ children, name1, name2, name3 }) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
+  const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -65,20 +57,23 @@ export default function VendorOptionsTab() {
           onChange={handleChange}
           aria-label='simple tabs example'
         >
-          <Tab label='El Cercle' {...a11yProps(0)} />
-          <Tab label='Barceloneta' {...a11yProps(1)} />
-          <Tab label='Item Three' {...a11yProps(2)} />
+          <Tab label={name1} {...a11yProps(0)} />
+          <Tab label={name2} {...a11yProps(1)} />
+          <Tab label={name3} {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <ElCercle />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Barceloneta />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <ElCercle />
-      </TabPanel>
+      {children.map((child, i) => (
+        <TabPanel value={value} index={i} key={i}>
+          {child}
+        </TabPanel>
+      ))}
     </div>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));

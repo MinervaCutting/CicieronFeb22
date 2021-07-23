@@ -11,26 +11,7 @@ import {
   Collapse,
 } from "@material-ui/core";
 import { Link } from "react-scroll";
-
-const items = [
-  {
-    id: "camiral",
-    title: "Hotel Camiral",
-  },
-  {
-    id: "picasso_tour",
-    title: "Picasso Private Tour",
-  },
-  {
-    id: "lunch01",
-    title: "Lunch",
-    options: ["El Cercle", "Barceloneta"],
-  },
-  {
-    id: "budget",
-    title: "Budget",
-  },
-];
+import { toc } from "../data/table_of_contents";
 
 export default function SidebarMenu() {
   const classes = useStyles();
@@ -41,6 +22,7 @@ export default function SidebarMenu() {
 
   return (
     <List
+      dense
       component='nav'
       aria-labelledby='nested-list-subheader'
       subheader={
@@ -50,7 +32,7 @@ export default function SidebarMenu() {
       }
       className={classes.root}
     >
-      {items.map((item) => (
+      {toc.map((item) => (
         <div key={item.id}>
           <Link
             to={item.id}
@@ -64,7 +46,10 @@ export default function SidebarMenu() {
               button
               onClick={() => setOpen({ ...open, [item.id]: !open[item.id] })}
             >
-              <ListItemText primary={item.title} />
+              <ListItemText
+                primary={<Typography variant='h6'>{item.title}</Typography>}
+                disableTypography
+              />
               {item.options ? (
                 open[item.id] ? (
                   <ExpandLess />
@@ -76,11 +61,21 @@ export default function SidebarMenu() {
           </Link>
 
           <Collapse in={open[item.id]} timeout='auto' unmountOnExit>
-            <List component='div' disablePadding>
+            <List component='div' disablePadding dense>
               {item.options?.map((option) => (
-                <ListItem button className={classes.nested} key={option}>
-                  <ListItemText primary={option} />
-                </ListItem>
+                <Link
+                  key={option.id}
+                  to={option.id}
+                  spy={true}
+                  smooth={true}
+                  activeClass='active'
+                  duration={500}
+                  offset={-70}
+                >
+                  <ListItem button className={classes.nested}>
+                    <ListItemText primary={option.service} />
+                  </ListItem>
+                </Link>
               ))}
             </List>
           </Collapse>

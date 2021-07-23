@@ -11,6 +11,10 @@ import {
   vinotecatorres,
   julivertmeu,
   flamant,
+  nuria,
+  elglop,
+  monchos,
+  mana75,
 } from "../../data/restaurants";
 import {
   SET_DAY1LUNCH,
@@ -27,9 +31,9 @@ import {
 
 const restaurantOptions = [
   { event: "day1Lunch", options: [fitora, cangrejoloco] },
-  { event: "day1Dinner", options: [cantravi, asadoraranda] },
+  { event: "day1Dinner", options: [nuria, elglop] },
   { event: "day2Lunch", options: [julivertmeu, flamant] },
-  { event: "day2Dinner", options: [albagranados, calpinxo] },
+  { event: "day2Dinner", options: [monchos, mana75] },
   { event: "day3Lunch", options: [casacarmen, vinotecatorres] },
 ];
 

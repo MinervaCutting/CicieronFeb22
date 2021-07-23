@@ -34,14 +34,19 @@ export default function Quotation(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar className={classes.toolbar}>
-            <img src={logo} alt='logo' className={classes.logo} />
+            <a target='_blank' href='https://www.cuttingedge-events.com'>
+              <img src={logo} alt='logo' className={classes.logo} />
+            </a>
+
             <ul>
               <li>
-                <Typography variant='h5'>Home</Typography>
+                <Typography variant='h5'>
+                  Quotation prepared for Pavla Lukásová at ASIANA, spol s.r.o
+                </Typography>
               </li>
-              <li>
+              {/* <li>
                 <Typography variant='h5'>Credentials</Typography>
-              </li>
+              </li> */}
             </ul>
           </Toolbar>
         </AppBar>
