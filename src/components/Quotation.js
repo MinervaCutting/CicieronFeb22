@@ -7,10 +7,16 @@ import {
   Grid,
   Slide,
   makeStyles,
+  Switch,
 } from "@material-ui/core";
 import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
-import logo from "../assets/logodark.png";
+import darkLogo from "../assets/logodark.png";
+import lightLogo from "../assets/logolight.png";
+import { selectDarkMode, SET_DARKMODE } from "../features/DarkModeSlice";
+import { useSelector, useDispatch } from "react-redux";
+import WbSunnyTwoToneIcon from "@material-ui/icons/WbSunnyTwoTone";
+import Brightness2TwoToneIcon from "@material-ui/icons/Brightness2TwoTone";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -27,6 +33,8 @@ function HideOnScroll(props) {
 }
 
 export default function Quotation(props) {
+  const darkMode = useSelector(selectDarkMode);
+  const dispatch = useDispatch();
   const classes = useStyles();
   return (
     <>
@@ -35,12 +43,19 @@ export default function Quotation(props) {
         <AppBar>
           <Toolbar className={classes.toolbar}>
             <a target='_blank' href='https://www.cuttingedge-events.com'>
-              <img src={logo} alt='logo' className={classes.logo} />
+              <img
+                src={`${darkMode ? darkLogo : lightLogo}`}
+                alt='logo'
+                className={classes.logo}
+              />
             </a>
 
             <ul>
               <li>
-                <Typography variant='h5'>
+                <Typography
+                  variant='h5'
+                  color={`${darkMode ? "#fff" : "#000"}`}
+                >
                   Quotation prepared for Pavla Lukásová at ASIANA, spol s.r.o
                 </Typography>
               </li>
@@ -48,6 +63,12 @@ export default function Quotation(props) {
                 <Typography variant='h5'>Credentials</Typography>
               </li> */}
             </ul>
+            <Switch
+              checked={darkMode}
+              checkedIcon={<WbSunnyTwoToneIcon />}
+              icon={<Brightness2TwoToneIcon />}
+              onChange={() => dispatch(SET_DARKMODE(!darkMode))}
+            />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
