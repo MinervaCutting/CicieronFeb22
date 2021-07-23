@@ -16,8 +16,7 @@ import { toc } from "../data/table_of_contents";
 export default function SidebarMenu() {
   const classes = useStyles();
   const [open, setOpen] = useState({
-    lunch01: false,
-    dinner01: false,
+    open: false,
   });
 
   return (
@@ -61,7 +60,14 @@ export default function SidebarMenu() {
           </Link>
 
           <Collapse in={open[item.id]} timeout='auto' unmountOnExit>
-            <List component='div' disablePadding dense>
+            <List
+              component='div'
+              disablePadding
+              dense
+              onMouseLeave={() =>
+                setOpen({ ...open, [item.id]: !open[item.id] })
+              }
+            >
               {item.options?.map((option) => (
                 <Link
                   key={option.id}
@@ -93,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.up("sm")]: {
       position: "sticky",
-      top: 200,
+      top: 100,
       left: 0,
     },
   },
