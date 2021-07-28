@@ -9,6 +9,7 @@ import {
   makeStyles,
   Switch,
 } from "@material-ui/core";
+
 import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
 import darkLogo from "../assets/logodark.png";
@@ -35,6 +36,10 @@ function HideOnScroll(props) {
 export default function Quotation(props) {
   const darkMode = useSelector(selectDarkMode);
   const dispatch = useDispatch();
+
+  const toggleDarkMode = () => {
+    dispatch(SET_DARKMODE(!darkMode));
+  };
   const classes = useStyles();
   return (
     <>
@@ -67,7 +72,7 @@ export default function Quotation(props) {
               checked={darkMode}
               checkedIcon={<WbSunnyTwoToneIcon />}
               icon={<Brightness2TwoToneIcon />}
-              onChange={() => dispatch(SET_DARKMODE(!darkMode))}
+              onChange={toggleDarkMode}
             />
           </Toolbar>
         </AppBar>

@@ -14,6 +14,7 @@ import WalkingTour from "../vendors/walking_tour/WalkingTour";
 import CorCaliu from "../vendors/cor_caliu/CorCaliu";
 import Mana75 from "../vendors/mana_75/Mana75";
 import MarinaMonchos from "../vendors/marina_monchos/MarinaMonchos";
+import OverviewMap from "./OverviewMap";
 
 export default function AppBody() {
   const classes = useStyles();
@@ -41,12 +42,8 @@ export default function AppBody() {
         dinners with this half board if you really need to adjust to a tight
         budget.
       </Typography>
-      <iframe
-        src='https://www.google.com/maps/d/embed?mid=14VLC-bPw7bHuvLsVCoccfNJRJuargezR&hl=es'
-        width='640'
-        height='480'
-        style={{ margin: "2rem auto" }}
-      ></iframe>
+
+      <OverviewMap />
       <Typography variant='h4' gutterBottom id='accommodation'>
         <strong>Accommodation</strong>
       </Typography>
