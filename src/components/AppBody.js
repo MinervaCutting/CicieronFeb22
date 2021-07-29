@@ -14,7 +14,7 @@ import WalkingTour from "../vendors/walking_tour/WalkingTour";
 import CorCaliu from "../vendors/cor_caliu/CorCaliu";
 import Mana75 from "../vendors/mana_75/Mana75";
 import MarinaMonchos from "../vendors/marina_monchos/MarinaMonchos";
-import OverviewMap from "./OverviewMap";
+import OverviewMap from "./Map/OverviewMap";
 
 export default function AppBody() {
   const classes = useStyles();

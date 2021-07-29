@@ -1,5 +1,6 @@
 import { makeStyles, Typography, Paper } from "@material-ui/core";
-import Carousel from "react-material-ui-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -41,12 +42,13 @@ function ImageSlider(props) {
     },
   ];
   return (
-    <Carousel autoPlay={false}>
+    <Carousel>
       {items.map((item, i) => (
         <Paper key={i}>
-          <Typography variant='h5'>{item.name}</Typography>
-          <Typography variant='h6'>{item.description}</Typography>
           <img src={item.image} alt='' />
+          <Typography variant='h6' className='legend'>
+            {item.description}
+          </Typography>
         </Paper>
       ))}
     </Carousel>

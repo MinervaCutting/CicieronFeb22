@@ -1,11 +1,12 @@
 import { makeStyles, Typography, Paper } from "@material-ui/core";
-import Carousel from "react-material-ui-carousel";
-import img1 from "./el_cercle1.jpeg";
-import img2 from "./el_cercle2.jpeg";
-import img3 from "./el_cercle3.jpeg";
-import img4 from "./el_cercle4.jpeg";
-import img5 from "./el_cercle5.jpeg";
-import img6 from "./el_cercle6.jpeg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import img1 from "./rest1.jpg";
+import img2 from "./rest2.jpg";
+import img3 from "./rest3.jpg";
+import img4 from "./rest4.jpg";
+import img5 from "./rest5.jpg";
+import img6 from "./rest6.jpg";
 
 function ImageSlider(props) {
   let items = [
@@ -41,12 +42,13 @@ function ImageSlider(props) {
     },
   ];
   return (
-    <Carousel autoPlay={false}>
+    <Carousel>
       {items.map((item, i) => (
         <Paper key={i}>
-          <Typography variant='h4'>{item.name}</Typography>
-          <Typography variant='subtitle1'>{item.description}</Typography>
           <img src={item.image} alt='' />
+          <Typography variant='h6' className='legend'>
+            {item.description}
+          </Typography>
         </Paper>
       ))}
     </Carousel>
