@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "View of the main dining room",
-      description: "Braseria El Glop is centrally located",
-      image: img1,
-    },
-    {
-      name: "Traditional Catalan Cuisine",
-      description: "Here's the 'Calçots - catalan delicatessen",
-      image: img2,
-    },
-    {
-      name: "Tapas concept",
-      description: "Starters to share",
-      image: img3,
-    },
-    {
-      name: "Another view of the main dining room",
-      description: "Tables are flexible for all group sizes",
-      image: img4,
-    },
-    {
-      name: "Another Dining room",
-      description: "There are more spaces in the restaurant",
-      image: img5,
-    },
-    {
-      name: "Delicious Crème Catalane",
-      description: "Catalunya's most traditional dessert",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "View of the main dining room",
+    photo: img1,
+  },
+  {
+    caption: "Traditional Catalan Cuisine",
+    photo: img2,
+  },
+  {
+    caption: "Tapas concept",
+    photo: img3,
+  },
+  {
+    caption: "Another view of the main dining room",
+    photo: img4,
+  },
+  {
+    caption: "Another Dining room",
+    photo: img5,
+  },
+  {
+    caption: "Delicious Crème Catalane",
+    photo: img6,
+  },
+];
 
 export default function ElGlop() {
   const classes = useStyles();
@@ -77,7 +56,7 @@ export default function ElGlop() {
 
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

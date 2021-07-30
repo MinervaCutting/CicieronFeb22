@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,53 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Views to the Yacht Marina",
-      description:
-        "Some dining rooms are half indoor, half terrace - which allows al-fresco dining",
-      image: img1,
-    },
-    {
-      name: "Pica-pica starters",
-      description: "Some starters to share before the main dish",
-      image: img2,
-    },
-    {
-      name: "Main dining room",
-      description: "Sailor décor ambiance",
-      image: img3,
-    },
-    {
-      name: "Dining room w/terrace",
-      description: "Half indoor, half outdoor",
-      image: img4,
-    },
-    {
-      name: "Dining room",
-      description: "",
-      image: img5,
-    },
-    {
-      name: "The Yacht Marina at dawn",
-      description: "",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Views to the Yacht Marina",
+    photo: img1,
+  },
+  {
+    caption: "Pica-pica starters",
+    photo: img2,
+  },
+  {
+    caption: "Main dining room",
+    photo: img3,
+  },
+  {
+    caption: "Dining room w/terrace",
+    photo: img4,
+  },
+  {
+    caption: "Dining room",
+    photo: img5,
+  },
+  {
+    caption: "The Yacht Marina at dawn",
+    photo: img6,
+  },
+];
 
 export default function Barceloneta() {
   const classes = useStyles();
@@ -85,7 +63,7 @@ export default function Barceloneta() {
           top quality food with amazing and fast service.
         </Typography>
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

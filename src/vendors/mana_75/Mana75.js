@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Beautiful Dining rooms",
-      description: "Colorful clothing, lots of light, next to the beach",
-      image: img1,
-    },
-    {
-      name: "Cozy terrace",
-      description: "Amazing al fresco dining",
-      image: img2,
-    },
-    {
-      name: "Open air terrace",
-      description: "Next to the beach",
-      image: img3,
-    },
-    {
-      name: "Seafood experience",
-      description: "If you like fish and seafood, this is the place",
-      image: img4,
-    },
-    {
-      name: "Front Façade",
-      description: "Beautiful surroundings",
-      image: img5,
-    },
-    {
-      name: "Always buzzing",
-      description: "",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Beautiful Dining rooms",
+    photo: img1,
+  },
+  {
+    caption: "Cozy terrace",
+    photo: img2,
+  },
+  {
+    caption: "Open air terrace",
+    photo: img3,
+  },
+  {
+    caption: "Seafood experience",
+    photo: img4,
+  },
+  {
+    caption: "Front Façade",
+    photo: img5,
+  },
+  {
+    caption: "Always buzzing",
+    photo: img6,
+  },
+];
 
 export default function Mana75() {
   const classes = useStyles();
@@ -81,7 +60,7 @@ export default function Mana75() {
         </Typography>
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

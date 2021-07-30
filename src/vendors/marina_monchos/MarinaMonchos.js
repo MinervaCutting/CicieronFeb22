@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Port Olímpic",
-      description: "Al fresco dining next to Hotel Ritz Carlton Arts",
-      image: img1,
-    },
-    {
-      name: "Terraces with sea views",
-      description: "Ibiza style wooden and blue décor",
-      image: img2,
-    },
-    {
-      name: "Mediterranean cuisine",
-      description: "",
-      image: img3,
-    },
-    {
-      name: "Terrace next to the Olympic Port",
-      description: "Semi-covered form mild rain",
-      image: img4,
-    },
-    {
-      name: "Dining room",
-      description: "Beautifully decorated interior dining rooms",
-      image: img5,
-    },
-    {
-      name: "Another perspective of the Terrace",
-      description: "",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Port Olímpic",
+    photo: img1,
+  },
+  {
+    caption: "Terraces with sea views",
+    photo: img2,
+  },
+  {
+    caption: "Mediterranean cuisine",
+    photo: img3,
+  },
+  {
+    caption: "Terrace next to the Olympic Port",
+    photo: img4,
+  },
+  {
+    caption: "Dining room",
+    photo: img5,
+  },
+  {
+    caption: "Another perspective of the Terrace",
+    photo: img6,
+  },
+];
 
 export default function MarinaMonchos() {
   const classes = useStyles();
@@ -85,7 +64,7 @@ export default function MarinaMonchos() {
         </Typography>
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

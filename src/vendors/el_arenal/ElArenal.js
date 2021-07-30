@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,54 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "El Arenal -Terrace",
-      description: "It's right on the beach of Barceloneta",
-      image: img1,
-    },
-    {
-      name: "More Terrace",
-      description: "Tables are laid out perpendicular to the Sea",
-      image: img2,
-    },
-    {
-      name: "Terrace is protected",
-      description: "The tented area can protect during mild bad weather",
-      image: img3,
-    },
-    {
-      name: "Front view of the restaurant",
-      description: "Next to all the trendy clubs",
-      image: img4,
-    },
-    {
-      name: "Prime location",
-      description:
-        "The restaurant is only a few steps away from the Port Olimpic",
-      image: img5,
-    },
-    {
-      name: "Inner diningroom",
-      description: "There is back up in case of bad weather",
-      image: img6,
-    },
-  ];
-
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "It's right on the beach of Barceloneta",
+    photo: img1,
+  },
+  {
+    caption: "Tables are laid out perpendicular to the Sea",
+    photo: img2,
+  },
+  {
+    caption: "The tented area can protect during mild bad weather",
+    photo: img3,
+  },
+  {
+    caption: "Next to all the trendy clubs",
+    photo: img4,
+  },
+  {
+    caption: "The restaurant is only a few steps away from the Port Olimpic",
+    photo: img5,
+  },
+  {
+    caption: "There is back up in case of bad weather",
+    photo: img6,
+  },
+];
 
 export default function ElArenal() {
   const classes = useStyles();
@@ -87,7 +64,7 @@ export default function ElArenal() {
         </Typography>
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

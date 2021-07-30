@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,33 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Small cozy terrace",
-      description: "",
-      image: img1,
-    },
-    {
-      name: "Elegant dining rooms",
-      description: "",
-      image: img2,
-    },
-    {
-      name: "Front Façade",
-      description: "",
-      image: img3,
-    },
-    {
-      name: "Fine wines",
-      description: "The group deserves some fine dining after a long walk",
-      image: img4,
-    },
-    {
-      name: "Delicious mediterranean dishes",
-      description: "",
-      image: img5,
-    },
-    {
-      name: "And even more delicious desserts",
-      description: "",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Small cozy terrace",
+    photo: img1,
+  },
+  {
+    caption: "Elegant dining rooms",
+    photo: img2,
+  },
+  {
+    caption: "Front Façade",
+    photo: img3,
+  },
+  {
+    caption: "Fine wines",
+    description: "The group deserves some fine dining after a long walk",
+    photo: img4,
+  },
+  {
+    caption: "Delicious mediterranean dishes",
+    photo: img5,
+  },
+  {
+    caption: "And even more delicious desserts",
+    photo: img6,
+  },
+];
 
 export default function CorCaliu() {
   const classes = useStyles();
@@ -80,7 +60,7 @@ export default function CorCaliu() {
         </Typography>
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

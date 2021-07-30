@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper, Divider } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "The Bar area is always buzzing",
-      description: "This is the largest area of the 4500sqm Old factory",
-      image: img1,
-    },
-    {
-      name: "The House is almost a museum",
-      description: "Full of memorabilia of Old Barcelona",
-      image: img2,
-    },
-    {
-      name: "The Place is still a brewery...",
-      description: "some of the beer tanks",
-      image: img3,
-    },
-    {
-      name: "A more formal restaurant",
-      description: "by Michelin-starred Jordi Vilà",
-      image: img4,
-    },
-    {
-      name: "Craft beer",
-      description: "In-house produced exclusive beer",
-      image: img5,
-    },
-    {
-      name: "Gift shop",
-      description: "Exclusive craft beer can be bought in the premises",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "The Bar area is always buzzing",
+    photo: img1,
+  },
+  {
+    caption: "The House is almost a museum",
+    photo: img2,
+  },
+  {
+    caption: "The Place is still a brewery...",
+    photo: img3,
+  },
+  {
+    caption: "A more formal restaurant",
+    photo: img4,
+  },
+  {
+    caption: "Craft beer",
+    photo: img5,
+  },
+  {
+    caption: "Gift shop",
+    photo: img6,
+  },
+];
 
 export default function FabricaMoritz() {
   const classes = useStyles();
@@ -87,7 +66,7 @@ export default function FabricaMoritz() {
         </Typography>
         <Divider />
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }

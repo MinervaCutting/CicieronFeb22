@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Terraza",
-      description: "Solo puede ser reservada por grupos corporativos",
-      image: img1,
-    },
-    {
-      name: "Terraza",
-      description: "La lluvia leve está prevista",
-      image: img2,
-    },
-    {
-      name: "Terraza",
-      description: "Otra vista diferente",
-      image: img3,
-    },
-    {
-      name: "Coffee Breaks",
-      description: "Se pueden organizar reuniones en el Palacete",
-      image: img4,
-    },
-    {
-      name: "Reial Cercle Artístic de Barcelona",
-      description: "Fundado en 1881",
-      image: img5,
-    },
-    {
-      name: "Más detalles",
-      description: "",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Terraza",
+    photo: img1,
+  },
+  {
+    caption: "Terraza",
+    photo: img2,
+  },
+  {
+    caption: "Terraza",
+    photo: img3,
+  },
+  {
+    caption: "Coffee Breaks",
+    photo: img4,
+  },
+  {
+    caption: "Reial Cercle Artístic de Barcelona",
+    photo: img5,
+  },
+  {
+    caption: "Más detalles",
+    photo: img6,
+  },
+];
 
 const ElCercle = () => {
   const classes = useStyles();
@@ -77,7 +56,7 @@ const ElCercle = () => {
         reuniones de hasta 75pax.
       </Typography>
 
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 };

@@ -1,6 +1,5 @@
-import { makeStyles, Typography, Paper } from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
+import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -8,52 +7,32 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
-function ImageSlider(props) {
-  let items = [
-    {
-      name: "Front Façade in Les Rambles",
-      description: "Nuria is a historic restaurant in buzzing 'Les Rambles'",
-      image: img1,
-    },
-    {
-      name: "Les Rambles",
-      description: "Barcelona's most iconic street",
-      image: img2,
-    },
-    {
-      name: "Restaurant Nuria is historic",
-      description: "iconic restaurant dating back to 1926",
-      image: img3,
-    },
-    {
-      name: "Dining rooms",
-      description: "The restaurant has undergone massive re-decoration",
-      image: img4,
-    },
-    {
-      name: "Dining room",
-      description: "The décor now combines tradition with modernity",
-      image: img5,
-    },
-    {
-      name: "Delicious Tapas",
-      description: "Tapas is a great choice here",
-      image: img6,
-    },
-  ];
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Paper key={i}>
-          <img src={item.image} alt='' />
-          <Typography variant='h6' className='legend'>
-            {item.description}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
-  );
-}
+let items = [
+  {
+    caption: "Front Façade in Les Rambles",
+    photo: img1,
+  },
+  {
+    caption: "Les Rambles",
+    photo: img2,
+  },
+  {
+    caption: "Restaurant Nuria is historic",
+    photo: img3,
+  },
+  {
+    caption: "Dining rooms",
+    photo: img4,
+  },
+  {
+    caption: "Dining room",
+    photo: img5,
+  },
+  {
+    caption: "Delicious Tapas",
+    photo: img6,
+  },
+];
 
 export default function Nuria() {
   const classes = useStyles();
@@ -84,7 +63,7 @@ export default function Nuria() {
           specialties.
         </Typography>
       </div>
-      <ImageSlider />
+      <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }
