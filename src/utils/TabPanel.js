@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import ElGlop from "../vendors/el_glop/ElGlop";
-import Barceloneta from "../vendors/barceloneta/Barceloneta";
+import {
+  makeStyles,
+  AppBar,
+  Tabs,
+  Tab,
+  Typography,
+  Box,
+} from "@material-ui/core";
+import { selectTabOption } from "../features/TabOptionSlice";
+import { useSelector } from "react-redux";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,7 +47,14 @@ function a11yProps(index) {
 export default function VendorOptionsTab({ children, name1, name2, name3 }) {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  const tabOption = useSelector(selectTabOption);
+
+  useEffect(() => {
+    setValue(tabOption);
+  }, [tabOption]);
+
   const handleChange = (event, newValue) => {
+    console.log("value=>", value);
     setValue(newValue);
   };
 

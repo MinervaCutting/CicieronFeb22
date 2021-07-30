@@ -55,7 +55,7 @@ export default function Quotation(props) {
               />
             </a>
 
-            <ul>
+            <ul className={classes.header_list}>
               <li>
                 <Typography
                   variant='h5'
@@ -96,6 +96,14 @@ const useStyles = makeStyles((theme) => ({
       position: "relative",
     },
   },
+  header_list: {
+    "& li h5": {
+      [theme.breakpoints.down("md")]: {
+        fontSize: "1rem",
+      },
+    },
+  },
+
   toolbar: {
     display: "flex",
     justifyContent: "space-between",

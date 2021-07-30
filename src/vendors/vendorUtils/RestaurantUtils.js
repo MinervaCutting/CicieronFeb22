@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
       borderRadius: "0.5rem",
       cursor: "pointer",
+      [theme.breakpoints.down("md")]: {
+        fontSize: "0.9rem",
+      },
     },
   },
 }));

@@ -12,12 +12,20 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-scroll";
 import { toc } from "../data/table_of_contents";
+import { useDispatch } from "react-redux";
+import { SET_TABOPTION } from "../features/TabOptionSlice";
 
 export default function SidebarMenu() {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [open, setOpen] = useState({
     open: false,
   });
+
+  const handleClick = (option, e) => {
+    const optionId = parseInt(option.id.charAt(3));
+    dispatch(SET_TABOPTION(optionId));
+  };
 
   return (
     <List
@@ -79,7 +87,10 @@ export default function SidebarMenu() {
                   offset={-70}
                 >
                   <ListItem button className={classes.nested}>
-                    <ListItemText primary={option.service} />
+                    <ListItemText
+                      primary={option.service}
+                      onClick={(e) => handleClick(option, e)}
+                    />
                   </ListItem>
                 </Link>
               ))}

@@ -4,15 +4,15 @@ export const toc = [
     title: "Accommodation",
     options: [
       {
-        id: "hotel_1",
+        id: "acc0",
         service: "Hotel Jazz",
       },
       {
-        id: "hotel_2",
+        id: "acc1",
         service: "Hotel HCC Montblanc",
       },
       {
-        id: "hotel_3",
+        id: "acc2",
         service: "Hotel Catalonia La Pedrera",
       },
     ],
@@ -50,11 +50,11 @@ export const toc = [
         service: "Lunch at El Arenal",
       },
       {
-        id: "day_two_3",
+        id: "d2d0",
         service: "Dinner at Cafeteria Nuria",
       },
       {
-        id: "day_two_4",
+        id: "d2d1",
         service: "Dinner alternative El Glop",
       },
     ],
@@ -78,11 +78,11 @@ export const toc = [
         service: "Game at FCBarcelona",
       },
       {
-        id: "day_three_4",
+        id: "d3d0",
         service: "Dinner at Mana 75",
       },
       {
-        id: "day_three_5",
+        id: "d3d1",
         service: "Alternative Dinner at Marina Moncho's",
       },
     ],

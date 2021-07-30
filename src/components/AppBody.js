@@ -47,10 +47,10 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='accommodation'>
         <strong>Accommodation</strong>
       </Typography>
-      <VendorOptionsTab name1='Jazz' name2='La Pedrera' name3='Montblanc'>
+      <VendorOptionsTab name1='Jazz' name2='Montblanc' name3='La Pedrera'>
         <Jazz />
-        <LaPedrera />
         <Montblanc />
+        <LaPedrera />
       </VendorOptionsTab>
       <Typography variant='h4' gutterBottom id='day_one'>
         <strong>Friday, May 20th - Arrival Day</strong>
@@ -92,6 +92,8 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_two_3'>
         Dinner options for Saturday
       </Typography>
+      <div id='d2d0' />
+      <div id='d2d1' />
       <VendorOptionsTab name1='Cafeteria Nuria' name2='Braseria El Glop'>
         <Nuria />
         <ElGlop />
@@ -113,6 +115,8 @@ export default function AppBody() {
         and wait for them. On our way back, we will drop the group in the final
         restaurant for dinner
       </Typography>
+      <div id='d3d0' />
+      <div id='d3d1' />
       <VendorOptionsTab name1='Mana 75' name2='Marina Monchos'>
         <Mana75 />
         <MarinaMonchos />

@@ -34,7 +34,7 @@ let items = [
   },
 ];
 
-export default function Nuria() {
+export default function Nuria({ id }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
