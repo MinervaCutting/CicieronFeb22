@@ -3,6 +3,7 @@ import Rating from "@material-ui/lab/Rating";
 import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
 import HotelIcons from "../../utils/HotelIcons";
+import { useStyles } from "../vendorStyles/styles";
 
 const leftIconsText = [
   "Gothic Quarter",
@@ -63,25 +64,3 @@ export default function Montblanc() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  title: {
-    display: "flex",
-    alignItems: "center",
-  },
-  text: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-
-  icons: {
-    display: "flex",
-    justifyContent: "flex-start",
-  },
-}));

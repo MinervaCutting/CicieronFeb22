@@ -6,14 +6,9 @@ import PoolTwoToneIcon from "@material-ui/icons/PoolTwoTone";
 import QueryBuilderTwoToneIcon from "@material-ui/icons/QueryBuilderTwoTone";
 import LocalCafeTwoToneIcon from "@material-ui/icons/LocalCafeTwoTone";
 import AccessibleForwardTwoToneIcon from "@material-ui/icons/AccessibleForwardTwoTone";
+import { useStyles } from "../vendors/vendorStyles/styles";
 
-import {
-  makeStyles,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@material-ui/core";
+import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 
 export default function HotelIcons({ leftIconsText, rightIconsText }) {
   const classes = useStyles();
@@ -60,10 +55,3 @@ export default function HotelIcons({ leftIconsText, rightIconsText }) {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  icons: {
-    display: "flex",
-    justifyContent: "flex-start",
-  },
-}));

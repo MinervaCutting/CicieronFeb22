@@ -1,5 +1,6 @@
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
+import { useStyles } from "../vendorStyles/styles";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -37,7 +38,7 @@ let items = [
 export default function Nuria({ id }) {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.text}>
       <div>
         <Typography variant='h4'>Cafeteria Nuria</Typography>
         <Typography variant='h6' component='h6' paragraph>
@@ -62,16 +63,9 @@ export default function Nuria({ id }) {
           fried squid, or the delicious ham croquettes as some of their
           specialties.
         </Typography>
+        <Divider />
       </div>
       <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));

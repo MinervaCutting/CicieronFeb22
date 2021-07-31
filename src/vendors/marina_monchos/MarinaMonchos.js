@@ -1,5 +1,6 @@
 import { makeStyles, Typography, Divider } from "@material-ui/core";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
+import { useStyles } from "../vendorStyles/styles";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -37,7 +38,7 @@ let items = [
 export default function MarinaMonchos() {
   const classes = useStyles();
   return (
-    <div className={classes.root} id='day_three_5'>
+    <div className={classes.text} id='day_three_5'>
       <div>
         <Typography variant='h4'>Restaurant Marina Monchos</Typography>
         <Typography variant='h6' component='h6' paragraph>
@@ -68,11 +69,3 @@ export default function MarinaMonchos() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));

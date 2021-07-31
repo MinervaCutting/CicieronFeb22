@@ -25,7 +25,7 @@ export default function Row({
     selected: { date, cat, pax, unitcost, rooms },
   },
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const classes = useRowStyles();
   return (
     <>

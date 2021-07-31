@@ -1,4 +1,5 @@
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
+import { useStyles } from "../vendorStyles/styles";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
@@ -68,11 +69,3 @@ export default function ElArenal() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));

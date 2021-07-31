@@ -1,5 +1,6 @@
 import { makeStyles, Typography, Divider } from "@material-ui/core";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
+import { useStyles } from "../vendorStyles/styles";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -37,7 +38,7 @@ let items = [
 export default function ElGlop() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.text}>
       <div>
         <Typography variant='h4' gutterBottom>
           Restaurant El Glop
@@ -60,11 +61,3 @@ export default function ElGlop() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));

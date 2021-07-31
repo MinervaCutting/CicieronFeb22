@@ -1,5 +1,6 @@
 import { makeStyles, Typography, Divider } from "@material-ui/core";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
+import { useStyles } from "../vendorStyles/styles";
 import img1 from "./rest1.jpg";
 import img2 from "./rest2.jpg";
 import img3 from "./rest3.jpg";
@@ -37,7 +38,7 @@ let items = [
 const ElCercle = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.text}>
       <Typography variant='h4' component='h4'>
         Restaurant El Cercle
       </Typography>
@@ -55,18 +56,10 @@ const ElCercle = () => {
         varios comedores, donde incluso fuera de horas, se pueden hacer
         reuniones de hasta 75pax.
       </Typography>
-
+      <Divider />
       <RestaurantSlider items={items} img1={img1} />
     </div>
   );
 };
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));
 
 export default ElCercle;

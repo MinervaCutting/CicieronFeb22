@@ -1,5 +1,6 @@
-import { Typography, makeStyles } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import ImageGallery from "react-image-gallery";
+import { useStyles } from "../vendorStyles/styles";
 import tour1 from "./tour1.jpg";
 import tour2 from "./tour2.jpg";
 import tour3 from "./tour3.jpg";
@@ -69,11 +70,3 @@ export default function BcnExperience() {
     </div>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  text: {
-    "& h6": {
-      textIndent: "2rem",
-    },
-  },
-}));
