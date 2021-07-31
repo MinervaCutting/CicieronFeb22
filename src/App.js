@@ -1,8 +1,8 @@
-import Quotation from "./components/Quotation";
 import { Container } from "@material-ui/core";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "./features/DarkModeSlice";
+import DrawerStructure from "./components/Quotation/DrawerStructure";
 
 function App() {
   const darkMode = useSelector(selectDarkMode);
@@ -57,7 +57,7 @@ function App() {
   return (
     <Container maxWidth='lg'>
       <ThemeProvider theme={theme}>
-        <Quotation />
+        <DrawerStructure />
       </ThemeProvider>
     </Container>
   );

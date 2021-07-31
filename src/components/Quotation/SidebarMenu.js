@@ -11,9 +11,9 @@ import {
   Collapse,
 } from "@material-ui/core";
 import { Link } from "react-scroll";
-import { toc } from "../data/table_of_contents";
+import { toc } from "../../data/table_of_contents";
 import { useDispatch } from "react-redux";
-import { SET_TABOPTION } from "../features/TabOptionSlice";
+import { SET_TABOPTION } from "../../features/TabOptionSlice";
 
 export default function SidebarMenu() {
   const classes = useStyles();
@@ -21,11 +21,6 @@ export default function SidebarMenu() {
   const [open, setOpen] = useState({
     open: false,
   });
-
-  const handleClick = (option, e) => {
-    const optionId = parseInt(option.id.charAt(3));
-    dispatch(SET_TABOPTION(optionId));
-  };
 
   return (
     <List
@@ -83,13 +78,15 @@ export default function SidebarMenu() {
                   spy={true}
                   smooth={true}
                   activeClass='active'
-                  duration={500}
-                  offset={-70}
+                  duration={700}
+                  offset={-0}
                 >
                   <ListItem button className={classes.nested}>
                     <ListItemText
                       primary={option.service}
-                      onClick={(e) => handleClick(option, e)}
+                      onClick={(e) =>
+                        dispatch(SET_TABOPTION(option.tabPosition))
+                      }
                     />
                   </ListItem>
                 </Link>
@@ -115,6 +112,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   nested: {
-    paddingLeft: theme.spacing(4),
+    paddingLeft: theme.spacing(3),
   },
 }));

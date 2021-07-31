@@ -1,20 +1,20 @@
 import { Paper, makeStyles, Typography } from "@material-ui/core";
-import VendorOptionsTab from "../utils/TabPanel";
-import LaPedrera from "../vendors/la_pedrera/LaPedrera";
-import Montblanc from "../vendors/montblanc/Montblanc";
-import Jazz from "../vendors/jazz/Jazz";
-import ElGlop from "../vendors/el_glop/ElGlop";
-import FabricaMoritz from "../vendors/fabrica_moritz/FabricaMoritz";
-import BcnExperience from "../vendors/fcbcn_experience/BcnExperience";
-import TapasTour from "../vendors/tapas_tour/TapasTour";
-import Budget from "./Budget/Budget";
-import ElArenal from "../vendors/el_arenal/ElArenal";
-import Nuria from "../vendors/nuria/Nuria";
-import WalkingTour from "../vendors/walking_tour/WalkingTour";
-import CorCaliu from "../vendors/cor_caliu/CorCaliu";
-import Mana75 from "../vendors/mana_75/Mana75";
-import MarinaMonchos from "../vendors/marina_monchos/MarinaMonchos";
-import OverviewMap from "./Map/OverviewMap";
+import VendorOptionsTab from "../../utils/TabPanel";
+import LaPedrera from "../../vendors/la_pedrera/LaPedrera";
+import Montblanc from "../../vendors/montblanc/Montblanc";
+import Jazz from "../../vendors/jazz/Jazz";
+import ElGlop from "../../vendors/el_glop/ElGlop";
+import FabricaMoritz from "../../vendors/fabrica_moritz/FabricaMoritz";
+import BcnExperience from "../../vendors/fcbcn_experience/BcnExperience";
+import TapasTour from "../../vendors/tapas_tour/TapasTour";
+import Budget from "../Budget/Budget";
+import ElArenal from "../../vendors/el_arenal/ElArenal";
+import Nuria from "../../vendors/nuria/Nuria";
+import WalkingTour from "../../vendors/walking_tour/WalkingTour";
+import CorCaliu from "../../vendors/cor_caliu/CorCaliu";
+import Mana75 from "../../vendors/mana_75/Mana75";
+import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
+import OverviewMap from "../Map/OverviewMap";
 
 export default function AppBody() {
   const classes = useStyles();

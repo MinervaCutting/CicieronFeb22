@@ -5,14 +5,17 @@ export const toc = [
     options: [
       {
         id: "acc0",
+        tabPosition: 0,
         service: "Hotel Jazz",
       },
       {
         id: "acc1",
+        tabPosition: 1,
         service: "Hotel HCC Montblanc",
       },
       {
         id: "acc2",
+        tabPosition: 2,
         service: "Hotel Catalonia La Pedrera",
       },
     ],
@@ -51,10 +54,12 @@ export const toc = [
       },
       {
         id: "d2d0",
+        tabPosition: 0,
         service: "Dinner at Cafeteria Nuria",
       },
       {
         id: "d2d1",
+        tabPosition: 1,
         service: "Dinner alternative El Glop",
       },
     ],
@@ -79,10 +84,12 @@ export const toc = [
       },
       {
         id: "d3d0",
+        tabPosition: 0,
         service: "Dinner at Mana 75",
       },
       {
         id: "d3d1",
+        tabPosition: 1,
         service: "Alternative Dinner at Marina Moncho's",
       },
     ],

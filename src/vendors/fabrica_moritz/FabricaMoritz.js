@@ -1,4 +1,4 @@
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 import RestaurantSlider from "../vendorUtils/RestaurantUtils";
 import { useStyles } from "../vendorStyles/styles";
 import img1 from "./rest1.jpg";

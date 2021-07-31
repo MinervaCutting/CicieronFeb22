@@ -1,4 +1,4 @@
-import { Typography, makeStyles } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
