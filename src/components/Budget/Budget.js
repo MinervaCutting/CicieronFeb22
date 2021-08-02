@@ -32,8 +32,9 @@ import {
   walkingtour,
 } from "../../data/activities";
 import { elarenal, fabricamoritz, corcaliu } from "../../data/restaurants";
+import { forwardRef } from "react";
 
-export default function Budget() {
+const Budget = (props, ref) => {
   const classes = useStyles();
   const hotel = useSelector(selectHotel);
   const day1Dinner = useSelector(selectDay1Dinner);
@@ -68,7 +69,7 @@ export default function Budget() {
   ];
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={ref}>
       <Table
         aria-label='collapsible table'
         stickyHeader
@@ -100,7 +101,7 @@ export default function Budget() {
       </Table>
     </div>
   );
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -112,3 +113,5 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+export default forwardRef(Budget);

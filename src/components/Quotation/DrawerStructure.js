@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   AppBar,
+  Toolbar,
   CssBaseline,
   useScrollTrigger,
   Slide,
@@ -8,12 +9,11 @@ import {
   Hidden,
   IconButton,
   Switch,
+  Typography,
+  makeStyles,
+  useTheme,
 } from "@material-ui/core";
-
 import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { selectDarkMode, SET_DARKMODE } from "../../features/DarkModeSlice";
 import { useSelector, useDispatch } from "react-redux";
 import darkLogo from "../../assets/logodark.png";
@@ -50,13 +50,6 @@ export default function DrawerStructure(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  /* const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      <SidebarMenu />
-    </div>
-  ); */
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -172,6 +165,7 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   toolbar: {
     ...theme.mixins.toolbar,
+
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",

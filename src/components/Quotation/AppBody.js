@@ -1,4 +1,4 @@
-import { Paper, makeStyles, Typography } from "@material-ui/core";
+import { Paper, makeStyles, Typography, Button } from "@material-ui/core";
 import VendorOptionsTab from "../../utils/TabPanel";
 import LaPedrera from "../../vendors/la_pedrera/LaPedrera";
 import Montblanc from "../../vendors/montblanc/Montblanc";
@@ -15,9 +15,15 @@ import CorCaliu from "../../vendors/cor_caliu/CorCaliu";
 import Mana75 from "../../vendors/mana_75/Mana75";
 import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
 import OverviewMap from "../Map/OverviewMap";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export default function AppBody() {
   const classes = useStyles();
+  const budgetRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => budgetRef.current,
+  });
 
   return (
     <Paper elevation={2} className={classes.bodyContainer}>
@@ -142,7 +148,13 @@ export default function AppBody() {
         the group wish to dine inside, there is a discount of EUR 3 p.person on
         the chosen menu.
       </Typography>
-      <Budget />
+
+      <div>
+        <Budget ref={budgetRef} />
+        <Button variant='outlined' onClick={handlePrint}>
+          Print PDF
+        </Button>
+      </div>
     </Paper>
   );
 }
