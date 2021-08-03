@@ -1,6 +1,6 @@
 export const tapastour = {
   title: "Tapas Tour",
-  cat: "transfer",
+  cat: "single",
   unitcost: 62.5,
   pax: 16,
   date: "Lunch",
@@ -8,7 +8,7 @@ export const tapastour = {
 
 export const beertasting = {
   title: "Fabrica Moritz Beer Tasting",
-  cat: "transfer",
+  cat: "single",
   unitcost: 15,
   pax: 16,
   date: "Pre-dinner",
@@ -16,7 +16,7 @@ export const beertasting = {
 
 export const fcbexperience = {
   title: "Museum and Stadium Tour",
-  cat: "transfer",
+  cat: "single",
   unitcost: 28.5,
   pax: 16,
   date: "morning",
@@ -24,7 +24,7 @@ export const fcbexperience = {
 
 export const walkingtour = {
   title: "Half Day Walking Tour city center",
-  cat: "transfer",
+  cat: "single",
   unitcost: 20,
   pax: 16,
   date: "May-22nd-2022 morning",
@@ -32,8 +32,10 @@ export const walkingtour = {
 
 export const footballtickets = {
   title: "Match tickets 3rd Stand Central",
-  cat: "transfer",
+  cat: "single",
   unitcost: 139,
   pax: 16,
   date: "May-22nd-2022 evening",
+  explanation:
+    "The Club cannot guarantee all tickets together, but will try to group as much as possible",
 };

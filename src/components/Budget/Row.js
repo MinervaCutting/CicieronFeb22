@@ -15,14 +15,14 @@ import {
 import accounting from "accounting";
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
 import HotelChoice from "./HotelChoice";
-import RestaurantChoice from "./RestaurantChoice";
+import MultipleChoice from "./MultipleChoice";
 import SingleChoice from "./SingleChoice";
 
 export default function Row({
   row: {
     event,
     selected,
-    selected: { date, cat, pax, unitcost, rooms },
+    selected: { date, cat, pax, unitcost, rooms, explanation },
   },
 }) {
   const [open, setOpen] = useState(true);
@@ -48,10 +48,10 @@ export default function Row({
         <TableCell>
           {cat === "hospitality" ? (
             <HotelChoice />
-          ) : cat === "meal" ? (
-            <RestaurantChoice event={event} />
-          ) : cat === "transfer" ? (
-            <SingleChoice event={event} />
+          ) : cat === "multiple" ? (
+            <MultipleChoice event={event} selected={selected} />
+          ) : cat === "single" ? (
+            <SingleChoice event={event} explanation={explanation} />
           ) : null}
         </TableCell>
         <TableCell>{pax}</TableCell>

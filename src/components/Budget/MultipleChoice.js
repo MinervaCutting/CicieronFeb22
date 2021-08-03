@@ -1,11 +1,15 @@
-import { makeStyles, MenuItem, FormControl, Select } from "@material-ui/core";
+import {
+  makeStyles,
+  MenuItem,
+  FormControl,
+  Select,
+  Tooltip,
+  withStyles,
+  Fade,
+} from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  albagranados,
-  asadoraranda,
-  calpinxo,
   cangrejoloco,
-  cantravi,
   casacarmen,
   fitora,
   vinotecatorres,
@@ -37,7 +41,7 @@ const restaurantOptions = [
   { event: "day3Lunch", options: [casacarmen, vinotecatorres] },
 ];
 
-export default function RestaurantChoice({ event }) {
+export default function RestaurantChoice({ event, selected }) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const day1Lunch = useSelector(selectDay1Lunch);

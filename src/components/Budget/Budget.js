@@ -63,7 +63,10 @@ const Budget = (props, ref) => {
     { event: "Walking Tour Art Nouveau", selected: walkingtour },
     { event: "Lunch at Cor Caliu", selected: corcaliu },
     { event: "Bus at disposal to Stadium and Dinner", selected: disposal5h29 },
-    { event: "Football tickets 3rd Stand Central", selected: footballtickets },
+    {
+      event: "Football tickets 3rd Stand Central",
+      selected: footballtickets,
+    },
     { event: "day2Dinner", selected: day2Dinner },
     { event: "Transfer to Airport", selected: airport29dep },
   ];

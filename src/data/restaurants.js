@@ -1,6 +1,6 @@
 export const fitora = {
   title: "La Fitora",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 34,
   pax: 20,
   date: "21-Feb-2022 Lunch",
@@ -8,7 +8,7 @@ export const fitora = {
 
 export const cangrejoloco = {
   title: "El Cangrejo Loco",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 38,
   pax: 20,
   date: "21-Feb-2022 Lunch",
@@ -16,7 +16,7 @@ export const cangrejoloco = {
 
 export const cantravi = {
   title: "Can Travi Nou",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 46,
   pax: 20,
   date: "21-Feb-2022 Dinner",
@@ -24,7 +24,7 @@ export const cantravi = {
 
 export const asadoraranda = {
   title: "Asador de Aranda",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 40,
   pax: 20,
   date: "21-Feb-2022 Dinner",
@@ -32,7 +32,7 @@ export const asadoraranda = {
 
 export const flamant = {
   title: "Flamant",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 30,
   pax: 20,
   date: "22-Feb-2022 Lunch",
@@ -40,7 +40,7 @@ export const flamant = {
 
 export const julivertmeu = {
   title: "Julivert Meu",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 42,
   pax: 20,
   date: "22-Feb-2022 Lunch",
@@ -48,7 +48,7 @@ export const julivertmeu = {
 
 export const albagranados = {
   title: "Alba Granados",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 45,
   pax: 20,
   date: "22-Feb-2022 Dinner",
@@ -56,7 +56,7 @@ export const albagranados = {
 
 export const calpinxo = {
   title: "Cal Pinxo Palau de Mar",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 36,
   pax: 20,
   date: "22-Feb-2022 Dinner",
@@ -64,7 +64,7 @@ export const calpinxo = {
 
 export const casacarmen = {
   title: "Casa Carmen",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 42,
   pax: 20,
   date: "23-Feb-2022 Lunch",
@@ -72,7 +72,7 @@ export const casacarmen = {
 
 export const vinotecatorres = {
   title: "Vinoteca Torres",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 37.5,
   pax: 20,
   date: "23-Feb-2022 Lunch",
@@ -80,7 +80,7 @@ export const vinotecatorres = {
 
 export const fabricamoritz = {
   title: "Fabrica Moritz",
-  cat: "transfer",
+  cat: "single",
   unitcost: 36.5,
   pax: 16,
   date: "Dinner",
@@ -88,30 +88,35 @@ export const fabricamoritz = {
 
 export const nuria = {
   title: "Cafeteria Nuria",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 26,
   pax: 16,
   date: "Dinner",
+  explanation: "3-course lunch, coffee, wine : 1 bottle x 3 pax",
 };
 
 export const elglop = {
   title: "Braseria El Glop",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 33,
   pax: 16,
   date: "Dinner",
+  explanation:
+    "3-course lunch, coffee, wine : 1 bottle x 3 pax, beer and soft drinks not incl",
 };
 export const elarenal = {
   title: "Beach Restaurant El Arenal",
-  cat: "transfer",
+  cat: "single",
   unitcost: 51,
   pax: 16,
   date: "Lunch",
+  explanation:
+    "3-course lunch, coffee, wine : 1 bottle x 3 pax, beer and soft drinks not incl",
 };
 
 export const corcaliu = {
   title: "Restaurant Cor Caliu",
-  cat: "transfer",
+  cat: "single",
   unitcost: 37.5,
   pax: 16,
   date: "Lunch",
@@ -119,7 +124,7 @@ export const corcaliu = {
 
 export const monchos = {
   title: "Marina Monchos",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 45,
   pax: 16,
   date: "Dinner",
@@ -127,7 +132,7 @@ export const monchos = {
 
 export const mana75 = {
   title: "Mana 75",
-  cat: "meal",
+  cat: "multiple",
   unitcost: 56.5,
   pax: 16,
   date: "Dinner",
