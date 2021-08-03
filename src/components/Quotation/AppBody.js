@@ -16,14 +16,41 @@ import Mana75 from "../../vendors/mana_75/Mana75";
 import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
 import OverviewMap from "../Map/OverviewMap";
 import { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
+import ReactToPrint from "react-to-print";
 
 export default function AppBody() {
   const classes = useStyles();
   const budgetRef = useRef();
-  const handlePrint = useReactToPrint({
-    content: () => budgetRef.current,
-  });
+
+  const pageStyle = `
+  @media all {
+    .page-break {
+      display: none;
+    }
+  }
+  
+  @media print {
+    html, body {
+      height: initial !important;
+      overflow: auto !important;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+  
+  @media print {
+    .page-break {
+      margin-top: 1rem;
+      display: block;
+      page-break-before: auto;
+    }
+  }
+  
+  @page {
+    size: landscape;
+    margin: 20mm;
+   
+  }
+`;
 
   return (
     <Paper elevation={2} className={classes.bodyContainer}>
@@ -150,10 +177,17 @@ export default function AppBody() {
       </Typography>
 
       <div>
+        <ReactToPrint
+          trigger={() => (
+            <Button variant='contained' color='secondary'>
+              Print PDF
+            </Button>
+          )}
+          content={() => budgetRef.current}
+          pageStyle={pageStyle}
+          documentTitle='Budget Printout'
+        />
         <Budget ref={budgetRef} />
-        <Button variant='outlined' onClick={handlePrint}>
-          Print PDF
-        </Button>
       </div>
     </Paper>
   );
