@@ -60,7 +60,7 @@ function App() {
           color: "#ea5933",
           fontSize: 18,
           "&&:hover": {
-            backgroundColor: "#ea5933",
+            backgroundColor: "#DDBCB0",
             color: darkMode ? "#fff" : "#22281b",
           },
         },
