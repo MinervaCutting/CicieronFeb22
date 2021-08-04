@@ -1,6 +1,6 @@
 export const tapastour = {
   title: "Tapas Tour",
-  cat: "single",
+  cat: "multiple",
   unitcost: 62.5,
   pax: 16,
   date: "Lunch",
@@ -24,7 +24,7 @@ export const fcbexperience = {
 
 export const walkingtour = {
   title: "Half Day Walking Tour city center",
-  cat: "single",
+  cat: "multiple",
   unitcost: 20,
   pax: 16,
   date: "May-22nd-2022 morning",
@@ -38,4 +38,9 @@ export const footballtickets = {
   date: "May-22nd-2022 evening",
   explanation:
     "The Club cannot guarantee all tickets together, but will try to group as much as possible",
+};
+
+//Preferred Activities
+export const activityEvents = {
+  activity1: tapastour,
 };

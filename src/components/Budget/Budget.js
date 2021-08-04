@@ -13,11 +13,9 @@ import { useSelector } from "react-redux";
 import { selectHotel } from "../../features/HotelSlice";
 import {
   selectDay1Dinner,
-  selectDay1Lunch,
   selectDay2Dinner,
-  selectDay2Lunch,
-  selectDay3Lunch,
 } from "../../features/RestaurantSlice";
+import { selectActivity1 } from "../../features/ActivitySlice";
 import {
   airport29,
   airport29dep,
@@ -39,12 +37,12 @@ const Budget = (props, ref) => {
   const hotel = useSelector(selectHotel);
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
-  const day3Lunch = useSelector(selectDay3Lunch);
+  const activity1 = useSelector(selectActivity1);
 
   const budgetRows = [
     { event: "accommodation", selected: hotel },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
-    { event: "Tapas tour for Lunch", selected: tapastour },
+    { event: "activity1", selected: activity1 },
     { event: "Fabrica Moritz beer tasting", selected: beertasting },
     { event: "Dinner at Fabrica Moritz", selected: fabricamoritz },
     {
@@ -60,7 +58,6 @@ const Budget = (props, ref) => {
       selected: elarenal,
     },
     { event: "day1Dinner", selected: day1Dinner },
-    { event: "Walking Tour Art Nouveau", selected: walkingtour },
     { event: "Lunch at Cor Caliu", selected: corcaliu },
     { event: "Bus at disposal to Stadium and Dinner", selected: disposal5h29 },
     {
@@ -95,9 +92,13 @@ const Budget = (props, ref) => {
           ))}
           <TableRow>
             <TableCell colSpan={4} />
-            <TableCell>Total Budget</TableCell>
             <TableCell>
-              {accounting.formatMoney(getTotal(budgetRows), "€")}
+              <strong>TOTAL BUDGET</strong>
+            </TableCell>
+            <TableCell>
+              <strong>
+                {accounting.formatMoney(getTotal(budgetRows), "€")}
+              </strong>
             </TableCell>
           </TableRow>
         </TableBody>

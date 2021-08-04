@@ -138,7 +138,7 @@ export const mana75 = {
   date: "Dinner",
 };
 
-//Preferred Restaurant
+//Preferred Restaurants
 export const mealEvents = {
   day1Lunch: fitora,
   day1Dinner: nuria,
