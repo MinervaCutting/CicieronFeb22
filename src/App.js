@@ -58,6 +58,11 @@ function App() {
         },
         label: {
           color: "#ea5933",
+          fontSize: 18,
+          "&&:hover": {
+            backgroundColor: "#ea5933",
+            color: darkMode ? "#fff" : "#22281b",
+          },
         },
       },
     },

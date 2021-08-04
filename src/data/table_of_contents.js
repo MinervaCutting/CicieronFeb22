@@ -1,22 +1,28 @@
 export const toc = [
   {
-    id: "accommodation",
-    title: "Accommodation",
+    id: "overview",
+    title: "Programme Overview",
     options: [
       {
-        id: "acc0",
-        tabPosition: 0,
-        service: "Hotel Jazz",
-      },
-      {
-        id: "acc1",
-        tabPosition: 1,
-        service: "Hotel HCC Montblanc",
-      },
-      {
-        id: "acc2",
-        tabPosition: 2,
-        service: "Hotel Catalonia La Pedrera",
+        id: "accommodation",
+        service: "Accommodation",
+        choices: [
+          {
+            id: "acc0",
+            tabPosition: 0,
+            service: "Hotel Jazz",
+          },
+          {
+            id: "acc1",
+            tabPosition: 1,
+            service: "Hotel HCC Montblanc",
+          },
+          {
+            id: "acc2",
+            tabPosition: 2,
+            service: "Hotel Catalonia La Pedrera",
+          },
+        ],
       },
     ],
   },
