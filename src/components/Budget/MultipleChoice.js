@@ -3,6 +3,7 @@ import {
   MenuItem,
   FormControl,
   Select,
+  Typography,
   Tooltip,
   withStyles,
   Fade,
@@ -119,7 +120,20 @@ export default function RestaurantChoice({ event, selected }) {
               restaurantOption.event === event &&
               restaurantOption.options.map((option) => (
                 <MenuItem key={option.title} value={option.title}>
-                  {option.title}
+                  {option.explanation ? (
+                    <BudgetTooltip
+                      title={option.explanation}
+                      arrow
+                      interactive
+                      TransitionComponent={Fade}
+                      TransitionProps={{ timeout: 800 }}
+                      placement='top-end'
+                    >
+                      <Typography variant='body1'>{option.title}</Typography>
+                    </BudgetTooltip>
+                  ) : (
+                    <Typography variant='body1'>{option.title}</Typography>
+                  )}
                 </MenuItem>
               ))
           )}
@@ -128,6 +142,17 @@ export default function RestaurantChoice({ event, selected }) {
     </div>
   );
 }
+
+const BudgetTooltip = withStyles((theme) => ({
+  tooltip: {
+    fontSize: 16,
+    backgroundColor: "#ea5933",
+  },
+  arrow: {
+    color: "#ea5933",
+    fontSize: 25,
+  },
+}))(Tooltip);
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
