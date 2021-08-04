@@ -53,14 +53,20 @@ export const toc = [
         service: "Lunch at El Arenal",
       },
       {
-        id: "d2d0",
-        tabPosition: 0,
-        service: "Dinner at Cafeteria Nuria",
-      },
-      {
-        id: "d2d1",
-        tabPosition: 1,
-        service: "Dinner alternative El Glop",
+        id: "day_two_3",
+        service: "Dinner alternatives",
+        choices: [
+          {
+            id: "d2d0",
+            tabPosition: 0,
+            service: "Cafeteria Nuria",
+          },
+          {
+            id: "d2d1",
+            tabPosition: 1,
+            service: "El Glop",
+          },
+        ],
       },
     ],
   },
@@ -83,14 +89,20 @@ export const toc = [
         service: "Game at FCBarcelona",
       },
       {
-        id: "d3d0",
-        tabPosition: 0,
-        service: "Dinner at Mana 75",
-      },
-      {
-        id: "d3d1",
-        tabPosition: 1,
-        service: "Alternative Dinner at Marina Moncho's",
+        id: "day_three_4",
+        service: "Dinner alternatives",
+        choices: [
+          {
+            id: "d3d0",
+            tabPosition: 0,
+            service: "Mana 75",
+          },
+          {
+            id: "d3d1",
+            tabPosition: 1,
+            service: "Marina Moncho's",
+          },
+        ],
       },
     ],
   },
@@ -101,12 +113,13 @@ export const toc = [
     options: [
       {
         id: "day_four_1",
-        service: "Free day and Transfer to the airport",
+        service: "Free day and Transfer out",
       },
     ],
   },
   {
     id: "budget",
     title: "Budget",
+    options: [],
   },
 ];

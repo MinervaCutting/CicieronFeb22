@@ -52,6 +52,14 @@ function App() {
           width: 50,
         },
       },
+      MuiTreeItem: {
+        iconContainer: {
+          color: "#ea5933",
+        },
+        label: {
+          color: "#ea5933",
+        },
+      },
     },
   });
   return (
