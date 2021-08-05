@@ -1,3 +1,5 @@
+import accounting from "accounting";
+
 export const getTotal = (cost) => {
   const nonhospCost = cost
     .map(
@@ -21,7 +23,7 @@ export const getHospitalityTotal = (cost, itemType) => {
   );
 
   const reducer = (acc, currentValue) => acc + currentValue;
-  return hospCost.reduce(reducer);
+  return accounting.formatMoney(hospCost.reduce(reducer), "€", 0);
 };
 
 export const getSubTotal = (cost, itemType) => {
@@ -33,7 +35,7 @@ export const getSubTotal = (cost, itemType) => {
     .filter(Boolean)
     .reduce((acc, currentValue) => acc + currentValue);
 
-  return subTotalAmount;
+  return accounting.formatMoney(subTotalAmount, "€", 0);
 };
 
 export const getHotelTotal = (cost) => {

@@ -1,4 +1,5 @@
 import {
+  Grid,
   makeStyles,
   Table,
   TableBody,
@@ -30,6 +31,10 @@ import {
 import { elarenal, fabricamoritz, corcaliu } from "../../data/restaurants";
 import { forwardRef } from "react";
 import BudgetSubTotals from "./BudgetSubTotals";
+import hospitalMarker from "@iconify-icons/mdi/hospital-marker";
+import silverwareVariant from "@iconify-icons/mdi/silverware-variant";
+import medalOutline from "@iconify-icons/mdi/medal-outline";
+import bus from "@iconify-icons/mdi/bus";
 
 const Budget = (props, ref) => {
   const classes = useStyles();
@@ -67,7 +72,12 @@ const Budget = (props, ref) => {
     { event: "Transfer to Airport", selected: airport29dep },
   ];
 
-  const typesArr = ["Hospitality", "Meals", "Activities", "Transfers"];
+  const typesArr = [
+    { type: "Hospitality", icon: hospitalMarker },
+    { type: "Meals", icon: silverwareVariant },
+    { type: "Activities", icon: medalOutline },
+    { type: "Transfers", icon: bus },
+  ];
 
   return (
     <div className={classes.root} ref={ref}>
@@ -103,12 +113,14 @@ const Budget = (props, ref) => {
             </TableCell>
           </TableRow>
         </TableBody>
-        {typesArr.map((itemType, i) => (
-          <div key={i}>
-            <BudgetSubTotals cost={budgetRows} itemType={itemType} />
-          </div>
-        ))}
       </Table>
+      <Grid container spacing={3} className={classes.gridLayout}>
+        {typesArr.map(({ type, icon }, i) => (
+          <Grid item key={i} xs={12} sm={6} md={3}>
+            <BudgetSubTotals cost={budgetRows} itemType={type} icon={icon} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };
@@ -121,6 +133,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       overflowX: "scroll",
     },
+  },
+  gridLayout: {
+    padding: theme.spacing(3),
   },
 }));
 

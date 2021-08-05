@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-import { makeStyles, SvgIcon } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
 export default function LocationMarker({ lat, lng, onClick, icon }) {
   const classes = useStyles();
