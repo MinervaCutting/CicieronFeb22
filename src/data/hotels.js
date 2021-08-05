@@ -1,6 +1,7 @@
 export const bcnmontblanc = {
   id: "hotelbcn_catalonia_montblanc",
   cat: "hospitality",
+  type: "Hospitality",
   title: "Hotel HCC Montblanc",
   rooms: [
     {
@@ -29,6 +30,7 @@ export const bcnlapedrera = {
   id: "hotelbcn_catalonia_lapedrera",
   title: "Hotel Catalonia La Pedrera",
   cat: "hospitality",
+  type: "Hospitality",
   rooms: [
     {
       title: "Doble room for ind Use, incl breakfast",
@@ -56,6 +58,7 @@ export const bcnjazz = {
   id: "hotelbcn_jazz",
   title: "Hotel Jazz",
   cat: "hospitality",
+  type: "Hospitality",
   rooms: [
     {
       title: "Doble room for ind Use, incl breakfast",

@@ -1,6 +1,7 @@
 export const tapastour = {
   title: "Tapas Tour",
   cat: "multiple",
+  type: "Activities",
   unitcost: 62.5,
   pax: 16,
   date: "Lunch",
@@ -9,6 +10,7 @@ export const tapastour = {
 export const beertasting = {
   title: "Fabrica Moritz Beer Tasting",
   cat: "single",
+  type: "Activities",
   unitcost: 15,
   pax: 16,
   date: "Pre-dinner",
@@ -17,6 +19,7 @@ export const beertasting = {
 export const fcbexperience = {
   title: "Museum and Stadium Tour",
   cat: "single",
+  type: "Activities",
   unitcost: 28.5,
   pax: 16,
   date: "morning",
@@ -25,6 +28,7 @@ export const fcbexperience = {
 export const walkingtour = {
   title: "Half Day Walking Tour city center",
   cat: "multiple",
+  type: "Activities",
   unitcost: 20,
   pax: 16,
   date: "May-22nd-2022 morning",
@@ -33,6 +37,7 @@ export const walkingtour = {
 export const footballtickets = {
   title: "Match tickets 3rd Stand Central",
   cat: "single",
+  type: "Activities",
   unitcost: 139,
   pax: 16,
   date: "May-22nd-2022 evening",

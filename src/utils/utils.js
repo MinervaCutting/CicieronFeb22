@@ -1,5 +1,4 @@
 export const getTotal = (cost) => {
-  console.log("cost=>", cost);
   const nonhospCost = cost
     .map(
       ({ selected }) =>
@@ -14,6 +13,27 @@ export const getTotal = (cost) => {
   const rowCost = [...hospCost, ...nonhospCost];
   const reducer = (acc, currentValue) => acc + currentValue;
   return rowCost.reduce(reducer);
+};
+
+export const getHospitalityTotal = (cost, itemType) => {
+  const hospCost = cost.map(
+    ({ selected }) => selected.type === itemType && getHotelTotal(selected)
+  );
+
+  const reducer = (acc, currentValue) => acc + currentValue;
+  return hospCost.reduce(reducer);
+};
+
+export const getSubTotal = (cost, itemType) => {
+  const subTotalAmount = cost
+    .map(
+      ({ selected }) =>
+        selected.type === itemType && selected.pax * selected.unitcost
+    )
+    .filter(Boolean)
+    .reduce((acc, currentValue) => acc + currentValue);
+
+  return subTotalAmount;
 };
 
 export const getHotelTotal = (cost) => {

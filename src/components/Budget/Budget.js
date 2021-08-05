@@ -26,11 +26,10 @@ import {
   beertasting,
   fcbexperience,
   footballtickets,
-  tapastour,
-  walkingtour,
 } from "../../data/activities";
 import { elarenal, fabricamoritz, corcaliu } from "../../data/restaurants";
 import { forwardRef } from "react";
+import BudgetSubTotals from "./BudgetSubTotals";
 
 const Budget = (props, ref) => {
   const classes = useStyles();
@@ -68,6 +67,8 @@ const Budget = (props, ref) => {
     { event: "Transfer to Airport", selected: airport29dep },
   ];
 
+  const typesArr = ["Hospitality", "Meals", "Activities", "Transfers"];
+
   return (
     <div className={classes.root} ref={ref}>
       <Table
@@ -102,6 +103,11 @@ const Budget = (props, ref) => {
             </TableCell>
           </TableRow>
         </TableBody>
+        {typesArr.map((itemType, i) => (
+          <div key={i}>
+            <BudgetSubTotals cost={budgetRows} itemType={itemType} />
+          </div>
+        ))}
       </Table>
     </div>
   );
