@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Grid,
   makeStyles,
@@ -44,7 +44,8 @@ const Budget = (props, ref) => {
   const day2Dinner = useSelector(selectDay2Dinner);
   const activity1 = useSelector(selectActivity1);
   const [rowToDelete, setRowToDelete] = useState(null);
-  const [budgetRows, setBudgetRows] = useState([
+
+  const initialRows = [
     { event: "accommodation", selected: hotel },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
     { event: "activity1", selected: activity1 },
@@ -74,9 +75,11 @@ const Budget = (props, ref) => {
     },
     { event: "day2Dinner", selected: day2Dinner },
     { event: "Transfer to Airport", selected: airport29dep },
-  ]);
+  ];
 
-  const handleClick = (e, rowToDelete) => {
+  const [budgetRows, setBudgetRows] = useState(initialRows);
+
+  const handleClick = (rowToDelete) => {
     setRowToDelete(rowToDelete);
     setBudgetRows(budgetRows?.filter((item) => item.event !== rowToDelete));
   };
@@ -117,8 +120,7 @@ const Budget = (props, ref) => {
             </TableCell>
             <TableCell>
               <strong>
-                {budgetRows.length &&
-                  accounting.formatMoney(getTotal(budgetRows), "€")}
+                {accounting.formatMoney(getTotal(budgetRows), "€")}
               </strong>
             </TableCell>
           </TableRow>

@@ -13,8 +13,8 @@ export const getTotal = (cost) => {
   );
 
   const rowCost = [...hospCost, ...nonhospCost];
-  const reducer = (acc, currentValue) => acc + currentValue;
-  return rowCost.reduce(reducer);
+
+  return rowCost.reduce((acc, currentValue) => acc + currentValue, 0);
 };
 
 export const getHospitalityTotal = (cost, itemType) => {
@@ -32,9 +32,7 @@ export const getSubTotal = (cost, itemType) => {
   const subTotalAmount = cost
     .map(
       ({ selected }) =>
-        selected.type === itemType &&
-        cost.length &&
-        selected.pax * selected.unitcost
+        selected.type === itemType && selected.pax * selected.unitcost
     )
     .filter(Boolean)
     .reduce((acc, currentValue) => acc + currentValue, 0);
@@ -57,6 +55,6 @@ export const getTotalRooms = (arr) => {
   const totalRooms = arr
     .filter((room) => room.cat !== "citytax")
     .map((room) => room.units * room.nights * room.occupancy);
-  const reducer = (acc, currentValue) => acc + currentValue;
-  return totalRooms.reduce(reducer);
+
+  return totalRooms.reduce((acc, currentValue) => acc + currentValue, 0);
 };

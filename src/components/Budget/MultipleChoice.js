@@ -40,7 +40,6 @@ const eventOptions = [
 export default function MultipleChoice({ event }) {
   const classes = useStyles();
   const dispatch = useDispatch();
-
   const activity1 = useSelector(selectActivity1);
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);

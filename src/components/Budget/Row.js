@@ -24,6 +24,7 @@ import SingleChoice from "./SingleChoice";
 
 export default function Row({
   handleClick,
+  row,
   row: {
     event,
     selected,
@@ -32,7 +33,7 @@ export default function Row({
 }) {
   const [open, setOpen] = useState(true);
   const classes = useRowStyles();
-
+  console.log("row-to-delete=>", row);
   return (
     <>
       <TableRow className={classes.root}>
@@ -70,7 +71,7 @@ export default function Row({
             : accounting.formatMoney(getHotelTotal(selected), "€")}
         </TableCell>
         <TableCell>
-          <IconButton onClick={(e) => handleClick(e, event)}>
+          <IconButton onClick={(e) => handleClick(event)}>
             <HighlightOffTwoToneIcon className={classes.delete} />
           </IconButton>
         </TableCell>
