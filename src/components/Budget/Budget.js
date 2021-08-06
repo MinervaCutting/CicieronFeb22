@@ -116,7 +116,7 @@ const Budget = (props, ref) => {
       </Table>
       <Grid container spacing={3} className={classes.gridLayout}>
         {typesArr.map(({ type, icon }, i) => (
-          <Grid item key={i} xs={12} sm={6} md={3}>
+          <Grid item key={i} xs={6} md={3}>
             <BudgetSubTotals cost={budgetRows} itemType={type} icon={icon} />
           </Grid>
         ))}

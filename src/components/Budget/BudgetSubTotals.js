@@ -21,9 +21,10 @@ export default function BudgetSubTotals({ cost, itemType, icon }) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "200px",
-    height: "200px",
+    width: "12rem",
+    height: "12rem",
     position: "relative",
+    margin: "0 auto",
   },
   icon: {
     width: "100%",
@@ -45,5 +46,15 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 10,
     fontSize: 35,
+  },
+  [theme.breakpoints.down("md")]: {
+    root: { width: "10rem", height: "10rem" },
+    money: { fontSize: 45 },
+    title: { fontSize: 30 },
+  },
+  [theme.breakpoints.down("sm", "md")]: {
+    root: { width: "15rem", height: "15rem" },
+    money: { fontSize: 50 },
+    title: { fontSize: 35 },
   },
 }));
