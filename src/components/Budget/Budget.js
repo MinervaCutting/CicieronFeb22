@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Grid,
   makeStyles,
@@ -31,7 +32,7 @@ import {
 import { elarenal, fabricamoritz, corcaliu } from "../../data/restaurants";
 import { forwardRef } from "react";
 import BudgetSubTotals from "./BudgetSubTotals";
-import hospitalMarker from "@iconify-icons/mdi/hospital-marker";
+import bedOutline from "@iconify-icons/mdi/bed-outline";
 import silverwareVariant from "@iconify-icons/mdi/silverware-variant";
 import medalOutline from "@iconify-icons/mdi/medal-outline";
 import bus from "@iconify-icons/mdi/bus";
@@ -42,8 +43,8 @@ const Budget = (props, ref) => {
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
   const activity1 = useSelector(selectActivity1);
-
-  const budgetRows = [
+  const [rowToDelete, setRowToDelete] = useState(null);
+  const [budgetRows, setBudgetRows] = useState([
     { event: "accommodation", selected: hotel },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
     { event: "activity1", selected: activity1 },
@@ -63,17 +64,25 @@ const Budget = (props, ref) => {
     },
     { event: "day1Dinner", selected: day1Dinner },
     { event: "Lunch at Cor Caliu", selected: corcaliu },
-    { event: "Bus at disposal to Stadium and Dinner", selected: disposal5h29 },
+    {
+      event: "Bus at disposal to Stadium and Dinner",
+      selected: disposal5h29,
+    },
     {
       event: "Football tickets 3rd Stand Central",
       selected: footballtickets,
     },
     { event: "day2Dinner", selected: day2Dinner },
     { event: "Transfer to Airport", selected: airport29dep },
-  ];
+  ]);
+
+  const handleClick = (e, rowToDelete) => {
+    setRowToDelete(rowToDelete);
+    setBudgetRows(budgetRows?.filter((item) => item.event !== rowToDelete));
+  };
 
   const typesArr = [
-    { type: "Hospitality", icon: hospitalMarker },
+    { type: "Hospitality", icon: bedOutline },
     { type: "Meals", icon: silverwareVariant },
     { type: "Activities", icon: medalOutline },
     { type: "Transfers", icon: bus },
@@ -98,8 +107,8 @@ const Budget = (props, ref) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {budgetRows.map((row) => (
-            <Row key={row.event} row={row} />
+          {budgetRows?.map((row) => (
+            <Row key={row.event} row={row} handleClick={handleClick} />
           ))}
           <TableRow>
             <TableCell colSpan={4} />
@@ -108,7 +117,8 @@ const Budget = (props, ref) => {
             </TableCell>
             <TableCell>
               <strong>
-                {accounting.formatMoney(getTotal(budgetRows), "€")}
+                {budgetRows.length &&
+                  accounting.formatMoney(getTotal(budgetRows), "€")}
               </strong>
             </TableCell>
           </TableRow>

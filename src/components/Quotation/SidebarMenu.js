@@ -65,7 +65,7 @@ export default function MultiSelectTreeView() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
+    width: "fit-content",
     maxWidth: 360,
     marginLeft: theme.spacing(2),
 

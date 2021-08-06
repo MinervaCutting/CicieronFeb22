@@ -1,24 +1,29 @@
 import { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Collapse from "@material-ui/core/Collapse";
-import IconButton from "@material-ui/core/IconButton";
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import {
+  makeStyles,
+  IconButton,
+  Box,
+  Collapse,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableRow,
 } from "@material-ui/core";
+
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import HighlightOffTwoToneIcon from "@material-ui/icons/HighlightOffTwoTone";
+
 import accounting from "accounting";
+
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
 import HotelChoice from "./HotelChoice";
 import MultipleChoice from "./MultipleChoice";
 import SingleChoice from "./SingleChoice";
 
 export default function Row({
+  handleClick,
   row: {
     event,
     selected,
@@ -27,6 +32,7 @@ export default function Row({
 }) {
   const [open, setOpen] = useState(true);
   const classes = useRowStyles();
+
   return (
     <>
       <TableRow className={classes.root}>
@@ -62,6 +68,11 @@ export default function Row({
           {cat !== "hospitality"
             ? accounting.formatMoney(pax * unitcost, "€")
             : accounting.formatMoney(getHotelTotal(selected), "€")}
+        </TableCell>
+        <TableCell>
+          <IconButton onClick={(e) => handleClick(e, event)}>
+            <HighlightOffTwoToneIcon className={classes.delete} />
+          </IconButton>
         </TableCell>
       </TableRow>
       {/* breakdown starts here  */}
@@ -123,6 +134,14 @@ const useRowStyles = makeStyles({
   root: {
     "& > *": {
       borderBottom: "unset",
+    },
+  },
+  delete: {
+    cursor: "pointer",
+    opacity: 0.8,
+    "&:hover": {
+      color: "#ea5933",
+      opacity: 1,
     },
   },
 });

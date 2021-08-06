@@ -21,19 +21,23 @@ export const getHospitalityTotal = (cost, itemType) => {
   const hospCost = cost.map(
     ({ selected }) => selected.type === itemType && getHotelTotal(selected)
   );
-
-  const reducer = (acc, currentValue) => acc + currentValue;
-  return accounting.formatMoney(hospCost.reduce(reducer), "€", 0);
+  return accounting.formatMoney(
+    hospCost.reduce((acc, currentValue) => acc + currentValue, 0),
+    "€",
+    0
+  );
 };
 
 export const getSubTotal = (cost, itemType) => {
   const subTotalAmount = cost
     .map(
       ({ selected }) =>
-        selected.type === itemType && selected.pax * selected.unitcost
+        selected.type === itemType &&
+        cost.length &&
+        selected.pax * selected.unitcost
     )
     .filter(Boolean)
-    .reduce((acc, currentValue) => acc + currentValue);
+    .reduce((acc, currentValue) => acc + currentValue, 0);
 
   return accounting.formatMoney(subTotalAmount, "€", 0);
 };
