@@ -65,6 +65,16 @@ function App() {
           },
         },
       },
+      MuiMenuItem: {
+        root: {
+          padding: "2rem",
+          "&&:hover": {
+            backgroundColor: "#ea5933",
+            opacity: 0.7,
+            color: "#fff",
+          },
+        },
+      },
     },
   });
   return (

@@ -13,8 +13,6 @@ import {
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import HighlightOffTwoToneIcon from "@material-ui/icons/HighlightOffTwoTone";
-
 import accounting from "accounting";
 
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
@@ -23,8 +21,6 @@ import MultipleChoice from "./MultipleChoice";
 import SingleChoice from "./SingleChoice";
 
 export default function Row({
-  handleClick,
-  row,
   row: {
     event,
     selected,
@@ -33,7 +29,7 @@ export default function Row({
 }) {
   const [open, setOpen] = useState(true);
   const classes = useRowStyles();
-  console.log("row-to-delete=>", row);
+
   return (
     <>
       <TableRow className={classes.root}>
@@ -69,11 +65,6 @@ export default function Row({
           {cat !== "hospitality"
             ? accounting.formatMoney(pax * unitcost, "€")
             : accounting.formatMoney(getHotelTotal(selected), "€")}
-        </TableCell>
-        <TableCell>
-          <IconButton onClick={(e) => handleClick(event)}>
-            <HighlightOffTwoToneIcon className={classes.delete} />
-          </IconButton>
         </TableCell>
       </TableRow>
       {/* breakdown starts here  */}

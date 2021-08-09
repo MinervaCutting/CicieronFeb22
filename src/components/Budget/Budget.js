@@ -43,9 +43,8 @@ const Budget = (props, ref) => {
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
   const activity1 = useSelector(selectActivity1);
-  const [rowToDelete, setRowToDelete] = useState(null);
 
-  const initialRows = [
+  const budgetRows = [
     { event: "accommodation", selected: hotel },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
     { event: "activity1", selected: activity1 },
@@ -77,13 +76,6 @@ const Budget = (props, ref) => {
     { event: "Transfer to Airport", selected: airport29dep },
   ];
 
-  const [budgetRows, setBudgetRows] = useState(initialRows);
-
-  const handleClick = (rowToDelete) => {
-    setRowToDelete(rowToDelete);
-    setBudgetRows(budgetRows?.filter((item) => item.event !== rowToDelete));
-  };
-
   const typesArr = [
     { type: "Hospitality", icon: bedOutline },
     { type: "Meals", icon: silverwareVariant },
@@ -111,7 +103,7 @@ const Budget = (props, ref) => {
         </TableHead>
         <TableBody>
           {budgetRows?.map((row) => (
-            <Row key={row.event} row={row} handleClick={handleClick} />
+            <Row key={row.event} row={row} />
           ))}
           <TableRow>
             <TableCell colSpan={4} />

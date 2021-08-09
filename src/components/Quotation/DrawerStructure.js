@@ -9,7 +9,6 @@ import {
   Hidden,
   IconButton,
   Switch,
-  Typography,
   makeStyles,
   useTheme,
 } from "@material-ui/core";
@@ -22,6 +21,7 @@ import WbSunnyTwoToneIcon from "@material-ui/icons/WbSunnyTwoTone";
 import Brightness2TwoToneIcon from "@material-ui/icons/Brightness2TwoTone";
 import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
+import AboutRFP from "./header/AboutRFP";
 
 const drawerWidth = 240;
 
@@ -78,20 +78,7 @@ export default function DrawerStructure(props) {
                 className={classes.logo}
               />
             </a>
-
-            <ul className={classes.header_list}>
-              <li>
-                <Typography
-                  variant='h5'
-                  color={`${darkMode ? "#fff" : "#000"}`}
-                >
-                  Quotation prepared for Pavla Lukásová at ASIANA, spol s.r.o
-                </Typography>
-              </li>
-              {/* <li>
-                <Typography variant='h5'>Credentials</Typography>
-              </li> */}
-            </ul>
+            <AboutRFP />
             <Switch
               checked={darkMode}
               checkedIcon={<WbSunnyTwoToneIcon />}
@@ -151,6 +138,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
+    height: "5rem",
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -185,13 +173,6 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-  },
-  header_list: {
-    "& li h5": {
-      [theme.breakpoints.down("md")]: {
-        fontSize: "1rem",
-      },
-    },
   },
   logo: {
     width: "10rem",
