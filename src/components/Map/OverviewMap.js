@@ -1,5 +1,4 @@
 import GoogleMapReact from "google-map-react";
-import { makeStyles } from "@material-ui/core";
 import LocationMarker from "./LocationMarker";
 import hospitalMarker from "@iconify-icons/mdi/hospital-marker";
 import silverwareVariant from "@iconify-icons/mdi/silverware-variant";
@@ -7,7 +6,7 @@ import medalOutline from "@iconify-icons/mdi/medal-outline";
 import { useState } from "react";
 import LocationInfoBox from "./LocationInfoBox";
 
-const markersArray = [
+const optionsArray = [
   {
     text: "Hotel NN Jazz",
     coords: [2.1657768, 41.3860573],
@@ -42,16 +41,41 @@ const markersArray = [
 
 export default function OverviewMap({ center, zoom }) {
   const [locationInfo, setLocationInfo] = useState(null);
-  const classes = useStyles();
+
+  const handleAPILoaded = (map, maps) => {
+    const MontblancDir = new maps.LatLng(41.3876803, 2.1733479);
+    const ElArenal = new maps.LatLng(41.3848301, 2.1958216);
+    const DirectionsRequest = {
+      origin: MontblancDir,
+      destination: ElArenal,
+      provideRouteAlternatives: false,
+      travelMode: "DRIVING",
+      drivingOptions: {
+        departureTime: new Date(/* now, or future date */),
+        trafficModel: "pessimistic",
+      },
+      unitSystem: maps.UnitSystem.METRIC,
+    };
+    const directionsService = new maps.DirectionsService();
+    const directionsRenderer = new maps.DirectionsRenderer();
+    directionsService.route(DirectionsRequest, (response, status) => {
+      if (status == "OK") {
+        directionsRenderer.setDirections(response);
+      }
+    });
+    directionsRenderer.setMap(map);
+  };
 
   return (
-    <div className={classes.map}>
+    <div style={{ width: "100%", height: "800px", position: "relative" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCfSR8KYZbIyX5FwhTRN6sc6sMsBBfzHGA" }}
+        yesIWantToUseGoogleMapApiInternals
         defaultCenter={center}
         defaultZoom={zoom}
+        onGoogleApiLoaded={({ map, maps }) => handleAPILoaded(map, maps)}
       >
-        {markersArray.map((marker, i) => (
+        {optionsArray.map((marker, i) => (
           <LocationMarker
             key={i}
             lat={marker.coords[1]}
@@ -75,11 +99,3 @@ OverviewMap.defaultProps = {
   },
   zoom: 14,
 };
-
-const useStyles = makeStyles((theme) => ({
-  map: {
-    width: "100%",
-    height: "800px",
-    position: "relative",
-  },
-}));
