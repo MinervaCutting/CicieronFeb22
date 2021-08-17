@@ -1,65 +1,100 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import {
+  makeStyles,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Box,
+} from "@material-ui/core";
 import TreeView from "@material-ui/lab/TreeView";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import LocationOnTwoToneIcon from "@material-ui/icons/LocationOnTwoTone";
+import SentimentSatisfiedTwoToneIcon from "@material-ui/icons/SentimentSatisfiedTwoTone";
+import CreateTwoToneIcon from "@material-ui/icons/CreateTwoTone";
 import TreeItem from "@material-ui/lab/TreeItem";
 import { toc } from "../../data/table_of_contents";
 import { Link } from "react-scroll";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SET_TABOPTION } from "../../features/TabOptionSlice";
+import { selectBody, SET_BODY } from "../../features/BodySlice";
 
 export default function MultiSelectTreeView() {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const body = useSelector(selectBody);
   return (
-    <TreeView
-      className={classes.root}
-      defaultCollapseIcon={<ExpandMoreIcon />}
-      defaultExpandIcon={<ChevronRightIcon />}
-      multiSelect
-    >
-      {toc.map((item) => (
-        <Link
-          to={item.id}
-          spy={true}
-          smooth={true}
-          activeClass='active'
-          duration={500}
-          offset={-70}
-        >
-          <TreeItem key={item.id} nodeId={item.id} label={item.title}>
-            {item.options?.map((option) => (
+    <Box className={classes.root}>
+      <List component='nav'>
+        <ListItem button onClick={(e) => dispatch(SET_BODY("destination"))}>
+          <ListItemIcon>
+            <LocationOnTwoToneIcon />
+          </ListItemIcon>
+          <ListItemText primary='Destination' />
+        </ListItem>
+        <ListItem button onClick={(e) => dispatch(SET_BODY("quotation"))}>
+          <ListItemIcon>
+            <CreateTwoToneIcon />
+          </ListItemIcon>
+          <ListItemText primary='Quotation' />
+        </ListItem>
+        {body === "quotation" && (
+          <TreeView
+            defaultCollapseIcon={<ExpandMoreIcon />}
+            defaultExpandIcon={<ChevronRightIcon />}
+            multiSelect
+          >
+            {toc.map((item) => (
               <Link
-                to={option.id}
+                to={item.id}
                 spy={true}
                 smooth={true}
                 activeClass='active'
                 duration={500}
                 offset={-70}
               >
-                <TreeItem
-                  key={option.id}
-                  nodeId={option.id}
-                  label={option.service}
-                >
-                  {option.choices?.map((choice) => (
-                    <TreeItem
-                      key={choice.id}
-                      nodeId={choice.id}
-                      label={choice.service}
-                      onClick={(e) =>
-                        dispatch(SET_TABOPTION(choice.tabPosition))
-                      }
-                    />
+                <TreeItem key={item.id} nodeId={item.id} label={item.title}>
+                  {item.options?.map((option) => (
+                    <Link
+                      to={option.id}
+                      spy={true}
+                      smooth={true}
+                      activeClass='active'
+                      duration={500}
+                      offset={-70}
+                    >
+                      <TreeItem
+                        key={option.id}
+                        nodeId={option.id}
+                        label={option.service}
+                      >
+                        {option.choices?.map((choice) => (
+                          <TreeItem
+                            key={choice.id}
+                            nodeId={choice.id}
+                            label={choice.service}
+                            onClick={(e) =>
+                              dispatch(SET_TABOPTION(choice.tabPosition))
+                            }
+                          />
+                        ))}
+                      </TreeItem>
+                    </Link>
                   ))}
                 </TreeItem>
               </Link>
             ))}
-          </TreeItem>
-        </Link>
-      ))}
-    </TreeView>
+          </TreeView>
+        )}
+        <ListItem button onClick={(e) => dispatch(SET_BODY("credentials"))}>
+          <ListItemIcon>
+            <SentimentSatisfiedTwoToneIcon />
+          </ListItemIcon>
+          <ListItemText primary='Our Clients' />
+        </ListItem>
+      </List>
+    </Box>
   );
 }
 

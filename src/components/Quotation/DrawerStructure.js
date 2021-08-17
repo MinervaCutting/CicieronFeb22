@@ -23,6 +23,9 @@ import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
 import AboutRFP from "./header/AboutRFP";
 import ScrollToTop from "react-scroll-to-top";
+import Destination from "../Destination/Destination";
+import { selectBody } from "../../features/BodySlice";
+import Credentials from "../Credentials/Credentials";
 
 const drawerWidth = 240;
 
@@ -47,6 +50,7 @@ export default function DrawerStructure(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const dispatch = useDispatch();
+  const body = useSelector(selectBody);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -84,13 +88,15 @@ export default function DrawerStructure(props) {
                 className={classes.logo}
               />
             </a>
-            <AboutRFP />
-            <Switch
-              checked={darkMode}
-              checkedIcon={<WbSunnyTwoToneIcon />}
-              icon={<Brightness2TwoToneIcon />}
-              onChange={toggleDarkMode}
-            />
+            <div>
+              <AboutRFP />
+              <Switch
+                checked={darkMode}
+                checkedIcon={<WbSunnyTwoToneIcon />}
+                icon={<Brightness2TwoToneIcon />}
+                onChange={toggleDarkMode}
+              />
+            </div>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -125,9 +131,16 @@ export default function DrawerStructure(props) {
           </Drawer>
         </Hidden>
       </nav>
+
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <AppBody />
+        {body === "destination" ? (
+          <Destination />
+        ) : body === "quotation" ? (
+          <AppBody />
+        ) : (
+          <Credentials />
+        )}
       </main>
     </div>
   );
@@ -159,7 +172,6 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   toolbar: {
     ...theme.mixins.toolbar,
-
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -178,7 +190,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(3, 1, 1, 1),
   },
   logo: {
     width: "10rem",

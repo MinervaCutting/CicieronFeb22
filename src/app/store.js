@@ -4,6 +4,7 @@ import restaurantReducer from "../features/RestaurantSlice";
 import darkModeReducer from "../features/DarkModeSlice";
 import tabOptionReducer from "../features/TabOptionSlice";
 import activityReducer from "../features/ActivitySlice";
+import bodyReducer from "../features/BodySlice";
 
 export default configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export default configureStore({
     restaurant: restaurantReducer,
     activity: activityReducer,
     tabOption: tabOptionReducer,
+    body: bodyReducer,
   },
 });

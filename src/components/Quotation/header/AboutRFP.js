@@ -1,66 +1,38 @@
 import { useState } from "react";
-import {
-  Button,
-  makeStyles,
-  Menu,
-  MenuItem,
-  Typography,
-} from "@material-ui/core";
-import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
-import SentimentSatisfiedTwoToneIcon from "@material-ui/icons/SentimentSatisfiedTwoTone";
+import { Avatar, Button, Snackbar } from "@material-ui/core";
+import parse from "html-react-parser";
+
+const message = `Hey, I'm <strong>Montse Miranda</strong>,\ 
+and I will be your account manager for this beautiful project !!!`;
 
 export default function AboutRFP() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = useState(null);
-  const handleClick = (e) => {
-    setAnchorEl(e.currentTarget);
+  const [state, setState] = useState({
+    open: false,
+    vertical: "top",
+    horizontal: "center",
+  });
+  const { vertical, horizontal, open } = state;
+
+  const handleClick = () => {
+    setState({ ...state, open: true });
   };
+
   const handleClose = () => {
-    setAnchorEl(null);
+    setState({ ...state, open: false });
   };
+
   return (
     <>
       <Button onMouseOver={handleClick}>
-        <Typography variant='h5'>About your RFP</Typography>
+        <Avatar />
       </Button>
-      <Menu
-        id='simple-menu'
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={open}
         onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose} className={classes.about}>
-          <Typography variant='h6'>
-            <em>
-              Quotation written for <strong>Pavla Szencei at ASIANA srl</strong>{" "}
-              - group <strong>Generali</strong>
-            </em>
-          </Typography>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <span>
-            <RoomTwoToneIcon fontSize='large' />
-          </span>
-          {"  "}
-          <Typography variant='h6'>Destination</Typography>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <span>
-            <SentimentSatisfiedTwoToneIcon fontSize='large' />
-          </span>
-          {"  "}
-          <Typography variant='h6'>Credentials</Typography>
-        </MenuItem>
-      </Menu>
+        message={parse(message)}
+        key={vertical + horizontal}
+      />
     </>
   );
 }
-
-const useStyles = makeStyles((theme) => ({
-  about: {
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-}));
