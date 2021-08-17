@@ -22,6 +22,7 @@ import Brightness2TwoToneIcon from "@material-ui/icons/Brightness2TwoTone";
 import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
 import AboutRFP from "./header/AboutRFP";
+import ScrollToTop from "react-scroll-to-top";
 
 const drawerWidth = 240;
 
@@ -58,6 +59,7 @@ export default function DrawerStructure(props) {
   };
   return (
     <div className={classes.root}>
+      <ScrollToTop smooth />
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar className={classes.appBar}>
