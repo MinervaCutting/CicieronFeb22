@@ -59,7 +59,7 @@ export default function OverviewMap({ center, zoom }) {
     const directionsService = new maps.DirectionsService();
     const directionsRenderer = new maps.DirectionsRenderer();
     directionsService.route(DirectionsRequest, (response, status) => {
-      if (status == "OK") {
+      if (status === "OK") {
         directionsRenderer.setDirections(response);
       }
     });

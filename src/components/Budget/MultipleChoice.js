@@ -9,18 +9,7 @@ import {
   Fade,
 } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  cangrejoloco,
-  casacarmen,
-  fitora,
-  vinotecatorres,
-  julivertmeu,
-  flamant,
-  nuria,
-  elglop,
-  monchos,
-  mana75,
-} from "../../data/restaurants";
+import { nuria, elglop, monchos, mana75 } from "../../data/restaurants";
 import {
   SET_DAY1DINNER,
   SET_DAY2DINNER,
@@ -74,8 +63,6 @@ export default function MultipleChoice({ event }) {
         return null;
     }
   };
-
-  let dispatchAction = whichDispatch(event);
 
   const handleChange = (e) => {
     const chosenEvent = (items) => {

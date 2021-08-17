@@ -1,9 +1,16 @@
 import { useState } from "react";
-import { Button, Menu, MenuItem, Typography } from "@material-ui/core";
+import {
+  Button,
+  makeStyles,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@material-ui/core";
 import RoomTwoToneIcon from "@material-ui/icons/RoomTwoTone";
 import SentimentSatisfiedTwoToneIcon from "@material-ui/icons/SentimentSatisfiedTwoTone";
 
 export default function AboutRFP() {
+  const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -23,7 +30,7 @@ export default function AboutRFP() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose} className={classes.about}>
           <Typography variant='h6'>
             <em>
               Quotation written for <strong>Pavla Szencei at ASIANA srl</strong>{" "}
@@ -49,3 +56,11 @@ export default function AboutRFP() {
     </>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  about: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+}));

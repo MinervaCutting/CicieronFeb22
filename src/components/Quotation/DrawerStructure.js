@@ -71,7 +71,11 @@ export default function DrawerStructure(props) {
             >
               <MenuIcon />
             </IconButton>
-            <a target='_blank' href='https://www.cuttingedge-events.com'>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.cuttingedge-events.com'
+            >
               <img
                 src={`${darkMode ? darkLogo : lightLogo}`}
                 alt='logo'

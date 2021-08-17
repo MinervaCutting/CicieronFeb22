@@ -33,7 +33,7 @@ export default function Camiral() {
       <div className={classes.text}>
         <Typography variant='h6' component='h6' paragraph>
           The resort is a contemporary 5-star hotel, part of the PGA Golf Club
-          complex. The complex is located inland on the{" "}
+          complex. The complex is located inland on the
           <strong>Costa Brava</strong> region, surrounded by nature, and around
           20 mins drive to the actual coastline. It takes around 1h 15mins by
           bus from <em>BCN airport</em> to the resort. The facilities boast two
@@ -57,7 +57,7 @@ export default function Camiral() {
           Other facilities include <strong>1477</strong> - a fine dining
           restaurant with "al fresco" terrace, <strong>The Club Café</strong> -
           a Clublhouse Bistro for a more informal dining option, the Lounge Bar
-          and the Pool bar. If that's your thing, the <em>Wellness centre</em>{" "}
+          and the Pool bar. If that's your thing, the <em>Wellness centre</em>
           is just one of a kind.
         </Typography>
         <Typography variant='h6' component='h6' paragraph>
