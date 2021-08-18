@@ -1,11 +1,11 @@
 export const toc = [
   {
-    id: "overview",
-    title: "Programme Overview",
+    id: "accommodation",
+    title: "Accommodation",
     options: [
       {
-        id: "accommodation",
-        service: "Accommodation",
+        id: "hotels",
+        service: "Hotel Alternatives",
         choices: [
           {
             id: "acc0",

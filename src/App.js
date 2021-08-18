@@ -29,7 +29,9 @@ function App() {
     },
     overrides: {
       MuiListItemText: {
-        dense: {
+        primary: {
+          fontSize: 18,
+          cursor: "pointer",
           color: "#ea5933",
           "&:hover": {
             backgroundColor: "#ea5933",

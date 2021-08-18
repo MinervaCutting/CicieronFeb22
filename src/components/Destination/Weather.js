@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     top: 10,
     right: 10,
+    border: "1px solid #ae5933",
+    padding: theme.spacing(2),
+    borderRadius: "10px",
   },
   degrees: {
     display: "flex",
