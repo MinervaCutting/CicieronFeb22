@@ -4,6 +4,30 @@ import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
 import HotelIcons from "../../utils/HotelIcons";
 import { useStyles } from "../vendorStyles/styles";
+import Paragraph from "../../utils/Paragraph";
+
+const text = {
+  variant: "h6",
+  paras: [
+    `  The <strong>HCC Montblanc</strong> is a 3-star hotel which could well
+    be classified as a 4-star. The location is unbeatable in Via Laietana,
+    right in the Gothic district, and close to Plaça Catalunya and metro
+    lines.`,
+
+    ` Although located in a buzzing street, all 157 rooms are sound proof,
+    the building is new and all rooms are modern and well appointed.
+    Double Rooms for single or double use are in average 23sqm. Some rooms
+    include 10sqm terraces`,
+
+    ` The property also offers a Restaurant, a Bar/lounge to relax and an a
+    spacious outdoor pool.`,
+
+    `   The property is following the strictest of <strong>COVID</strong>
+    protocols, including all linens sanitized in high-temperature wash,
+    floors marked for social distancing, hand sanitizers available
+    everywhere, and regularly sanitized high-traffic areas.`,
+  ],
+};
 
 const leftIconsText = [
   "Gothic Quarter",
@@ -33,28 +57,7 @@ export default function Montblanc() {
         </Typography> */}
       </div>
       <div className={classes.text}>
-        <Typography variant='h6' component='h6' paragraph>
-          The <strong>HCC Montblanc</strong> is a 3-star hotel which could well
-          be classified as a 4-star. The location is unbeatable in Via Laietana,
-          right in the Gothic district, and close to Plaça Catalunya and metro
-          lines.
-        </Typography>
-        <Typography variant='h6' component='h6' paragraph>
-          Although located in a buzzing street, all 157 rooms are sound proof,
-          the building is new and all rooms are modern and well appointed.
-          Double Rooms for single or double use are in average 23sqm. Some rooms
-          include 10sqm terraces
-        </Typography>
-        <Typography variant='h6' component='h6' paragraph>
-          The property also offers a Restaurant, a Bar/lounge to relax and an a
-          spacious outdoor pool.
-        </Typography>
-        <Typography variant='h6' component='h6' paragraph>
-          The property is following the strictest of <strong>COVID</strong>{" "}
-          protocols, including all linens sanitized in high-temperature wash,
-          floors marked for social distancing, hand sanitizers available
-          everywhere, and regularly sanitized high-traffic areas.
-        </Typography>
+        <Paragraph variant={text.variant} paras={text.paras} />
       </div>
       <Gallery images={photos} />
       <HotelIcons

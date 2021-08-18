@@ -4,6 +4,23 @@ import { photos } from "./photos";
 import Gallery from "react-grid-gallery";
 import HotelIcons from "../../utils/HotelIcons";
 import { useStyles } from "../vendorStyles/styles";
+import Paragraph from "../../utils/Paragraph";
+
+const text = {
+  variant: "h6",
+  paras: [
+    `    The <strong>Hotel La Pedrera</strong> occupies a prime location on the
+    modernist route, close to <strong>Sagrada Familia</strong> and the
+    famous <em>Passeig de Gràcia</em>`,
+
+    `<strong>La Pedrera</strong> is a small/medium sized hotel, with 79
+    rooms -broken down into double rooms, premium, superior, superior with
+    terrace and junior suites.`,
+
+    ` Other facilities include Free-wifi, a Bar a snack Bar, a Swiming Pool
+    and a restaurant`,
+  ],
+};
 
 const leftIconsText = [
   "Close to Sagrada Familia",
@@ -33,20 +50,7 @@ export default function LaPedrera() {
         </Typography> */}
       </div>
       <div className={classes.text}>
-        <Typography variant='h6' component='h6' paragraph>
-          The <strong>Hotel La Pedrera</strong> occupies a prime location on the
-          modernist route, close to <strong>Sagrada Familia</strong> and the
-          famous <em>Passeig de Gràcia</em>
-        </Typography>
-        <Typography variant='h6' component='h6' paragraph>
-          <strong>La Pedrera</strong> is a small/medium sized hotel, with 79
-          rooms -broken down into double rooms, premium, superior, superior with
-          terrace and junior suites.
-        </Typography>
-        <Typography variant='h6' component='h6' paragraph>
-          Other facilities include Free-wifi, a Bar a snack Bar, a Swiming Pool
-          and a restaurant
-        </Typography>
+        <Paragraph variant={text.variant} paras={text.paras} />
       </div>
       <Gallery images={photos} />
       <HotelIcons

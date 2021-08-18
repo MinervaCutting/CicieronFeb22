@@ -1,5 +1,7 @@
+import Weather from "../Credentials/Weather";
+
 const Destination = () => {
-  return <h1>This is the destination</h1>;
+  return <Weather />;
 };
 
 export default Destination;
