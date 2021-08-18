@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Avatar, Button, Snackbar } from "@material-ui/core";
 import parse from "html-react-parser";
 
-const message = `Hey, I'm <strong>Montse Miranda</strong>,\ 
+const message = `Hey, I'm <strong>Montse Miranda</strong>,
 and I will be your account manager for this beautiful project !!!`;
 
 export default function AboutRFP() {

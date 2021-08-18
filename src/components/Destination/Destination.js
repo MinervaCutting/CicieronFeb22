@@ -1,4 +1,4 @@
-import Weather from "../Credentials/Weather";
+import Weather from "./Weather";
 
 const Destination = () => {
   return <Weather />;

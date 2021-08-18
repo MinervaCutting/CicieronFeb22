@@ -53,8 +53,9 @@ export default function MultiSelectTreeView() {
                 activeClass='active'
                 duration={500}
                 offset={-70}
+                key={item.id}
               >
-                <TreeItem key={item.id} nodeId={item.id} label={item.title}>
+                <TreeItem nodeId={item.id} label={item.title}>
                   {item.options?.map((option) => (
                     <Link
                       to={option.id}
@@ -63,12 +64,9 @@ export default function MultiSelectTreeView() {
                       activeClass='active'
                       duration={500}
                       offset={-70}
+                      key={option.id}
                     >
-                      <TreeItem
-                        key={option.id}
-                        nodeId={option.id}
-                        label={option.service}
-                      >
+                      <TreeItem nodeId={option.id} label={option.service}>
                         {option.choices?.map((choice) => (
                           <TreeItem
                             key={choice.id}
