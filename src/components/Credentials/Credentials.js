@@ -1,16 +1,19 @@
 import {
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
+  Paper,
+  Box,
+  ButtonGroup,
   makeStyles,
+  Typography,
 } from "@material-ui/core";
 import parse from "html-react-parser";
 import Paragraph from "../../utils/Paragraph";
-import ArrowRightAltTwoToneIcon from "@material-ui/icons/ArrowRightAltTwoTone";
 import infographic from "../../assets/infographic.jpeg";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import "./styles.css";
+import ArrowRightAltTwoToneIcon from "@material-ui/icons/ArrowRightAltTwoTone";
 
-const textLeft = {
+const textUpper = {
   variant: "h6",
   paras: [
     ` <strong> Cutting Edge Events</strong> offers a fresh approach to the world of [Meetings & Events]. As the name of the company suggests, we are on top of the latest technologies, and apply them every day to stay on top of the game.`,
@@ -37,7 +40,7 @@ const listItems = [
   `,
 ];
 
-const textRight = {
+const textLower = {
   variant: "h6",
   paras: [
     ` You can find plenty of references within our Curriculum, but here’s what some of our latest clients had to say about our work - (<em>all groups had above 70pax attendance</em>):`,
@@ -61,70 +64,132 @@ const recommendations = {
   ],
 };
 
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1619 },
+    items: 3,
+  },
+  laptop: {
+    breakpoint: { max: 1619, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 640 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 639, min: 0 },
+    items: 1,
+  },
+};
+
+const carouselParams = {
+  additionalTransfrom: 0,
+  arrows: false,
+  autoPlaySpeed: 3000,
+  centerMode: false,
+  className: "",
+  containerClass: "carousel-container",
+  customButtonGroup: <ButtonGroup />,
+  dotListClass: "",
+  draggable: true,
+  focusOnSelect: false,
+  infinite: true,
+  itemClass: "carousel-item",
+  keyBoardControl: true,
+  minimumTouchDrag: 80,
+  renderButtonGroupOutside: true,
+  renderDotsOutside: false,
+  responsive: responsive,
+  showDots: true,
+  sliderClass: "",
+  slidesToSlide: 1,
+};
+
 const Credentials = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <div className={classes.textColumns}>
-        <div className={classes.left}>
-          <Paragraph variant={textLeft.variant} paras={textLeft.paras} />
-          <List>
-            {listItems.map((item, i) => (
-              <ListItem key={i}>
-                <ListItemIcon>
-                  <ArrowRightAltTwoToneIcon />
-                </ListItemIcon>
-                <ListItemText
-                  primary={parse(item)}
-                  className={classes.item_text}
-                />
-              </ListItem>
-            ))}
-          </List>
-        </div>
-        <div className={classes.right}>
-          <Paragraph variant={textRight.variant} paras={textRight.paras} />
-          {recommendations.paras.map((recommendation, i) => (
-            <div className={classes.recommendation} key={i}>
-              {parse(recommendation)}
-            </div>
+    <Paper elevation={2} className={classes.bodyContainer}>
+      <div className={classes.text_bullets}>
+        <Paragraph variant={textUpper.variant} paras={textUpper.paras} />
+        <Carousel {...carouselParams}>
+          {listItems.map((item, i) => (
+            <Box key={i}>
+              <Typography variant='h5'>
+                <span>
+                  <ArrowRightAltTwoToneIcon
+                    color='primary'
+                    fontSize='large'
+                    className={classes.icon}
+                  />
+                </span>
+                {parse(item)}
+              </Typography>
+            </Box>
           ))}
-        </div>
+        </Carousel>
+      </div>
+      <div className={classes.lower}>
+        <Paragraph variant={textLower.variant} paras={textLower.paras} />
+        {recommendations.paras.map((recommendation, i) => (
+          <div className={classes.recommendation} key={i}>
+            <Typography variant='h6'> {parse(recommendation)}</Typography>
+          </div>
+        ))}
       </div>
       <div>
         <img src={infographic} alt='infographic' />
       </div>
-    </div>
+    </Paper>
   );
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    height: "fit-content",
+  bodyContainer: {
+    margin: theme.spacing(1),
+    padding: theme.spacing(3),
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
-  },
-  textColumns: {
-    display: "flex",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
+    width: "100%",
+    "& h6": {
+      textIndent: "2rem",
     },
   },
-  left: {
+  text_bullets: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  lower: {
     padding: theme.spacing(4),
     flex: 0.5,
   },
-  right: {
-    padding: theme.spacing(4),
-    flex: 0.5,
+  icon: {
+    fontSize: 40,
   },
   recommendation: {
-    border: "1px solid #ea5933",
-    margin: theme.spacing(3),
-    padding: theme.spacing(3),
-    fontSize: 22,
+    borderRight: "5px solid #ea5933",
+    borderBottom: "1px solid #ea5933",
+    borderRadius: "1rem",
+    cursor: "grab",
+    margin: theme.spacing(2),
+    padding: theme.spacing(5),
+
+    "& h6": {
+      fontSize: 22,
+      transition: "scale 2s",
+      transitionTimingFunction: "ease-in-out",
+    },
+    "&:hover": {
+      borderBottom: "1px solid #000",
+      borderRight: "5px solid #000",
+      backgroundColor: "#ea5933",
+    },
+    "& h6:hover": {
+      transform: "scale(1.05)",
+      color: "#fff",
+    },
   },
 }));
 

@@ -200,9 +200,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    margin: "auto",
     width: "100%",
-    "& h6": {
-      textIndent: "2rem",
-    },
   },
 }));
