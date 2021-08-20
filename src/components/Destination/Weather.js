@@ -47,16 +47,12 @@ const Weather = () => {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    position: "relative",
     padding: theme.spacing(3),
   },
   weather: {
-    position: "absolute",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    top: 10,
-    right: 10,
     border: "1px solid #ae5933",
     padding: theme.spacing(2),
     borderRadius: "10px",

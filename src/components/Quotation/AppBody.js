@@ -195,7 +195,6 @@ export default function AppBody() {
 
 const useStyles = makeStyles((theme) => ({
   bodyContainer: {
-    margin: theme.spacing(1),
     padding: theme.spacing(1),
     display: "flex",
     flexDirection: "column",
