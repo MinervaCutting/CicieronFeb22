@@ -35,11 +35,7 @@ export default function Row({
       <TableRow className={classes.root}>
         {cat === "hospitality" ? (
           <TableCell>
-            <IconButton
-              aria-label='expand row'
-              size='small'
-              onClick={() => setOpen(!open)}
-            >
+            <IconButton size='small' onClick={() => setOpen(!open)}>
               {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
             </IconButton>
           </TableCell>

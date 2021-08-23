@@ -8,6 +8,71 @@ import hotel7 from "./hotel7.jpg";
 import hotel8 from "./hotel8.jpg";
 import hotel9 from "./hotel9.jpg";
 
+export const bcnmontblanc = {
+  id: "hotelbcn_catalonia_montblanc",
+  cat: "hospitality",
+  type: "Hospitality",
+  title: "Hotel HCC Montblanc",
+  rooms: [
+    {
+      title: "Double room for ind Use, incl breakfast",
+      units: 2,
+      occupancy: 1,
+      nights: 3,
+      unitcost: 137.5,
+    },
+    {
+      title: "Double room, for twin use, incl breakfast",
+      units: 7,
+      occupancy: 2,
+      nights: 3,
+      unitcost: 137.5,
+    },
+    {
+      cat: "citytax",
+      title: "city tax, per night per person, incl VAT",
+      unitcost: 1.54,
+    },
+  ],
+};
+
+export const text = {
+  variant: "h6",
+  paras: [
+    `  The <strong>HCC Montblanc</strong> is a 3-star hotel which could well
+    be classified as a 4-star. The location is unbeatable in Via Laietana,
+    right in the Gothic district, and close to Plaça Catalunya and metro
+    lines.`,
+
+    ` Although located in a buzzing street, all 157 rooms are sound proof,
+    the building is new and all rooms are modern and well appointed.
+    Double Rooms for single or double use are in average 23sqm. Some rooms
+    include 10sqm terraces`,
+
+    ` The property also offers a Restaurant, a Bar/lounge to relax and an a
+    spacious outdoor pool.`,
+
+    `   The property is following the strictest of <strong>COVID</strong>
+    protocols, including all linens sanitized in high-temperature wash,
+    floors marked for social distancing, hand sanitizers available
+    everywhere, and regularly sanitized high-traffic areas.`,
+  ],
+};
+
+export const leftIconsText = [
+  "Gothic Quarter",
+  "1x Restaurant 1 piano-Bar/Lounge",
+  "157rooms",
+  "High Speed, available",
+];
+
+export const rightIconsText = [
+  "1x outdoor pool",
+  "checkin/out 2pm / 12pm",
+  "2 x meeting rooms",
+  "Wheelchair accessible",
+];
+
 export const photos = [
   {
     src: hotel1,

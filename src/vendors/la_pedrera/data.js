@@ -8,6 +8,64 @@ import hotel7 from "./hotel7.jpg";
 import hotel8 from "./hotel8.jpg";
 import hotel9 from "./hotel9.jpg";
 
+export const bcnlapedrera = {
+  id: "hotelbcn_catalonia_lapedrera",
+  title: "Hotel Catalonia La Pedrera",
+  cat: "hospitality",
+  type: "Hospitality",
+  rooms: [
+    {
+      title: "Doble room for ind Use, incl breakfast",
+      units: 2,
+      occupancy: 1,
+      nights: 3,
+      unitcost: 125,
+    },
+    {
+      title: "Double room for twin use, incl breakfast",
+      units: 7,
+      occupancy: 2,
+      nights: 3,
+      unitcost: 145,
+    },
+    {
+      cat: "citytax",
+      title: "city tax, per night per person, incl VAT",
+      unitcost: 2.04,
+    },
+  ],
+};
+
+export const text = {
+  variant: "h6",
+  paras: [
+    `    The <strong>Hotel La Pedrera</strong> occupies a prime location on the
+    modernist route, close to <strong>Sagrada Familia</strong> and the
+    famous <em>Passeig de Gràcia</em>`,
+
+    `<strong>La Pedrera</strong> is a small/medium sized hotel, with 79
+    rooms -broken down into double rooms, premium, superior, superior with
+    terrace and junior suites.`,
+
+    ` Other facilities include Free-wifi, a Bar a snack Bar, a Swiming Pool
+    and a restaurant`,
+  ],
+};
+
+export const leftIconsText = [
+  "Close to Sagrada Familia",
+  "1 x Restaurant, 2 x bars",
+  "79 rooms",
+  "High Speed, available",
+];
+
+export const rightIconsText = [
+  "1x outdoor, 1x Spa center",
+  "checkin/out 3pm / 12pm",
+  "1 x meeting room for 60pax",
+  "Wheelchair accessible",
+];
+
 export const photos = [
   {
     src: hotel1,

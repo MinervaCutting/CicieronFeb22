@@ -84,12 +84,7 @@ const Budget = (props, ref) => {
 
   return (
     <div className={classes.root} ref={ref}>
-      <Table
-        aria-label='collapsible table'
-        stickyHeader
-        size='small'
-        id='budget'
-      >
+      <Table stickyHeader size='small' id='budget'>
         <TableHead>
           <TableRow>
             <TableCell width='5%' />

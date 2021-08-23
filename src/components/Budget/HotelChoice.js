@@ -1,9 +1,7 @@
 import { makeStyles, MenuItem, FormControl, Select } from "@material-ui/core";
-import { bcnjazz, bcnmontblanc, bcnlapedrera } from "../../data/hotels";
 import { useDispatch, useSelector } from "react-redux";
+import { hotelOptions } from "../../data/budget_selected_lines";
 import { selectHotel, SET_HOTEL } from "../../features/HotelSlice";
-
-const hotelOptions = [bcnjazz, bcnmontblanc, bcnlapedrera];
 
 export default function HotelChoice() {
   const classes = useStyles();

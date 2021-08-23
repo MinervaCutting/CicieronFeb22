@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { preferredHotel } from "../data/hotels";
+import { preferredHotel } from "../data/budget_selected_lines";
 
 export const hotelSlice = createSlice({
   name: "hotel",
@@ -13,7 +13,7 @@ export const hotelSlice = createSlice({
   },
 });
 
-export const { SET_HOTEL, DELETE_HOTEL } = hotelSlice.actions;
+export const { SET_HOTEL } = hotelSlice.actions;
 export const selectHotel = (state) => state.hotel.hotel;
 
 export default hotelSlice.reducer;

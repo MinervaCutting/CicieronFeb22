@@ -8,6 +8,62 @@ import hotel7 from "./hotel7.jpg";
 import hotel8 from "./hotel8.jpg";
 import hotel9 from "./hotel9.jpg";
 
+export const bcnjazz = {
+  id: "hotelbcn_jazz",
+  title: "Hotel Jazz",
+  cat: "hospitality",
+  type: "Hospitality",
+  rooms: [
+    {
+      title: "Doble room for ind Use, incl breakfast",
+      units: 2,
+      occupancy: 1,
+      nights: 3,
+      unitcost: 130,
+    },
+    {
+      title: "Double room for twin use, incl breakfast",
+      units: 7,
+      occupancy: 2,
+      nights: 3,
+      unitcost: 140,
+    },
+    {
+      cat: "citytax",
+      title: "city tax, per night per person, incl VAT",
+      unitcost: 1.54,
+    },
+  ],
+};
+
+export const text = {
+  variant: "h6",
+  paras: [
+    `  The <strong>Hotel Jazz</strong> is one of our 3star superior
+    favourites in the city. The location could not be better, only a few
+    steps away from Plaça Catalunya, and the upper side of
+    <em>Les Rambles</em>`,
+
+    ` The property is very close to many of Barcelona's attractions, and it
+    offers 108 really modern and elegant rooms- some of them are adapted
+    for handicapped people. It really looks like a 4-star.`,
+  ],
+};
+
+export const leftIconsText = [
+  "Off Plaça Catalunya",
+  "1x Lounge Bar",
+  "108 rooms",
+  "High Speed, available",
+];
+
+export const rightIconsText = [
+  "1x outdoor pool",
+  "checkin/out 3pm / 12pm",
+  "2 x meeting rooms",
+  "Wheelchair accessible",
+];
+
 export const photos = [
   {
     src: hotel1,
