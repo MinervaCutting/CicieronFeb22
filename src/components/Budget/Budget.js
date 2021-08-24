@@ -10,26 +10,8 @@ import {
 import accounting from "accounting";
 import Row from "./Row";
 import { getTotal } from "../../utils/utils";
-import { useSelector } from "react-redux";
-import { selectHotel } from "../../features/HotelSlice";
-import {
-  selectDay1Dinner,
-  selectDay2Dinner,
-} from "../../features/RestaurantSlice";
-import { selectActivity1 } from "../../features/ActivitySlice";
-import {
-  airport29,
-  airport29dep,
-  disposal5h29,
-  disposal6h29,
-} from "../../data/transfers";
-import {
-  beertasting,
-  fcbexperience,
-  footballtickets,
-} from "../../data/activities";
-import { elarenal, fabricamoritz, corcaliu } from "../../data/restaurants";
 import { forwardRef } from "react";
+import { GetBudgetRows } from "../../data/budget_selected_lines";
 import BudgetSubTotals from "./BudgetSubTotals";
 import bedOutline from "@iconify-icons/mdi/bed-outline";
 import silverwareVariant from "@iconify-icons/mdi/silverware-variant";
@@ -38,43 +20,7 @@ import bus from "@iconify-icons/mdi/bus";
 
 const Budget = (props, ref) => {
   const classes = useStyles();
-  const hotel = useSelector(selectHotel);
-  const day1Dinner = useSelector(selectDay1Dinner);
-  const day2Dinner = useSelector(selectDay2Dinner);
-  const activity1 = useSelector(selectActivity1);
-
-  const budgetRows = [
-    { event: "accommodation", selected: hotel },
-    { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
-    { event: "activity1", selected: activity1 },
-    { event: "Fabrica Moritz beer tasting", selected: beertasting },
-    { event: "Dinner at Fabrica Moritz", selected: fabricamoritz },
-    {
-      event: "29-Seater bus at disposal for up to 6hours",
-      selected: disposal6h29,
-    },
-    {
-      event: "FCBarcelona Experience Museum & Stadium",
-      selected: fcbexperience,
-    },
-    {
-      event: "Lunch at the Beach - El Arenal",
-      selected: elarenal,
-    },
-    { event: "day1Dinner", selected: day1Dinner },
-    { event: "Lunch at Cor Caliu", selected: corcaliu },
-    {
-      event: "Bus at disposal to Stadium and Dinner",
-      selected: disposal5h29,
-    },
-    {
-      event: "Football tickets 3rd Stand Central",
-      selected: footballtickets,
-    },
-    { event: "day2Dinner", selected: day2Dinner },
-    { event: "Transfer to Airport", selected: airport29dep },
-  ];
-
+  const budgetRows = GetBudgetRows();
   const typesArr = [
     { type: "Hospitality", icon: bedOutline },
     { type: "Meals", icon: silverwareVariant },
@@ -96,7 +42,7 @@ const Budget = (props, ref) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {budgetRows?.map((row) => (
+          {budgetRows.map((row) => (
             <Row key={row.event} row={row} />
           ))}
           <TableRow>

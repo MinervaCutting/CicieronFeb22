@@ -16,15 +16,6 @@ export const beertasting = {
   date: "Pre-dinner",
 };
 
-export const fcbexperience = {
-  title: "Museum and Stadium Tour",
-  cat: "single",
-  type: "Activities",
-  unitcost: 28.5,
-  pax: 16,
-  date: "morning",
-};
-
 export const walkingtour = {
   title: "Half Day Walking Tour city center",
   cat: "multiple",
