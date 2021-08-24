@@ -5,6 +5,15 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
+export const corcaliu = {
+  title: "Restaurant Cor Caliu",
+  cat: "single",
+  type: "Meals",
+  unitcost: 37.5,
+  pax: 16,
+  date: "Lunch",
+};
+
 export const text = {
   variant: "h6",
   paras: [

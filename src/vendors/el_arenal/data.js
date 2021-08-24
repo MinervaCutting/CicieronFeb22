@@ -5,6 +5,17 @@ import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
 
+export const elarenal = {
+  title: "Beach Restaurant El Arenal",
+  cat: "single",
+  type: "Meals",
+  unitcost: 51,
+  pax: 16,
+  date: "Lunch",
+  explanation:
+    "3-course lunch, coffee, wine : 1 bottle x 3 pax, beer and soft drinks not incl",
+};
+
 export const text = {
   variant: "h6",
   paras: [

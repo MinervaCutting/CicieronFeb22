@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { bcnjazz } from "../vendors/jazz/data";
+import { preferredHotel } from "../data/budget_selected_lines";
 
 export const hotelSlice = createSlice({
   name: "hotel",
   initialState: {
-    hotel: bcnjazz,
+    hotel: preferredHotel,
   },
   reducers: {
     SET_HOTEL: (state, action) => {
