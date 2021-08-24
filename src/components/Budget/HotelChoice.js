@@ -1,11 +1,13 @@
 import { makeStyles, MenuItem, FormControl, Select } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { hotelOptions } from "../../data/budget_selected_lines";
+import { useBudgetRows } from "../../data/budget_selected_lines";
 import { selectHotel, SET_HOTEL } from "../../features/HotelSlice";
 
 export default function HotelChoice() {
   const classes = useStyles();
   const hotel = useSelector(selectHotel);
+  const [budgetRows] = useBudgetRows();
+  const hotelOptions = budgetRows[0].hotelOptions;
   const dispatch = useDispatch();
   const handleChange = (e) => {
     if (e.target.value === "") {

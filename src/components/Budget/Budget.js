@@ -11,7 +11,7 @@ import accounting from "accounting";
 import Row from "./Row";
 import { getTotal } from "../../utils/utils";
 import { forwardRef } from "react";
-import { GetBudgetRows } from "../../data/budget_selected_lines";
+import { useBudgetRows } from "../../data/budget_selected_lines";
 import BudgetSubTotals from "./BudgetSubTotals";
 import bedOutline from "@iconify-icons/mdi/bed-outline";
 import silverwareVariant from "@iconify-icons/mdi/silverware-variant";
@@ -20,7 +20,7 @@ import bus from "@iconify-icons/mdi/bus";
 
 const Budget = (props, ref) => {
   const classes = useStyles();
-  const budgetRows = GetBudgetRows();
+  const [budgetRows] = useBudgetRows();
   const typesArr = [
     { type: "Hospitality", icon: bedOutline },
     { type: "Meals", icon: silverwareVariant },

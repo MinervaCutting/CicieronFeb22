@@ -18,15 +18,17 @@ import {
 } from "../features/RestaurantSlice";
 import { selectActivity1 } from "../features/ActivitySlice";
 
-export const hotelOptions = [bcnjazz, bcnmontblanc, bcnlapedrera];
-
-export const GetBudgetRows = () => {
+export const useBudgetRows = () => {
   const hotel = useSelector(selectHotel);
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
   const activity1 = useSelector(selectActivity1);
   const budgetRows = [
-    { event: "accommodation", selected: hotel },
+    {
+      event: "accommodation",
+      hotelOptions: [bcnjazz, bcnmontblanc, bcnlapedrera],
+      selected: hotel,
+    },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
     { event: "activity1", selected: activity1 },
     { event: "Fabrica Moritz beer tasting", selected: beertasting },
@@ -56,5 +58,6 @@ export const GetBudgetRows = () => {
     { event: "day2Dinner", selected: day2Dinner },
     { event: "Transfer to Airport", selected: airport29dep },
   ];
-  return budgetRows;
+
+  return [budgetRows];
 };
