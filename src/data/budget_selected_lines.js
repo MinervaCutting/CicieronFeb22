@@ -29,6 +29,8 @@ import {
 import { selectActivity1 } from "../features/ActivitySlice";
 
 export const preferredHotel = bcnjazz;
+export const day1Dinner = nuria;
+export const day2Dinner = mana75;
 
 export const useBudgetRows = () => {
   const day1Dinner = useSelector(selectDay1Dinner);
