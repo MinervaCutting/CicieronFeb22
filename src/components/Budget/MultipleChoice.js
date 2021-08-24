@@ -9,30 +9,23 @@ import {
   Fade,
 } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { nuria, elglop, monchos, mana75 } from "../../data/restaurants";
 import {
   SET_DAY1DINNER,
   SET_DAY2DINNER,
   selectDay1Dinner,
   selectDay2Dinner,
 } from "../../features/RestaurantSlice";
-
+import { useBudgetRows } from "../../data/budget_selected_lines";
 import { selectActivity1, SET_ACTIVITY1 } from "../../features/ActivitySlice";
-import { tapastour, walkingtour } from "../../data/activities";
-
-const eventOptions = [
-  { event: "activity1", options: [tapastour, walkingtour] },
-  { event: "day1Dinner", options: [nuria, elglop] },
-  { event: "day2Dinner", options: [monchos, mana75] },
-];
 
 export default function MultipleChoice({ event }) {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const [budgetRows] = useBudgetRows();
   const activity1 = useSelector(selectActivity1);
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
-
+  const eventOptions = budgetRows.filter((rows) => rows.options);
   const currentOption = eventOptions
     .map((option) => option.event === event && option.options)
     .filter(Boolean)

@@ -7,8 +7,21 @@ import {
   disposal6h29,
   airport29dep,
 } from "./transfers";
-import { fabricamoritz, elarenal, corcaliu } from "./restaurants";
-import { beertasting, footballtickets } from "./activities";
+import {
+  fabricamoritz,
+  elarenal,
+  corcaliu,
+  nuria,
+  elglop,
+  monchos,
+  mana75,
+} from "./restaurants";
+import {
+  beertasting,
+  footballtickets,
+  tapastour,
+  walkingtour,
+} from "./activities";
 import { fcbexperience } from "../vendors/fcbcn_experience/data";
 import { useSelector } from "react-redux";
 import { selectHotel } from "../features/HotelSlice";
@@ -30,7 +43,11 @@ export const useBudgetRows = () => {
       selected: hotel,
     },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
-    { event: "activity1", selected: activity1 },
+    {
+      event: "activity1",
+      options: [tapastour, walkingtour],
+      selected: activity1,
+    },
     { event: "Fabrica Moritz beer tasting", selected: beertasting },
     { event: "Dinner at Fabrica Moritz", selected: fabricamoritz },
     {
@@ -45,7 +62,7 @@ export const useBudgetRows = () => {
       event: "Lunch at the Beach - El Arenal",
       selected: elarenal,
     },
-    { event: "day1Dinner", selected: day1Dinner },
+    { event: "day1Dinner", options: [nuria, elglop], selected: day1Dinner },
     { event: "Lunch at Cor Caliu", selected: corcaliu },
     {
       event: "Bus at disposal to Stadium and Dinner",
@@ -55,7 +72,7 @@ export const useBudgetRows = () => {
       event: "Football tickets 3rd Stand Central",
       selected: footballtickets,
     },
-    { event: "day2Dinner", selected: day2Dinner },
+    { event: "day2Dinner", options: [monchos, mana75], selected: day2Dinner },
     { event: "Transfer to Airport", selected: airport29dep },
   ];
 
