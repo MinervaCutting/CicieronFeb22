@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { day1Dinner, day2Dinner } from "../data/budget_selected_lines";
+import { mana75 } from "../vendors/mana_75/data";
+import { nuria } from "../vendors/nuria/data";
 
 export const restaurantSlice = createSlice({
   name: "restaurant",
   initialState: {
-    day1Dinner: day1Dinner,
-    day2Dinner: day2Dinner,
+    day1Dinner: nuria,
+    day2Dinner: mana75,
   },
   reducers: {
     SET_DAY1DINNER: (state, action) => {

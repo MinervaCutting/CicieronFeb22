@@ -8,18 +8,15 @@ import { nuria } from "../vendors/nuria/data";
 import { elglop } from "../vendors/el_glop/data";
 import { monchos } from "../vendors/marina_monchos/data";
 import { mana75 } from "../vendors/mana_75/data";
+import { tapastour } from "../vendors/tapas_tour/data";
+import { walkingtour } from "../vendors/walking_tour/data";
 import {
   airport29,
   disposal5h29,
   disposal6h29,
   airport29dep,
 } from "./transfers";
-import {
-  beertasting,
-  footballtickets,
-  tapastour,
-  walkingtour,
-} from "./activities";
+import { beertasting, footballtickets } from "./activities";
 import { fcbexperience } from "../vendors/fcbcn_experience/data";
 import { useSelector } from "react-redux";
 import {
@@ -27,12 +24,10 @@ import {
   selectDay2Dinner,
 } from "../features/RestaurantSlice";
 import { selectActivity1 } from "../features/ActivitySlice";
-
-export const preferredHotel = bcnjazz;
-export const day1Dinner = nuria;
-export const day2Dinner = mana75;
+import { selectHotel } from "../features/HotelSlice";
 
 export const useBudgetRows = () => {
+  const hotel = useSelector(selectHotel);
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
   const activity1 = useSelector(selectActivity1);
@@ -40,7 +35,7 @@ export const useBudgetRows = () => {
     {
       event: "accommodation",
       hotelOptions: [bcnjazz, bcnmontblanc, bcnlapedrera],
-      selected: bcnjazz,
+      selected: hotel,
     },
     { event: "29-seater Airport Transfer to Hotel", selected: airport29 },
     {

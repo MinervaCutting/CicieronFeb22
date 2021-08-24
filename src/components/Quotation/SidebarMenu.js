@@ -1,4 +1,3 @@
-import React from "react";
 import {
   makeStyles,
   List,
@@ -7,13 +6,12 @@ import {
   ListItemText,
   Box,
 } from "@material-ui/core";
-import TreeView from "@material-ui/lab/TreeView";
+import { TreeView, TreeItem } from "@material-ui/lab";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import LocationOnTwoToneIcon from "@material-ui/icons/LocationOnTwoTone";
 import SentimentSatisfiedTwoToneIcon from "@material-ui/icons/SentimentSatisfiedTwoTone";
 import CreateTwoToneIcon from "@material-ui/icons/CreateTwoTone";
-import TreeItem from "@material-ui/lab/TreeItem";
 import { toc } from "../../data/table_of_contents";
 import { Link } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { activityEvents } from "../data/activities";
+import { tapastour } from "../vendors/tapas_tour/data";
 
 export const activitySlice = createSlice({
   name: "activity",
   initialState: {
-    activity1: activityEvents.activity1,
+    activity1: tapastour,
   },
   reducers: {
     SET_ACTIVITY1: (state, action) => {

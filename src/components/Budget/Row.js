@@ -10,11 +10,9 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import accounting from "accounting";
-
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
 import HotelChoice from "./HotelChoice";
 import MultipleChoice from "./MultipleChoice";

@@ -20,7 +20,7 @@ export const text = {
     ` The <strong>Mana 75</strong> is another option for your group to enjoy
     the beach. Located next to the <strong>W</strong> Hotel, next to the
     Marina Yacht Club - which is the most luxurious Yacht Marina in the
-    Mediterranean, and very close to where the futuristic{" "}
+    Mediterranean, and very close to where the futuristic
     <strong>Barcelona's Hermitage Museum </strong> will be located.`,
 
     ` The restaurant boasts modern design, and open 20-meter kitchen, in

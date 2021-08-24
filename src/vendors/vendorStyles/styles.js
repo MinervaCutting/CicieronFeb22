@@ -20,6 +20,26 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
   },
+  pdfContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  pdfButton: {
+    marginBoyyom: theme.spacing(3),
+    backgroundColor: "#ea5933",
+    padding: theme.spacing(3),
+    "&:hover": {
+      backgroundColor: "#fff",
+    },
+    "& a": {
+      color: "#fff",
+      textDecoration: "none",
+      fontWeight: 900,
+    },
+    "& a:hover": {
+      color: "tomato",
+    },
+  },
 }));
 
 export { useStyles };

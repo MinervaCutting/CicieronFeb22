@@ -21,6 +21,7 @@ import bus from "@iconify-icons/mdi/bus";
 const Budget = (props, ref) => {
   const classes = useStyles();
   const [budgetRows] = useBudgetRows();
+
   const typesArr = [
     { type: "Hospitality", icon: bedOutline },
     { type: "Meals", icon: silverwareVariant },
@@ -43,7 +44,7 @@ const Budget = (props, ref) => {
         </TableHead>
         <TableBody>
           {budgetRows.map((row) => (
-            <Row key={row.event} row={row} />
+            <Row key={row.title} row={row} />
           ))}
           <TableRow>
             <TableCell colSpan={4} />

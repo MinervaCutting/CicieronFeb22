@@ -26,6 +26,7 @@ export default function MultipleChoice({ event }) {
   const day1Dinner = useSelector(selectDay1Dinner);
   const day2Dinner = useSelector(selectDay2Dinner);
   const eventOptions = budgetRows.filter((rows) => rows.options);
+
   const currentOption = eventOptions
     .map((option) => option.event === event && option.options)
     .filter(Boolean)
