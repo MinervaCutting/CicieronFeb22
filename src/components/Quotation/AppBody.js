@@ -14,7 +14,6 @@ import WalkingTour from "../../vendors/walking_tour/WalkingTour";
 import CorCaliu from "../../vendors/cor_caliu/CorCaliu";
 import Mana75 from "../../vendors/mana_75/Mana75";
 import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
-import OverviewMap from "../Map/OverviewMap";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import Footer from "../StickyFooter/Footer";
@@ -62,22 +61,21 @@ export default function AppBody() {
         Cutting Edge Events - July 22nd, 2021
       </Typography>
 
-      <Typography variant='h6' component='h6' gutterBottom>
+      <Typography variant='h6' gutterBottom>
         Dear <strong>Pavla</strong>. We have prepared this offer with your group
         in mind. We have designed a program that will help your group have a
         terrific time in Barcelona - discover all its hidden corners, eat
         delicious mediterranean food with views of the Mediterranean, or prime
         locations in the city, and all in all, enjoy their visit to the full.
       </Typography>
-      <Typography variant='h6' component='h6' gutterBottom>
-        Here's a map of all the locations that we have proposed for the group.
+
+      <Typography variant='h6' gutterBottom>
         If you choose <strong>Hotel HCC Montblanc</strong>, they have offered a
         supplement for half board of €24p.p for dinner - so you can skip some
         dinners with this half board if you really need to adjust to a tight
         budget.
       </Typography>
 
-      <OverviewMap />
       <Typography variant='h4' gutterBottom id='accommodation'>
         <strong>Accommodation</strong>
       </Typography>
@@ -89,7 +87,7 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_one'>
         <strong>Friday, May 20th - Arrival Day</strong>
       </Typography>
-      <Typography variant='h6' component='h6' paragraph>
+      <Typography variant='h6' paragraph>
         As your plane lands, we will meet you at the airport, and transfer the
         group to the Hotel. This will be our starting point for the tapas tour
       </Typography>
@@ -100,8 +98,8 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_one_2'>
         Pre-dinner activity at Fabrica Moritz
       </Typography>
-      <Typography variant='h6' component='h6' paragraph>
-        Tonight we are going to enjoy dinner at the legendary{" "}
+      <Typography variant='h6' paragraph>
+        Tonight we are going to enjoy dinner at the legendary
         <strong>Fabrica Moritz</strong>, which is a very famous local beer
         brewery. We will take a tour of the brewery en enjoy 4 x different beer
         tasting, in an activity that will take around 25 minutes, and will lead

@@ -23,7 +23,6 @@ import AppBody from "./AppBody";
 import SidebarMenu from "./SidebarMenu";
 import AboutRFP from "./header/AboutRFP";
 import ScrollToTop from "react-scroll-to-top";
-import Destination from "../Destination/Destination";
 import { selectBody } from "../../features/BodySlice";
 import Credentials from "../Credentials/Credentials";
 import { Link, useHistory } from "react-router-dom";
