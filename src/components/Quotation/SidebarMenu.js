@@ -25,11 +25,11 @@ export default function MultiSelectTreeView() {
   return (
     <Box className={classes.root}>
       <List component='nav'>
-        <ListItem button onClick={(e) => dispatch(SET_BODY("destination"))}>
+        <ListItem button onClick={(e) => dispatch(SET_BODY("overview"))}>
           <ListItemIcon>
             <LocationOnTwoToneIcon />
           </ListItemIcon>
-          <ListItemText primary='Destination' />
+          <ListItemText primary='Overview' />
         </ListItem>
         <ListItem button onClick={(e) => dispatch(SET_BODY("quotation"))}>
           <ListItemIcon>

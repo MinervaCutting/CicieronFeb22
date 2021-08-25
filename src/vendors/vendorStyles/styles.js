@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   pdfButton: {
-    marginBoyyom: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     backgroundColor: "#ea5933",
     padding: theme.spacing(3),
     "&:hover": {

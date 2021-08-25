@@ -3,6 +3,9 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
 import { selectDarkMode } from "./features/DarkModeSlice";
 import DrawerStructure from "./components/Quotation/DrawerStructure";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Destination from "./components/Destination/Destination";
+import Header from "./components/Quotation/header/Header";
 
 function App() {
   const darkMode = useSelector(selectDarkMode);
@@ -82,7 +85,17 @@ function App() {
   return (
     <Container maxWidth='lg'>
       <ThemeProvider theme={theme}>
-        <DrawerStructure />
+        <Router>
+          <Switch>
+            <Route path='/destination'>
+              <Header />
+              <Destination />
+            </Route>
+            <Route path='/'>
+              <DrawerStructure />
+            </Route>
+          </Switch>
+        </Router>
       </ThemeProvider>
     </Container>
   );

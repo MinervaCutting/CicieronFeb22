@@ -26,6 +26,9 @@ import ScrollToTop from "react-scroll-to-top";
 import Destination from "../Destination/Destination";
 import { selectBody } from "../../features/BodySlice";
 import Credentials from "../Credentials/Credentials";
+import { Link, useHistory } from "react-router-dom";
+import ExploreTwoToneIcon from "@material-ui/icons/ExploreTwoTone";
+import Overview from "../Overview/Overview";
 
 const drawerWidth = 240;
 
@@ -48,6 +51,7 @@ export default function DrawerStructure(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
   const [mobileOpen, setMobileOpen] = useState(false);
   const dispatch = useDispatch();
   const body = useSelector(selectBody);
@@ -77,18 +81,17 @@ export default function DrawerStructure(props) {
             >
               <MenuIcon />
             </IconButton>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.cuttingedge-events.com'
-            >
+            <Link to='/'>
               <img
                 src={`${darkMode ? darkLogo : lightLogo}`}
                 alt='logo'
                 className={classes.logo}
               />
-            </a>
+            </Link>
             <div>
+              <IconButton onClick={() => history.push("/destination")}>
+                <ExploreTwoToneIcon fontSize='large' />
+              </IconButton>
               <AboutRFP />
               <Switch
                 checked={darkMode}
@@ -134,8 +137,8 @@ export default function DrawerStructure(props) {
 
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {body === "destination" ? (
-          <Destination />
+        {body === "overview" ? (
+          <Overview />
         ) : body === "quotation" ? (
           <AppBody />
         ) : (
