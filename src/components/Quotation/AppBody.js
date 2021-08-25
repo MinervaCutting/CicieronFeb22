@@ -17,6 +17,7 @@ import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
 import OverviewMap from "../Map/OverviewMap";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
+import Footer from "../StickyFooter/Footer";
 
 export default function AppBody() {
   const classes = useStyles();
@@ -188,6 +189,7 @@ export default function AppBody() {
           documentTitle='Budget Printout'
         />
         <Budget ref={budgetRef} />
+        <Footer />
       </div>
     </Paper>
   );
