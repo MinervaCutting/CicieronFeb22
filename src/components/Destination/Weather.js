@@ -15,7 +15,7 @@ const Weather = () => {
       .then((data) => setWeatherData(data))
       .catch((err) => setWeatherData(null));
     console.log("data=>", weatherData);
-  }, []);
+  });
 
   return (
     <div className={classes.container}>
