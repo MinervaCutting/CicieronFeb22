@@ -14,7 +14,7 @@ export const fcbexperience = {
   date: "morning",
 };
 
-export const text = {
+export const fcbexperience_data = {
   variant: "h6",
   paras: [
     `   The <strong>FC Barcelona Experience</strong> includes entrance to the
@@ -34,37 +34,36 @@ export const text = {
     the stadium, which is like 25mins from the city center on a non-match
     day.`,
   ],
+  images: [
+    {
+      original: tour1,
+      thumbnail: tour1,
+      description: "The stadium on match day",
+    },
+    {
+      original: tour2,
+      thumbnail: tour2,
+      description: "Footballers wait here before kickoff",
+    },
+    {
+      original: tour3,
+      thumbnail: tour3,
+      description: "Away changing room",
+    },
+    {
+      original: tour4,
+      thumbnail: tour4,
+      description: "All thropees and cups",
+    },
+    {
+      original: tour5,
+      thumbnail: tour5,
+      description: "Access to the Stands",
+    },
+    {
+      original: tour6,
+      thumbnail: tour6,
+      description: "Welcome to the stadium",
+    },
+  ],
 };
-
-export const images = [
-  {
-    original: tour1,
-    thumbnail: tour1,
-    description: "The stadium on match day",
-  },
-  {
-    original: tour2,
-    thumbnail: tour2,
-    description: "Footballers wait here before kickoff",
-  },
-  {
-    original: tour3,
-    thumbnail: tour3,
-    description: "Away changing room",
-  },
-  {
-    original: tour4,
-    thumbnail: tour4,
-    description: "All thropees and cups",
-  },
-  {
-    original: tour5,
-    thumbnail: tour5,
-    description: "Access to the Stands",
-  },
-  {
-    original: tour6,
-    thumbnail: tour6,
-    description: "Welcome to the stadium",
-  },
-];

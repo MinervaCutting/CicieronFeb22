@@ -14,7 +14,7 @@ export const tapastour = {
   date: "Lunch",
 };
 
-export const text = {
+export const tapastour_data = {
   variant: "h6",
   paras: [
     ` Our <strong>Tapas Tour</strong> combines a gastronomic experience, with
@@ -35,37 +35,36 @@ export const text = {
     tapas in different parts of town, and it takes around 3.5 hours to
     complete.`,
   ],
+  images: [
+    {
+      original: tour1,
+      thumbnail: tour1,
+      description: "A group tasting delicious tapas",
+    },
+    {
+      original: tour2,
+      thumbnail: tour2,
+      description: "Pintxos is another version of tapas",
+    },
+    {
+      original: tour3,
+      thumbnail: tour3,
+      description: "Cider, beer or wine usually go well with tapas",
+    },
+    {
+      original: tour4,
+      thumbnail: tour4,
+      description: "It's not all about eating - we also walk",
+    },
+    {
+      original: tour5,
+      thumbnail: tour5,
+      description: "We will see some highlights of central Barcelona",
+    },
+    {
+      original: tour6,
+      thumbnail: tour6,
+      description: "The tour will focus on the Ciutat Vella area",
+    },
+  ],
 };
-
-export const images = [
-  {
-    original: tour1,
-    thumbnail: tour1,
-    description: "A group tasting delicious tapas",
-  },
-  {
-    original: tour2,
-    thumbnail: tour2,
-    description: "Pintxos is another version of tapas",
-  },
-  {
-    original: tour3,
-    thumbnail: tour3,
-    description: "Cider, beer or wine usually go well with tapas",
-  },
-  {
-    original: tour4,
-    thumbnail: tour4,
-    description: "It's not all about eating - we also walk",
-  },
-  {
-    original: tour5,
-    thumbnail: tour5,
-    description: "We will see some highlights of central Barcelona",
-  },
-  {
-    original: tour6,
-    thumbnail: tour6,
-    description: "The tour will focus on the Ciutat Vella area",
-  },
-];

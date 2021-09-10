@@ -3,15 +3,13 @@ import VendorOptionsTab from "../../utils/TabPanel";
 import { jazz_data } from "../../vendors/jazz/data";
 import { montblanc_data } from "../../vendors/montblanc/data";
 import { lapedrera_data } from "../../vendors/la_pedrera/data";
-import BcnExperience from "../../vendors/fcbcn_experience/BcnExperience";
-import TapasTour from "../../vendors/tapas_tour/TapasTour";
 import Budget from "../Budget/Budget";
-import WalkingTour from "../../vendors/walking_tour/WalkingTour";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import Footer from "../StickyFooter/Footer";
 import HotelVendor from "../../utils/hotel_vendors/HotelVendor";
 import RestaurantVendor from "../../utils/restaurant_vendors/RestaurantVendor";
+import ActivityVendor from "../../utils/activity_vendors/ActivityVendor";
 import { elarenal_data } from "../../vendors/el_arenal/data";
 import { elglop_data } from "../../vendors/el_glop/data";
 import { corcaliu_data } from "../../vendors/cor_caliu/data";
@@ -19,6 +17,9 @@ import { fabricamoritz_data } from "../../vendors/fabrica_moritz/data";
 import { mana75_data } from "../../vendors/mana_75/data";
 import { marinamonchos_data } from "../../vendors/marina_monchos/data";
 import { nuria_data } from "../../vendors/nuria/data";
+import { tapastour_data } from "../../vendors/tapas_tour/data";
+import { walkingtour_data } from "../../vendors/walking_tour/data";
+import { fcbexperience_data } from "../../vendors/fcbcn_experience/data";
 
 export default function AppBody() {
   const classes = useStyles();
@@ -101,7 +102,7 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_one_1'>
         Tapas Tour
       </Typography>
-      <TapasTour />
+      <ActivityVendor data={tapastour_data} />
       <Typography variant='h4' gutterBottom id='day_one_2'>
         Pre-dinner activity at Fabrica Moritz
       </Typography>
@@ -120,7 +121,7 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_two_1'>
         FC Barcelona Experience
       </Typography>
-      <BcnExperience />
+      <ActivityVendor data={fcbexperience_data} />
       <Typography variant='h4' gutterBottom>
         Lunch at the Beach
       </Typography>
@@ -145,7 +146,7 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_three_1'>
         Morning walking tour of the <strong>Eixample</strong> district
       </Typography>
-      <WalkingTour />
+      <ActivityVendor data={walkingtour_data} />
       <Typography variant='h4' gutterBottom id='day_three_2'>
         For lunch, we offer the following option ...
       </Typography>

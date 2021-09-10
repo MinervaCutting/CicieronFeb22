@@ -14,7 +14,7 @@ export const walkingtour = {
   date: "Before lunch",
 };
 
-export const text = {
+export const walkingtour_data = {
   variant: "h6",
   paras: [
     `   Since the program has included extensive visits to the
@@ -48,37 +48,36 @@ export const text = {
     tour, minimum.
     `,
   ],
+  images: [
+    {
+      original: tour1,
+      thumbnail: tour1,
+      description: "Passeig de Gràcia - The golden mile of Barcelona",
+    },
+    {
+      original: tour2,
+      thumbnail: tour2,
+      description: "Lateral view of Casa Batlló",
+    },
+    {
+      original: tour3,
+      thumbnail: tour3,
+      description: "La Pedrera is another masterpiece by Antoni Gaudí",
+    },
+    {
+      original: tour4,
+      thumbnail: tour4,
+      description: "Casa Batlló by night",
+    },
+    {
+      original: tour5,
+      thumbnail: tour5,
+      description: "The Sagrada Familia",
+    },
+    {
+      original: tour6,
+      thumbnail: tour6,
+      description: "Hospital de Sant Pau",
+    },
+  ],
 };
-
-export const images = [
-  {
-    original: tour1,
-    thumbnail: tour1,
-    description: "Passeig de Gràcia - The golden mile of Barcelona",
-  },
-  {
-    original: tour2,
-    thumbnail: tour2,
-    description: "Lateral view of Casa Batlló",
-  },
-  {
-    original: tour3,
-    thumbnail: tour3,
-    description: "La Pedrera is another masterpiece by Antoni Gaudí",
-  },
-  {
-    original: tour4,
-    thumbnail: tour4,
-    description: "Casa Batlló by night",
-  },
-  {
-    original: tour5,
-    thumbnail: tour5,
-    description: "The Sagrada Familia",
-  },
-  {
-    original: tour6,
-    thumbnail: tour6,
-    description: "Hospital de Sant Pau",
-  },
-];
