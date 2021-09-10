@@ -17,6 +17,7 @@ export const corcaliu = {
 export const corcaliu_data = {
   variant: "h6",
   title: "Restaurant Cor Caliu",
+  pdf: null,
   paras: [
     ` <strong>Cor Caliu</strong> is a cozy Mediterranean restaurant located in Barcelona's
     eixample district. It is open from eary morning until mid-nigth where

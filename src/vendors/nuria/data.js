@@ -18,6 +18,7 @@ export const nuria = {
 export const nuria_data = {
   variant: "h6",
   title: "Restaurant Nuria",
+  pdf: null,
   paras: [
     `  <strong>Nuria</strong> opened its doors back in 1926, and it was
     inspired by some of the most romantic Parisian restaurants back then.

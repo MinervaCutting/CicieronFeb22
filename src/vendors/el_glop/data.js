@@ -19,6 +19,7 @@ export const elglop = {
 export const elglop_data = {
   variant: "h6",
   title: "Restaurant El Glop",
+  pdf: null,
   paras: [
     `  <strong>Braseria El Glop</strong> is a restaurant that is located just
     5 minutes off Plaça Catalunya.`,

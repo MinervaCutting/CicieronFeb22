@@ -17,6 +17,7 @@ export const monchos = {
 export const marinamonchos_data = {
   variant: "h6",
   title: "Restaurant Marina Moncho's",
+  pdf: null,
   paras: [
     `  This restaurant is located in the district known as <em>"Barceloneta"</em>,
     (i.e, Little Barcelona in Catalan). The district was formerly

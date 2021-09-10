@@ -4,6 +4,7 @@ import img3 from "./rest3.jpg";
 import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
+import menus from "./menus.pdf";
 
 export const elarenal = {
   title: "Beach Restaurant El Arenal",
@@ -19,6 +20,7 @@ export const elarenal = {
 export const elarenal_data = {
   variant: "h6",
   title: "Restaurant El Arenal",
+  pdf: menus,
   paras: [
     ` <strong>El Arenal</strong> is one of the few restaurants in
     <em>Barcelona</em> that are located just by the beach - near

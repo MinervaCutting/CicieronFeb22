@@ -17,6 +17,7 @@ export const fabricamoritz = {
 export const fabricamoritz_data = {
   variant: "h6",
   title: "Fabrica Moritz",
+  pdf: null,
   paras: [
     `  Back in <em>1851</em>, <strong>Louis Moritz</strong>, a local of
     Pfaffenhoffen, Alsace, established in Barcelona. He started producing

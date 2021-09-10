@@ -4,6 +4,7 @@ import img3 from "./rest3.jpg";
 import img4 from "./rest4.jpg";
 import img5 from "./rest5.jpg";
 import img6 from "./rest6.jpg";
+import menus from "./menus.pdf";
 
 export const mana75 = {
   title: "Mana 75",
@@ -17,6 +18,7 @@ export const mana75 = {
 export const mana75_data = {
   variant: "h6",
   title: "Restaurant Mana 75",
+  pdf: menus,
   paras: [
     ` The <strong>Mana 75</strong> is another option for your group to enjoy
     the beach. Located next to the <strong>W</strong> Hotel, next to the
