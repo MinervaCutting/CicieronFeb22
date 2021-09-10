@@ -14,8 +14,9 @@ export const fabricamoritz = {
   date: "Dinner",
 };
 
-export const text = {
+export const fabricamoritz_data = {
   variant: "h6",
+  title: "Fabrica Moritz",
   paras: [
     `  Back in <em>1851</em>, <strong>Louis Moritz</strong>, a local of
     Pfaffenhoffen, Alsace, established in Barcelona. He started producing
@@ -36,31 +37,30 @@ export const text = {
     combined with a tour of the old brewery. The complex also houses a
     "Bar à Vins", a bakery, a gift shop, and a more formal restaurant.`,
   ],
+  items: [
+    {
+      caption: "The Bar area is always buzzing",
+      photo: img1,
+    },
+    {
+      caption: "The House is almost a museum",
+      photo: img2,
+    },
+    {
+      caption: "The Place is still a brewery...",
+      photo: img3,
+    },
+    {
+      caption: "A more formal restaurant",
+      photo: img4,
+    },
+    {
+      caption: "Craft beer",
+      photo: img5,
+    },
+    {
+      caption: "Gift shop",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "The Bar area is always buzzing",
-    photo: img1,
-  },
-  {
-    caption: "The House is almost a museum",
-    photo: img2,
-  },
-  {
-    caption: "The Place is still a brewery...",
-    photo: img3,
-  },
-  {
-    caption: "A more formal restaurant",
-    photo: img4,
-  },
-  {
-    caption: "Craft beer",
-    photo: img5,
-  },
-  {
-    caption: "Gift shop",
-    photo: img6,
-  },
-];

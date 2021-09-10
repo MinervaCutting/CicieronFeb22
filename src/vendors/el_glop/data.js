@@ -16,8 +16,9 @@ export const elglop = {
     "3-course lunch, coffee, wine : 1 bottle x 3 pax, beer and soft drinks not incl",
 };
 
-export const text = {
+export const elglop_data = {
   variant: "h6",
+  title: "Restaurant El Glop",
   paras: [
     `  <strong>Braseria El Glop</strong> is a restaurant that is located just
     5 minutes off Plaça Catalunya.`,
@@ -28,31 +29,30 @@ export const text = {
     a good spot to have some grilled meat, which is something they are
     strong at - thus the name of <em>Brasserie</em>`,
   ],
+  items: [
+    {
+      caption: "View of the main dining room",
+      photo: img1,
+    },
+    {
+      caption: "Traditional Catalan Cuisine",
+      photo: img2,
+    },
+    {
+      caption: "Tapas concept",
+      photo: img3,
+    },
+    {
+      caption: "Another view of the main dining room",
+      photo: img4,
+    },
+    {
+      caption: "Another Dining room",
+      photo: img5,
+    },
+    {
+      caption: "Delicious Crème Catalane",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "View of the main dining room",
-    photo: img1,
-  },
-  {
-    caption: "Traditional Catalan Cuisine",
-    photo: img2,
-  },
-  {
-    caption: "Tapas concept",
-    photo: img3,
-  },
-  {
-    caption: "Another view of the main dining room",
-    photo: img4,
-  },
-  {
-    caption: "Another Dining room",
-    photo: img5,
-  },
-  {
-    caption: "Delicious Crème Catalane",
-    photo: img6,
-  },
-];

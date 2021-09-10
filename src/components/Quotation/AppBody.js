@@ -3,21 +3,22 @@ import VendorOptionsTab from "../../utils/TabPanel";
 import { jazz_data } from "../../vendors/jazz/data";
 import { montblanc_data } from "../../vendors/montblanc/data";
 import { lapedrera_data } from "../../vendors/la_pedrera/data";
-import ElGlop from "../../vendors/el_glop/ElGlop";
-import FabricaMoritz from "../../vendors/fabrica_moritz/FabricaMoritz";
 import BcnExperience from "../../vendors/fcbcn_experience/BcnExperience";
 import TapasTour from "../../vendors/tapas_tour/TapasTour";
 import Budget from "../Budget/Budget";
-import ElArenal from "../../vendors/el_arenal/ElArenal";
-import Nuria from "../../vendors/nuria/Nuria";
 import WalkingTour from "../../vendors/walking_tour/WalkingTour";
-import CorCaliu from "../../vendors/cor_caliu/CorCaliu";
-import Mana75 from "../../vendors/mana_75/Mana75";
-import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import Footer from "../StickyFooter/Footer";
 import HotelVendor from "../../utils/hotel_vendors/HotelVendor";
+import RestaurantVendor from "../../utils/restaurant_vendors/RestaurantVendor";
+import { elarenal_data } from "../../vendors/el_arenal/data";
+import { elglop_data } from "../../vendors/el_glop/data";
+import { corcaliu_data } from "../../vendors/cor_caliu/data";
+import { fabricamoritz_data } from "../../vendors/fabrica_moritz/data";
+import { mana75_data } from "../../vendors/mana_75/data";
+import { marinamonchos_data } from "../../vendors/marina_monchos/data";
+import { nuria_data } from "../../vendors/nuria/data";
 
 export default function AppBody() {
   const classes = useStyles();
@@ -52,6 +53,12 @@ export default function AppBody() {
   }
 `;
 
+  const getHotels = () => {
+    let hotels = [];
+    hotels.push(jazz_data, montblanc_data, lapedrera_data);
+    return hotels;
+  };
+
   return (
     <Paper elevation={2} className={classes.bodyContainer}>
       <Typography variant='h4' gutterBottom>
@@ -80,9 +87,9 @@ export default function AppBody() {
         <strong>Accommodation</strong>
       </Typography>
       <VendorOptionsTab name1='Jazz' name2='Montblanc' name3='La Pedrera'>
-        <HotelVendor data={jazz_data} />
-        <HotelVendor data={montblanc_data} />
-        <HotelVendor data={lapedrera_data} />
+        {getHotels()?.map((hoteldata) => (
+          <HotelVendor key={hoteldata.title} data={hoteldata} />
+        ))}
       </VendorOptionsTab>
       <Typography variant='h4' gutterBottom id='day_one'>
         <strong>Friday, May 20th - Arrival Day</strong>
@@ -100,12 +107,13 @@ export default function AppBody() {
       </Typography>
       <Typography variant='h6' paragraph>
         Tonight we are going to enjoy dinner at the legendary
-        <strong>Fabrica Moritz</strong>, which is a very famous local beer
+        <strong> Fabrica Moritz</strong>, which is a very famous local beer
         brewery. We will take a tour of the brewery en enjoy 4 x different beer
         tasting, in an activity that will take around 25 minutes, and will lead
         to dinner.
       </Typography>
-      <FabricaMoritz />
+      <div id='day_one_3' />
+      <RestaurantVendor data={fabricamoritz_data} />
       <Typography variant='h4' gutterBottom id='day_two'>
         <strong>Saturday, May 21st </strong>
       </Typography>
@@ -116,7 +124,8 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom>
         Lunch at the Beach
       </Typography>
-      <ElArenal />
+      <div id='day_two_2' />
+      <RestaurantVendor data={elarenal_data} />
       <Typography variant='h5' gutterBottom>
         After lunch, we will give the group a free afternoon, so that they can
         enjoy the Port and the beach
@@ -124,11 +133,11 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_two_3'>
         Dinner options for Saturday
       </Typography>
-      <div id='d2d0' />
-      <div id='d2d1' />
+
+      <div id='day_two_3' />
       <VendorOptionsTab name1='Cafeteria Nuria' name2='Braseria El Glop'>
-        <Nuria />
-        <ElGlop />
+        <RestaurantVendor data={nuria_data} />
+        <RestaurantVendor data={elglop_data} />
       </VendorOptionsTab>
       <Typography variant='h4' gutterBottom id='day_three'>
         <strong>Sunday, May 22nd </strong>
@@ -140,18 +149,17 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='day_three_2'>
         For lunch, we offer the following option ...
       </Typography>
-      <CorCaliu />
+      <RestaurantVendor data={corcaliu_data} />
       <Typography variant='h6' gutterBottom id='day_three_3'>
         In the later afternoon, the group will be coached to the Stadium for a
         vibrating game of FCBarcelona. We will guide the group to the Stadium,
         and wait for them. On our way back, we will drop the group in the final
         restaurant for dinner
       </Typography>
-      <div id='d3d0' />
-      <div id='d3d1' />
+      <div id='day_three_4' />
       <VendorOptionsTab name1='Mana 75' name2='Marina Monchos'>
-        <Mana75 />
-        <MarinaMonchos />
+        <RestaurantVendor data={mana75_data} />
+        <RestaurantVendor data={marinamonchos_data} />
       </VendorOptionsTab>
       <Typography variant='h4' gutterBottom id='day_four'>
         <strong>Monday, May 23rd </strong>

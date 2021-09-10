@@ -14,8 +14,9 @@ export const monchos = {
   date: "Dinner",
 };
 
-export const text = {
+export const marinamonchos_data = {
   variant: "h6",
+  title: "Restaurant Marina Moncho's",
   paras: [
     `  This restaurant is located in the district known as <em>"Barceloneta"</em>,
     (i.e, Little Barcelona in Catalan). The district was formerly
@@ -36,31 +37,30 @@ export const text = {
     seabass, and ending with a delicious dessert. The restaurant serves
     top quality food with amazing and fast service.`,
   ],
+  items: [
+    {
+      caption: "Port Olímpic",
+      photo: img1,
+    },
+    {
+      caption: "Terraces with sea views",
+      photo: img2,
+    },
+    {
+      caption: "Mediterranean cuisine",
+      photo: img3,
+    },
+    {
+      caption: "Terrace next to the Olympic Port",
+      photo: img4,
+    },
+    {
+      caption: "Dining room",
+      photo: img5,
+    },
+    {
+      caption: "Another perspective of the Terrace",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "Port Olímpic",
-    photo: img1,
-  },
-  {
-    caption: "Terraces with sea views",
-    photo: img2,
-  },
-  {
-    caption: "Mediterranean cuisine",
-    photo: img3,
-  },
-  {
-    caption: "Terrace next to the Olympic Port",
-    photo: img4,
-  },
-  {
-    caption: "Dining room",
-    photo: img5,
-  },
-  {
-    caption: "Another perspective of the Terrace",
-    photo: img6,
-  },
-];

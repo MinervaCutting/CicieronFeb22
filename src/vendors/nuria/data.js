@@ -15,8 +15,9 @@ export const nuria = {
   explanation: "3-course lunch, coffee, wine : 1 bottle x 3 pax",
 };
 
-export const text = {
+export const nuria_data = {
   variant: "h6",
+  title: "Restaurant Nuria",
   paras: [
     `  <strong>Nuria</strong> opened its doors back in 1926, and it was
     inspired by some of the most romantic Parisian restaurants back then.
@@ -37,31 +38,30 @@ export const text = {
     fried squid, or the delicious ham croquettes as some of their
     specialties.`,
   ],
+  items: [
+    {
+      caption: "Front Façade in Les Rambles",
+      photo: img1,
+    },
+    {
+      caption: "Les Rambles",
+      photo: img2,
+    },
+    {
+      caption: "Restaurant Nuria is historic",
+      photo: img3,
+    },
+    {
+      caption: "Dining rooms",
+      photo: img4,
+    },
+    {
+      caption: "Dining room",
+      photo: img5,
+    },
+    {
+      caption: "Delicious Tapas",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "Front Façade in Les Rambles",
-    photo: img1,
-  },
-  {
-    caption: "Les Rambles",
-    photo: img2,
-  },
-  {
-    caption: "Restaurant Nuria is historic",
-    photo: img3,
-  },
-  {
-    caption: "Dining rooms",
-    photo: img4,
-  },
-  {
-    caption: "Dining room",
-    photo: img5,
-  },
-  {
-    caption: "Delicious Tapas",
-    photo: img6,
-  },
-];

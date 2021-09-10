@@ -14,8 +14,9 @@ export const mana75 = {
   date: "Dinner",
 };
 
-export const text = {
+export const mana75_data = {
   variant: "h6",
+  title: "Restaurant Mana 75",
   paras: [
     ` The <strong>Mana 75</strong> is another option for your group to enjoy
     the beach. Located next to the <strong>W</strong> Hotel, next to the
@@ -32,31 +33,30 @@ export const text = {
     ending with a delicious dessert. The restaurant serves top quality
     food with amazing and fast service.`,
   ],
+  items: [
+    {
+      caption: "Beautiful Dining rooms",
+      photo: img1,
+    },
+    {
+      caption: "Cozy terrace",
+      photo: img2,
+    },
+    {
+      caption: "Open air terrace",
+      photo: img3,
+    },
+    {
+      caption: "Seafood experience",
+      photo: img4,
+    },
+    {
+      caption: "Front Façade",
+      photo: img5,
+    },
+    {
+      caption: "Always buzzing",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "Beautiful Dining rooms",
-    photo: img1,
-  },
-  {
-    caption: "Cozy terrace",
-    photo: img2,
-  },
-  {
-    caption: "Open air terrace",
-    photo: img3,
-  },
-  {
-    caption: "Seafood experience",
-    photo: img4,
-  },
-  {
-    caption: "Front Façade",
-    photo: img5,
-  },
-  {
-    caption: "Always buzzing",
-    photo: img6,
-  },
-];

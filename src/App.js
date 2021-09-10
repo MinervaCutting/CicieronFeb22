@@ -57,6 +57,12 @@ function App() {
           width: 50,
         },
       },
+      MuiTab: {
+        root: {
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+        },
+      },
       MuiTreeItem: {
         iconContainer: {
           color: "#ea5933",

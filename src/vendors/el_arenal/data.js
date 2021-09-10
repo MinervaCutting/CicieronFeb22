@@ -16,8 +16,9 @@ export const elarenal = {
     "3-course lunch, coffee, wine : 1 bottle x 3 pax, beer and soft drinks not incl",
 };
 
-export const text = {
+export const elarenal_data = {
   variant: "h6",
+  title: "Restaurant El Arenal",
   paras: [
     ` <strong>El Arenal</strong> is one of the few restaurants in
     <em>Barcelona</em> that are located just by the beach - near
@@ -37,31 +38,30 @@ export const text = {
     ` The terrace can fit up to 40pax , and the total capacity of the
     restaurant is 100pax including the inner dining room.`,
   ],
+  items: [
+    {
+      caption: "It's right on the beach of Barceloneta",
+      photo: img1,
+    },
+    {
+      caption: "Tables are laid out perpendicular to the Sea",
+      photo: img2,
+    },
+    {
+      caption: "The tented area can protect during mild bad weather",
+      photo: img3,
+    },
+    {
+      caption: "Next to all the trendy clubs",
+      photo: img4,
+    },
+    {
+      caption: "The restaurant is only a few steps away from the Port Olimpic",
+      photo: img5,
+    },
+    {
+      caption: "There is back up in case of bad weather",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "It's right on the beach of Barceloneta",
-    photo: img1,
-  },
-  {
-    caption: "Tables are laid out perpendicular to the Sea",
-    photo: img2,
-  },
-  {
-    caption: "The tented area can protect during mild bad weather",
-    photo: img3,
-  },
-  {
-    caption: "Next to all the trendy clubs",
-    photo: img4,
-  },
-  {
-    caption: "The restaurant is only a few steps away from the Port Olimpic",
-    photo: img5,
-  },
-  {
-    caption: "There is back up in case of bad weather",
-    photo: img6,
-  },
-];

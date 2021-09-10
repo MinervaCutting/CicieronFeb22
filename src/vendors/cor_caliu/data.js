@@ -14,8 +14,9 @@ export const corcaliu = {
   date: "Lunch",
 };
 
-export const text = {
+export const corcaliu_data = {
   variant: "h6",
+  title: "Restaurant Cor Caliu",
   paras: [
     ` <strong>Cor Caliu</strong> is a cozy Mediterranean restaurant located in Barcelona's
     eixample district. It is open from eary morning until mid-nigth where
@@ -27,32 +28,31 @@ export const text = {
     ` This is a small, cozy restaurant, with a maximum dining capacity of
     50pax.`,
   ],
+  items: [
+    {
+      caption: "Small cozy terrace",
+      photo: img1,
+    },
+    {
+      caption: "Elegant dining rooms",
+      photo: img2,
+    },
+    {
+      caption: "Front Façade",
+      photo: img3,
+    },
+    {
+      caption: "Fine wines",
+      description: "The group deserves some fine dining after a long walk",
+      photo: img4,
+    },
+    {
+      caption: "Delicious mediterranean dishes",
+      photo: img5,
+    },
+    {
+      caption: "And even more delicious desserts",
+      photo: img6,
+    },
+  ],
 };
-
-export const items = [
-  {
-    caption: "Small cozy terrace",
-    photo: img1,
-  },
-  {
-    caption: "Elegant dining rooms",
-    photo: img2,
-  },
-  {
-    caption: "Front Façade",
-    photo: img3,
-  },
-  {
-    caption: "Fine wines",
-    description: "The group deserves some fine dining after a long walk",
-    photo: img4,
-  },
-  {
-    caption: "Delicious mediterranean dishes",
-    photo: img5,
-  },
-  {
-    caption: "And even more delicious desserts",
-    photo: img6,
-  },
-];
