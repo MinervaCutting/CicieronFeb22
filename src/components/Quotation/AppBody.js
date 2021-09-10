@@ -1,8 +1,8 @@
 import { Paper, makeStyles, Typography, Button } from "@material-ui/core";
 import VendorOptionsTab from "../../utils/TabPanel";
-import LaPedrera from "../../vendors/la_pedrera/LaPedrera";
-import Montblanc from "../../vendors/montblanc/Montblanc";
-import Jazz from "../../vendors/jazz/Jazz";
+import { jazz_data } from "../../vendors/jazz/data";
+import { montblanc_data } from "../../vendors/montblanc/data";
+import { lapedrera_data } from "../../vendors/la_pedrera/data";
 import ElGlop from "../../vendors/el_glop/ElGlop";
 import FabricaMoritz from "../../vendors/fabrica_moritz/FabricaMoritz";
 import BcnExperience from "../../vendors/fcbcn_experience/BcnExperience";
@@ -17,11 +17,11 @@ import MarinaMonchos from "../../vendors/marina_monchos/MarinaMonchos";
 import { useRef } from "react";
 import ReactToPrint from "react-to-print";
 import Footer from "../StickyFooter/Footer";
+import HotelVendor from "../../utils/hotel_vendors/HotelVendor";
 
 export default function AppBody() {
   const classes = useStyles();
   const budgetRef = useRef();
-
   const pageStyle = `
   @media all {
     .page-break {
@@ -80,9 +80,9 @@ export default function AppBody() {
         <strong>Accommodation</strong>
       </Typography>
       <VendorOptionsTab name1='Jazz' name2='Montblanc' name3='La Pedrera'>
-        <Jazz />
-        <Montblanc />
-        <LaPedrera />
+        <HotelVendor data={jazz_data} />
+        <HotelVendor data={montblanc_data} />
+        <HotelVendor data={lapedrera_data} />
       </VendorOptionsTab>
       <Typography variant='h4' gutterBottom id='day_one'>
         <strong>Friday, May 20th - Arrival Day</strong>

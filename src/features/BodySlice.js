@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const bodySlice = createSlice({
   name: "body",
   initialState: {
-    body: "quotation",
+    body: "overview",
   },
   reducers: {
     SET_BODY: (state, action) => {

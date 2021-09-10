@@ -36,8 +36,11 @@ export const bcnlapedrera = {
   ],
 };
 
-export const text = {
+export const lapedrera_data = {
   variant: "h6",
+  title: "Hotel La Pedrera",
+  stars: 4,
+  category: "",
   paras: [
     `    The <strong>Hotel La Pedrera</strong> occupies a prime location on the
     modernist route, close to <strong>Sagrada Familia</strong> and the
@@ -50,103 +53,100 @@ export const text = {
     ` Other facilities include Free-wifi, a Bar a snack Bar, a Swiming Pool
     and a restaurant`,
   ],
+  leftIconsText: [
+    "Close to Sagrada Familia",
+    "1 x Restaurant, 2 x bars",
+    "79 rooms",
+    "High Speed, available",
+  ],
+  rightIconsText: [
+    "1x outdoor, 1x Spa center",
+    "checkin/out 3pm / 12pm",
+    "1 x meeting room for 60pax",
+    "Wheelchair accessible",
+  ],
+  photos: [
+    {
+      src: hotel1,
+      thumbnail: hotel1,
+      thumbnailWidth: 271,
+      thumbnailHeight: 180,
+      tags: [{ value: "Hotel Façade" }],
+      caption: "Hotel Façade",
+    },
+    {
+      src: hotel2,
+      thumbnail: hotel2,
+      thumbnailWidth: 320,
+      thumbnailHeight: 190,
+      tags: [
+        { value: "Common areas" },
+        /*   { value: "Industrial", title: "Industrial" }, */
+      ],
+      caption: "Common areas",
+    },
+    {
+      src: hotel3,
+      thumbnail: hotel3,
+      thumbnailWidth: 320,
+      thumbnailHeight: 230,
+      tags: [
+        { value: "Double or Twin Room" },
+        /*  { value: "Architecture" },
+        { value: "Industrial" }, */
+      ],
+      caption: "Double or Twin Room",
+    },
+    {
+      src: hotel4,
+      thumbnail: hotel4,
+      thumbnailWidth: 320,
+      thumbnailHeight: 213,
+      tags: [
+        { value: "Room Terrace" },
+        /*   { value: "Industrial" }, */
+      ],
+      caption: "Some rooms include terrace",
+    },
+    {
+      src: hotel5,
+      thumbnail: hotel5,
+      thumbnailWidth: 248,
+      thumbnailHeight: 180,
+      caption: "Outdoor Pool",
+      tags: [{ value: "Outdoor Pool" }],
+    },
+    {
+      src: hotel6,
+      thumbnail: hotel6,
+      thumbnailWidth: 320,
+      thumbnailHeight: 220,
+      tags: [{ value: "Lobby" }],
+      caption: "Lobby- Public areas",
+    },
+    {
+      src: hotel7,
+      thumbnail: hotel7,
+      thumbnailWidth: 313,
+      thumbnailHeight: 280,
+      caption: "Breakfast room",
+      tags: [{ value: "Breakfast room" }],
+    },
+    {
+      src: hotel8,
+      thumbnail: hotel8,
+      thumbnailWidth: 320,
+      thumbnailHeight: 213,
+      caption: "Front Desk",
+      tags: [{ value: "Front Desk" }],
+    },
+    {
+      src: hotel9,
+      thumbnail: hotel9,
+      thumbnailWidth: 320,
+      thumbnailHeight: 213,
+      caption: "Bar",
+      tags: [{ value: "Snack Bar" }],
+    },
+  ],
 };
-
-export const leftIconsText = [
-  "Close to Sagrada Familia",
-  "1 x Restaurant, 2 x bars",
-  "79 rooms",
-  "High Speed, available",
-];
-
-export const rightIconsText = [
-  "1x outdoor, 1x Spa center",
-  "checkin/out 3pm / 12pm",
-  "1 x meeting room for 60pax",
-  "Wheelchair accessible",
-];
-
-export const photos = [
-  {
-    src: hotel1,
-    thumbnail: hotel1,
-    thumbnailWidth: 271,
-    thumbnailHeight: 180,
-    tags: [{ value: "Hotel Façade" }],
-    caption: "Hotel Façade",
-  },
-  {
-    src: hotel2,
-    thumbnail: hotel2,
-    thumbnailWidth: 320,
-    thumbnailHeight: 190,
-    tags: [
-      { value: "Common areas" },
-      /*   { value: "Industrial", title: "Industrial" }, */
-    ],
-    caption: "Common areas",
-  },
-  {
-    src: hotel3,
-    thumbnail: hotel3,
-    thumbnailWidth: 320,
-    thumbnailHeight: 230,
-    tags: [
-      { value: "Double or Twin Room" },
-      /*  { value: "Architecture" },
-      { value: "Industrial" }, */
-    ],
-    caption: "Double or Twin Room",
-  },
-  {
-    src: hotel4,
-    thumbnail: hotel4,
-    thumbnailWidth: 320,
-    thumbnailHeight: 213,
-    tags: [
-      { value: "Room Terrace" },
-      /*   { value: "Industrial" }, */
-    ],
-    caption: "Some rooms include terrace",
-  },
-  {
-    src: hotel5,
-    thumbnail: hotel5,
-    thumbnailWidth: 248,
-    thumbnailHeight: 180,
-    caption: "Outdoor Pool",
-    tags: [{ value: "Outdoor Pool" }],
-  },
-  {
-    src: hotel6,
-    thumbnail: hotel6,
-    thumbnailWidth: 320,
-    thumbnailHeight: 220,
-    tags: [{ value: "Lobby" }],
-    caption: "Lobby- Public areas",
-  },
-  {
-    src: hotel7,
-    thumbnail: hotel7,
-    thumbnailWidth: 313,
-    thumbnailHeight: 280,
-    caption: "Breakfast room",
-    tags: [{ value: "Breakfast room" }],
-  },
-  {
-    src: hotel8,
-    thumbnail: hotel8,
-    thumbnailWidth: 320,
-    thumbnailHeight: 213,
-    caption: "Front Desk",
-    tags: [{ value: "Front Desk" }],
-  },
-  {
-    src: hotel9,
-    thumbnail: hotel9,
-    thumbnailWidth: 320,
-    thumbnailHeight: 213,
-    caption: "Bar",
-    tags: [{ value: "Snack Bar" }],
-  },
-];

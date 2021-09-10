@@ -1,26 +1,36 @@
 import { Typography } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
-import { leftIconsText, photos, rightIconsText, text } from "./data";
 import Gallery from "react-grid-gallery";
-import HotelIcons from "../../utils/HotelIcons";
-import { useStyles } from "../vendorStyles/styles";
-import Paragraph from "../../utils/Paragraph";
+import HotelIcons from "../HotelIcons";
+import { useStyles } from "./styles";
+import Paragraph from "../Paragraph";
 
-export default function Jazz() {
+export default function HotelVendor({
+  data: {
+    title,
+    stars,
+    category,
+    variant,
+    paras,
+    photos,
+    leftIconsText,
+    rightIconsText,
+  },
+}) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <div className={classes.title}>
         <Typography variant='h4' gutterBottom>
-          Hotel Jazz
+          {title}
         </Typography>
-        <Rating name='read-only' value={3} readOnly emptyIcon />
+        <Rating name='read-only' value={stars} readOnly emptyIcon />
         <Typography component='subtitle1'>
-          <sup>Superior</sup>
+          <sup>{category}</sup>
         </Typography>
       </div>
       <div className={classes.text}>
-        <Paragraph variant={text.variant} paras={text.paras} />
+        <Paragraph variant={variant} paras={paras} />
       </div>
       <Gallery images={photos} />
       <HotelIcons
