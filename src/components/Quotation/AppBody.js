@@ -8,6 +8,8 @@ import RestaurantVendor from "../../utils/restaurant_vendors/RestaurantVendor";
 import ActivityVendor from "../../utils/activity_vendors/ActivityVendor";
 import { estadiolimpic_data } from "../../vendors/estadi_olimpic/data";
 import { windsor_data } from "../../vendors/windsor/data";
+import { lolive_data } from "../../vendors/lolive/data";
+import { canfisher_data } from "../../vendors/can_fisher/data";
 import OverviewMap from "../Map/OverviewMap";
 
 export default function AppBody() {
@@ -74,15 +76,16 @@ export default function AppBody() {
         <strong>Tuesday, February 8th</strong>
       </Typography>
       <Typography variant='h4' gutterBottom id='accommodation'>
-        <strong>Estadi Olimpic Lluis Companys</strong>
+       Estadi Olimpic Lluis Companys
       </Typography>
       <ActivityVendor data={estadiolimpic_data} />
       <Typography variant='h4' gutterBottom id='day_one_1'>
         Restaurant Options
       </Typography>
-      <VendorOptionsTab name1='Windsor' name2='Windsor2'>
+      <VendorOptionsTab name1='Windsor' name2='L`Olivé' name3='Can Fisher'>
         <RestaurantVendor data={windsor_data} />
-        <RestaurantVendor data={windsor_data} />
+        <RestaurantVendor data={lolive_data} />
+        <RestaurantVendor data={canfisher_data} />
       </VendorOptionsTab>
       <OverviewMap/>
       <Typography variant='h4' gutterBottom>

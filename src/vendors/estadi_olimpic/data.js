@@ -20,39 +20,63 @@ export const estadiolimpic = {
 export const estadiolimpic_data = {
   variant: "h6",
   paras: [
-    ` Texto estadi olimpic`,
-
+    ` Estadi Olimpic was oraginlly built in 1927 for the 1929 International Exposition and it was renovated in 1989 to be the main stadium for the <strong>1992 Summer Olympics</strong>`,
+    ` It is the 5th largest stadium in Spain with a capacity of more than 60000 seats.`,
+    ` In 1989 the stadium was gutted, preserving only the original façades and new grandstands were built.`,
+    ` From 1997 until 2009 RCD Espanyol (the second football team of the city) used it for their first team. It also served as home for the Barcelona Dragons American Football team until 2002`,
+    ` <strong>Venue Rental</strong>`,
+    `In order to rent this space, it is compulsory to contract some basic services that we are including in the rental cost:
+    <ul>
+    <li>Medical service (including a driver, a doctor and a nurse).</li>
+    <li>Cleaning service before and after the rental</li>
+    <li>Security: 4 people </li>
+    <li>Technical services: PA system, scoreboard and technician to control the equipment</li>
+    </ul>`,
+    ` Other services can be added in order to organize the group activities. It is forbidden to install any structure on the grass area, tents may be put up, if necessary, on the paved area.`,
+    ` In case of rain, we can use the <strong>Indoor training track</strong>`,
   ],
   images: [
     {
       original: tour1,
       thumbnail: tour1,
-      description: "A group tasting delicious tapas",
+      description: "Olypmic Stadium general view",
     },
     {
       original: tour2,
       thumbnail: tour2,
-      description: "Pintxos is another version of tapas",
+      description: "Olympic Stadium aerial view",
     },
     {
       original: tour3,
       thumbnail: tour3,
-      description: "Cider, beer or wine usually go well with tapas",
+      description: "Anella Olimpica: Palau Sant Jordi, Estadi Olimpic, Picornell Swimming pool and Calatrava Tower",
     },
     {
       original: tour4,
       thumbnail: tour4,
-      description: "It's not all about eating - we also walk",
+      description: "Olypmic Stadium Façade",
     },
     {
       original: tour5,
       thumbnail: tour5,
-      description: "We will see some highlights of central Barcelona",
+      description: "Indoor training track",
     },
     {
       original: tour6,
       thumbnail: tour6,
-      description: "The tour will focus on the Ciutat Vella area",
+      description: "Summer Olympics Closing Ceremony 1992",
     },
+    {
+      original: tour7,
+      thumbnail: tour7,
+      description: "Summer Olympics Opening Ceremony 1992",
+    },
+    {
+      original: tour8,
+      thumbnail: tour8,
+      description: "Summer Olympics Opening Ceremony 1992",
+    },
+      
+
   ],
 };
