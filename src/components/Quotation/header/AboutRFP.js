@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Avatar, Button, Snackbar } from "@material-ui/core";
 import parse from "html-react-parser";
+import avatarPic from "../../../assets/avatar.jpeg"
 
-const message = `Hey, I'm <strong>Montse Miranda</strong>,
+const message = `Hey, I'm <strong>Minerva</strong>,
 and I will be your account manager for this beautiful project !!!`;
 
 export default function AboutRFP() {
@@ -24,7 +25,7 @@ export default function AboutRFP() {
   return (
     <>
       <Button onMouseOver={handleClick}>
-        <Avatar />
+        <Avatar src={ avatarPic}/>
       </Button>
       <Snackbar
         anchorOrigin={{ vertical, horizontal }}

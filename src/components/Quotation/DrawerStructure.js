@@ -88,9 +88,7 @@ export default function DrawerStructure(props) {
               />
             </Link>
             <div>
-              <IconButton onClick={() => history.push("/destination")}>
-                <ExploreTwoToneIcon fontSize='large' />
-              </IconButton>
+             
               <AboutRFP />
               <Switch
                 checked={darkMode}
@@ -136,13 +134,7 @@ export default function DrawerStructure(props) {
 
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {body === "overview" ? (
-          <Overview />
-        ) : body === "quotation" ? (
           <AppBody />
-        ) : (
-          <Credentials />
-        )}
       </main>
     </div>
   );

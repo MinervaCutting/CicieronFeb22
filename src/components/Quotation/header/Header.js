@@ -37,9 +37,6 @@ const Header = () => {
             />
           </Link>
           <div>
-            <IconButton onClick={() => history.push("/destination")}>
-              <ExploreTwoToneIcon fontSize='large' />
-            </IconButton>
             <AboutRFP />
             <Switch
               checked={darkMode}

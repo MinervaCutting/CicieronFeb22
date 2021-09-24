@@ -14,7 +14,6 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import accounting from "accounting";
 import { getHotelTotal, getTotalRooms } from "../../utils/utils";
-import HotelChoice from "./HotelChoice";
 import MultipleChoice from "./MultipleChoice";
 import SingleChoice from "./SingleChoice";
 
@@ -43,13 +42,7 @@ export default function Row({
 
         <TableCell>{date}</TableCell>
         <TableCell>
-          {cat === "hospitality" ? (
-            <HotelChoice />
-          ) : cat === "multiple" ? (
-            <MultipleChoice event={event} selected={selected} />
-          ) : cat === "single" ? (
             <SingleChoice event={event} explanation={explanation} />
-          ) : null}
         </TableCell>
         <TableCell>{pax}</TableCell>
         <TableCell>
