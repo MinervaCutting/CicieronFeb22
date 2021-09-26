@@ -13,7 +13,8 @@ export const lolive = {
   type: "Meals",
   unitcost: 71.50,
   pax: 1,
-  date: "Dinner",
+  date: "8th Feb - Dinner",
+  explanation: "Max 50 pax - private room",
 };
 
 export const lolive_data = {

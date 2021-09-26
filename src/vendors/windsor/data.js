@@ -13,7 +13,8 @@ export const windsor = {
   type: "Meals",
   unitcost: 60,
   pax: 1,
-  date: "Dinner",
+  date: "8th Feb - Dinner",
+  explanation: "Private rooms: Terrace (min 58 max 84), Salón Corcega (min 29 max 38), Main Dinning Room (min 45 max 60) ",
 };
 
 export const windsor_data = {

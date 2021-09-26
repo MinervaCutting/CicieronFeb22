@@ -13,7 +13,8 @@ export const canfisher = {
   type: "Meals",
   unitcost: 70,
   pax: 1,
-  date: "Dinner",
+  date: "8th Feb Dinner",
+  explanation: "Max 80 pax - Main dinning room",
 };
 
 export const canfisher_data = {
