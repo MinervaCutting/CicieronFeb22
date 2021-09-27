@@ -12,8 +12,10 @@ import { lolive_data } from "../../vendors/lolive/data";
 import { canfisher_data } from "../../vendors/can_fisher/data";
 import { tragaluz_data } from "../../vendors/tragaluz/data";
 import { barceloneta_data } from "../../vendors/barceloneta/data";
+import { dostorres_data } from "../../vendors/dos_torres/data";
 import { somni_data } from "../../vendors/somni/data";
-import OverviewMap from "../Map/OverviewMap";
+import { mana_data } from "../../vendors/mana75/data";
+
 
 export default function AppBody() {
   const classes = useStyles();
@@ -109,12 +111,18 @@ export default function AppBody() {
        Somni
       </Typography>
       <RestaurantVendor data={somni_data} />
-
+      <Typography variant='h4' gutterBottom id='rest7'>
+       Dos Torres
+      </Typography>
+      <RestaurantVendor data={dostorres_data} />
+      <Typography variant='h4' gutterBottom id='rest8'>
+       Maná 75
+      </Typography>
+      <RestaurantVendor data={mana_data} />
 
       <Typography variant='h4' gutterBottom id='map'>
-        <strong>Overview Map</strong>
+      <a href="https://www.google.com/maps/d/edit?mid=1nqiV2-lhkUyQ1UGtdNMfUKsHD77DHLqN&usp=sharing">📍 Overview Map</a>
       </Typography>
-      <OverviewMap />
       <Typography variant='h4' gutterBottom>
         <strong>Budget</strong>
       </Typography>

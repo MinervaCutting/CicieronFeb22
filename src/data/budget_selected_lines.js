@@ -24,6 +24,8 @@ import { estadiolimpic } from "../vendors/estadi_olimpic/data";
 import { tragaluz } from "../vendors/tragaluz/data";
 import { barceloneta } from "../vendors/barceloneta/data";
 import { somni } from "../vendors/somni/data";
+import { dostorres } from "../vendors/dos_torres/data";
+import { mana } from "../vendors/mana75/data";
 
 export const useBudgetRows = () => {
 
@@ -66,6 +68,12 @@ export const useBudgetRows = () => {
     },
     {event: "Dinner at Restaurant Somni (Menu including water, wine and coffee) from",
     selected: somni
+    },
+    {event: "Dinner at Restaurant Dos Torres (Menu including water, wine and coffee) from",
+    selected: dostorres
+    },
+    {event: "Dinner at Restaurant Mana 75 (Menu including water, wine and coffee) from",
+    selected: mana
   },
     
 

@@ -33,6 +33,14 @@ export const toc = [
         id: "rest6",
         service: "Somni",
       },
+      {
+        id: "rest7",
+        service: "Dos Torres",
+      },
+      {
+        id: "rest8",
+        service: "Maná 75",
+      },
     ],
   },
   {
