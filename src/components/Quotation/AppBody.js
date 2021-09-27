@@ -11,6 +11,8 @@ import { windsor_data } from "../../vendors/windsor/data";
 import { lolive_data } from "../../vendors/lolive/data";
 import { canfisher_data } from "../../vendors/can_fisher/data";
 import { tragaluz_data } from "../../vendors/tragaluz/data";
+import { barceloneta_data } from "../../vendors/barceloneta/data";
+import { somni_data } from "../../vendors/somni/data";
 import OverviewMap from "../Map/OverviewMap";
 
 export default function AppBody() {
@@ -98,8 +100,21 @@ export default function AppBody() {
       <Typography variant='h4' gutterBottom id='rest4'>
        Tragaluz
       </Typography>
-        <RestaurantVendor data={tragaluz_data} />     
-      <OverviewMap/>
+      <RestaurantVendor data={tragaluz_data} />
+      <Typography variant='h4' gutterBottom id='rest5'>
+       Barceloneta
+      </Typography>
+      <RestaurantVendor data={barceloneta_data} />
+      <Typography variant='h4' gutterBottom id='rest6'>
+       Somni
+      </Typography>
+      <RestaurantVendor data={somni_data} />
+
+
+      <Typography variant='h4' gutterBottom id='map'>
+        <strong>Overview Map</strong>
+      </Typography>
+      <OverviewMap />
       <Typography variant='h4' gutterBottom>
         <strong>Budget</strong>
       </Typography>

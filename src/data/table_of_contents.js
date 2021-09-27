@@ -25,7 +25,20 @@ export const toc = [
         id: "rest4",
         service: "Tragaluz",
       },
+      {
+        id: "rest5",
+        service: "Barceloneta",
+      },
+      {
+        id: "rest6",
+        service: "Somni",
+      },
     ],
+  },
+  {
+    id: "map",
+    title: "Overview map ",
+    options: [],
   },
   {
     id: "budget",

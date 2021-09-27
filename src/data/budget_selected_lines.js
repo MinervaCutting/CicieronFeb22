@@ -21,6 +21,9 @@ import { windsor } from "../vendors/windsor/data";
 import { lolive } from "../vendors/lolive/data";
 import { canfisher } from "../vendors/can_fisher/data";
 import { estadiolimpic } from "../vendors/estadi_olimpic/data";
+import { tragaluz } from "../vendors/tragaluz/data";
+import { barceloneta } from "../vendors/barceloneta/data";
+import { somni } from "../vendors/somni/data";
 
 export const useBudgetRows = () => {
 
@@ -40,7 +43,10 @@ export const useBudgetRows = () => {
     { event: "Bus at disposal 6h (08.00h-20.00h)", selected: disposal6h50d },
     { event: "Bus at disposal 4h (20.00h- 8.00h)", selected: disposal4h50n },
     { event: "Bus at disposal for dinner outside Barcelona (5h) (20.00h- 8.00h)", selected: disposal50km50n },
-
+    {event: "Olympic Stadium, Venue rental to organice sportive activity",
+      selected: estadiolimpic
+    },
+    
     {event: "Dinner at Restaurant Windsor (Menu including water, wine and coffees) from",
       selected: windsor
     },
@@ -52,9 +58,17 @@ export const useBudgetRows = () => {
     {event: "Dinner at Restaurant Can Fisher (Menu including water, wine and coffees) from",
       selected: canfisher
     },
+    {event: "Dinner at Restaurant Tragaluz (Menu including water, wine and coffees) from",
+    selected: tragaluz
+    },
+    {event: "Dinner at Restaurant Barceloneta (Menu including water, wine and coffee) from",
+    selected: barceloneta
+    },
+    {event: "Dinner at Restaurant Somni (Menu including water, wine and coffee) from",
+    selected: somni
+  },
     
-    {event: "Olympic Stadium, Venue rental to organice sportive activity",
-    selected: estadiolimpic},
+
 
 
   ];

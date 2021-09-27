@@ -39,19 +39,19 @@ export const tragaluz_data = {
   ],
   items: [
     {
-      caption: "Terrace",
+      caption: "Restaurant",
       photo: img1,
     },
     {
-      caption: "Entrance",
+      caption: "Restaurant",
       photo: img2,
     },
     {
-      caption: "Salon Corcega",
+      caption: "Restaurant",
       photo: img3,
     },
     {
-      caption: "Terrace",
+      caption: "Restaurant",
       photo: img4,
     },
     {
