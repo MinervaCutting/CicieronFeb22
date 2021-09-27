@@ -10,6 +10,7 @@ import { estadiolimpic_data } from "../../vendors/estadi_olimpic/data";
 import { windsor_data } from "../../vendors/windsor/data";
 import { lolive_data } from "../../vendors/lolive/data";
 import { canfisher_data } from "../../vendors/can_fisher/data";
+import { tragaluz_data } from "../../vendors/tragaluz/data";
 import OverviewMap from "../Map/OverviewMap";
 
 export default function AppBody() {
@@ -72,21 +73,32 @@ export default function AppBody() {
       <Typography variant='h6' gutterBottom>
       As for the activities, I am still waiting for a response from some suppliers, as soon as I have the information I will update this presentation and add all the information.
       </Typography>
-      <Typography variant='h4' gutterBottom id='day_one'>
+      <Typography variant='h4' gutterBottom id='8feb'>
         <strong>Tuesday, February 8th</strong>
       </Typography>
-      <Typography variant='h4' gutterBottom id='accommodation'>
+      <Typography variant='h4' gutterBottom id='estadi'>
        Estadi Olimpic Lluis Companys
       </Typography>
       <ActivityVendor data={estadiolimpic_data} />
-      <Typography variant='h4' gutterBottom id='day_one_1'>
+      <Typography variant='h4' gutterBottom id='dinner'>
         Restaurant Options
       </Typography>
-      <VendorOptionsTab name1='Windsor' name2='L`Olivé' name3='Can Fisher'>
-        <RestaurantVendor data={windsor_data} />
-        <RestaurantVendor data={lolive_data} />
-        <RestaurantVendor data={canfisher_data} />
-      </VendorOptionsTab>
+      <Typography variant='h4' gutterBottom id='rest1'>
+       Windsor
+      </Typography>
+      <RestaurantVendor data={windsor_data} />
+      <Typography variant='h4' gutterBottom id='rest2'>
+       L'Olivé
+      </Typography>
+      <RestaurantVendor data={lolive_data} />
+      <Typography variant='h4' gutterBottom id='rest3'>
+       Can Fisher
+      </Typography>
+      <RestaurantVendor data={canfisher_data} />
+      <Typography variant='h4' gutterBottom id='rest4'>
+       Tragaluz
+      </Typography>
+        <RestaurantVendor data={tragaluz_data} />     
       <OverviewMap/>
       <Typography variant='h4' gutterBottom>
         <strong>Budget</strong>

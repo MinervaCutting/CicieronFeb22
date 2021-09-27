@@ -14,7 +14,8 @@ export const estadiolimpic = {
   type: "Activities",
   unitcost: 14000,
   pax: 1,
-  date: "Lunch",
+  date: "8 Feb - Group Activity",
+  explanation: "The rental is including: 4 security staff, 1 medical service, basic cleaning service before and after the use and Technical services: PA system, scoreboard and technician to control the equipment "
 };
 
 export const estadiolimpic_data = {

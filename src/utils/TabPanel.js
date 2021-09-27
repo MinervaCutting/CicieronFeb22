@@ -44,7 +44,7 @@ function a11yProps(index) {
   };
 }
 
-export default function VendorOptionsTab({ children, name1, name2, name3 }) {
+export default function VendorOptionsTab({ children, name1, name2, name3, }) {
   const classes = useStyles();
   const [value, setValue] = useState(0);
   const tabOption = useSelector(selectTabOption);

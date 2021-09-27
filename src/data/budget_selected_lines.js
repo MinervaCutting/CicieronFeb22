@@ -20,6 +20,7 @@ import {
 import { windsor } from "../vendors/windsor/data";
 import { lolive } from "../vendors/lolive/data";
 import { canfisher } from "../vendors/can_fisher/data";
+import { estadiolimpic } from "../vendors/estadi_olimpic/data";
 
 export const useBudgetRows = () => {
 
@@ -49,7 +50,11 @@ export const useBudgetRows = () => {
     },
     
     {event: "Dinner at Restaurant Can Fisher (Menu including water, wine and coffees) from",
-    selected: canfisher},
+      selected: canfisher
+    },
+    
+    {event: "Olympic Stadium, Venue rental to organice sportive activity",
+    selected: estadiolimpic},
 
 
   ];
