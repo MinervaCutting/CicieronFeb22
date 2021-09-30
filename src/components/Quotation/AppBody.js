@@ -121,10 +121,15 @@ export default function AppBody() {
       <RestaurantVendor data={mana_data} />
 
       <Typography variant='h4' gutterBottom id='map'>
-      <a href="https://www.google.com/maps/d/edit?mid=1nqiV2-lhkUyQ1UGtdNMfUKsHD77DHLqN&usp=sharing">📍 Overview Map</a>
+      <a href="https://www.google.com/maps/d/edit?mid=1nqiV2-lhkUyQ1UGtdNMfUKsHD77DHLqN&usp=sharing" target ="_blank">🗺️ Overview Map</a>
       </Typography>
       <Typography variant='h4' gutterBottom>
         <strong>Budget</strong>
+      </Typography>
+      <Typography variant='h6' gutterBottom>
+        * There is no water included in the transfers.
+        * The menu rates are the basic ones, all the restaurants offer upper menus and they are flexible in case you would like to suggest any change
+        * You can print this budget in pdf clicking the button below.
       </Typography>
       <div>
         <ReactToPrint
