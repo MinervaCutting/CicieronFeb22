@@ -56,6 +56,11 @@ export const toc = [
         id: "act3",
         service: "Cocktail Workshop",
       },
+      {
+        id: "act4",
+        service: "Padel Activities",
+      },
+      
     ],
   },
   {

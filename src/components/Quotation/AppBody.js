@@ -120,7 +120,7 @@ export default function AppBody() {
       </Typography>
       <ActivityVendor data={cocteling_data} />
       <Typography variant='h4' gutterBottom id='act4'>
-       Padel Classes
+       Padel Activities
       </Typography>
       <ActivityVendor data={padelclasses_data} />
 
