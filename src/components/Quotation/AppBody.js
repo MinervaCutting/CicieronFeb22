@@ -15,6 +15,9 @@ import { barceloneta_data } from "../../vendors/barceloneta/data";
 import { dostorres_data } from "../../vendors/dos_torres/data";
 import { somni_data } from "../../vendors/somni/data";
 import { mana_data } from "../../vendors/mana75/data";
+import { albetinoya_data } from "../../vendors/albetinoya/data";
+import { cocteling_data } from "../../vendors/cocteling/data";
+import { padelclasses_data } from "../../vendors/padelclasses/data";
 
 
 export default function AppBody() {
@@ -55,27 +58,13 @@ export default function AppBody() {
   return (
     <Paper elevation={2} className={classes.bodyContainer}>
       <Typography variant='h4' gutterBottom>
-        Group 400 pax  - February 2022 - Barcelona
+        Group 400 pax - Feb 2022
       </Typography>
       <Typography variant='h6' gutterBottom>
-        <em>Cutting Edge Events - September 24th, 2021</em>
+        <em>Cutting Edge Events - October 12th, 2021</em>
       </Typography>
-
-      <Typography variant='h6' gutterBottom>
-        Hello Helena,
-      </Typography>
-      <Typography variant='h6' gutterBottom>
+     <Typography variant='h6' gutterBottom>
       In this presentation you will find the presentation of the <strong>Estadi Olimpic</strong> as a venue that we can rent to organize the activities on the 8th of February.
-      </Typography>
-      <Typography variant='h6' gutterBottom>
-        My suggestion of <strong>restaurants</strong> for that night, including the maximum capacity of each one, a description and photos so you can get an idea of what the space is like. All the restaurants are of similar quality and offer different menus and options for vegetarians, people with allergies, etc.
-        I have added a map where I have located the W Hotel and the different restaurants.
-      </Typography>
-      <Typography variant='h6' gutterBottom>
-        Finally, you will find a table with the <strong>prices</strong> of the different services I propose, <strong>including transfers</strong>, as we agreed.
-      </Typography>
-      <Typography variant='h6' gutterBottom>
-      As for the activities, I am still waiting for a response from some suppliers, as soon as I have the information I will update this presentation and add all the information.
       </Typography>
       <Typography variant='h4' gutterBottom id='8feb'>
         <strong>Tuesday, February 8th</strong>
@@ -119,6 +108,21 @@ export default function AppBody() {
        Maná 75
       </Typography>
       <RestaurantVendor data={mana_data} />
+      <Typography variant='h4' gutterBottom id='Activities'>
+       <strong>Activity options -  Feb 9th</strong>
+      </Typography>
+      <Typography variant='h4' gutterBottom id='act2'>
+       Albet i Noya - Mehari route + Winery visit and wine tasting
+      </Typography>
+      <ActivityVendor data={albetinoya_data} />
+      <Typography variant='h4' gutterBottom id='act3'>
+       Cocktail Workshop
+      </Typography>
+      <ActivityVendor data={cocteling_data} />
+      <Typography variant='h4' gutterBottom id='act4'>
+       Padel Classes
+      </Typography>
+      <ActivityVendor data={padelclasses_data} />
 
       <Typography variant='h4' gutterBottom id='map'>
       <a href="https://www.google.com/maps/d/edit?mid=1nqiV2-lhkUyQ1UGtdNMfUKsHD77DHLqN&usp=sharing" target ="_blank">🗺️ Overview Map</a>

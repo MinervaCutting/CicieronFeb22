@@ -44,6 +44,21 @@ export const toc = [
     ],
   },
   {
+    id: "Activities",
+    title: "Activity Options",
+    date: "9 Feb",
+    options: [
+      {
+        id: "act2",
+        service: "Mehari route and Wine tasting",
+      },
+      {
+        id: "act3",
+        service: "Cocktail Workshop",
+      },
+    ],
+  },
+  {
     id: "map",
     title: "Overview map ",
     options: [],
