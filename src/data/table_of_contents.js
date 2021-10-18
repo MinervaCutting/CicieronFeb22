@@ -60,6 +60,14 @@ export const toc = [
         id: "act4",
         service: "Padel Activities",
       },
+      {
+        id: "act5",
+        service: "Climbing Activity",
+      },
+      {
+        id: "act6",
+        service: "Karting Grand Prix",
+      },
       
     ],
   },

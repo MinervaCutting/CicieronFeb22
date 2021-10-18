@@ -18,6 +18,8 @@ import { mana_data } from "../../vendors/mana75/data";
 import { albetinoya_data } from "../../vendors/albetinoya/data";
 import { cocteling_data } from "../../vendors/cocteling/data";
 import { padelclasses_data } from "../../vendors/padelclasses/data";
+import { climbat_data } from "../../vendors/indoor_climbing/data";
+import { karting_data } from "../../vendors/indoor_karting/data";
 
 
 export default function AppBody() {
@@ -123,6 +125,15 @@ export default function AppBody() {
        Padel Activities
       </Typography>
       <ActivityVendor data={padelclasses_data} />
+      <Typography variant='h4' gutterBottom id='act5'>
+       Indoor Climbing Activity
+      </Typography>
+      <ActivityVendor data={climbat_data} />
+      <Typography variant='h4' gutterBottom id='act6'>
+       Indoor Karting - Grand Prix
+      </Typography>
+      <ActivityVendor data={karting_data} />
+      
 
       <Typography variant='h4' gutterBottom id='map'>
       <a href="https://www.google.com/maps/d/edit?mid=1nqiV2-lhkUyQ1UGtdNMfUKsHD77DHLqN&usp=sharing" target ="_blank">🗺️ Overview Map</a>
