@@ -68,6 +68,26 @@ export const toc = [
         id: "act6",
         service: "Karting Grand Prix",
       },
+      {
+        id: "act7",
+        service: "High-end car driving",
+      },
+      {
+        id: "act8",
+        service: "Cooking Workshop",
+      },
+      {
+        id: "act9",
+        service: "Tapas Tour",
+      },
+      {
+        id: "act10",
+        service: "ArtCava Activities (winery)",
+      },
+      {
+        id: "act11",
+        service: "Modernism Experience",
+      },
       
     ],
   },

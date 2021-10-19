@@ -20,6 +20,12 @@ import { cocteling_data } from "../../vendors/cocteling/data";
 import { padelclasses_data } from "../../vendors/padelclasses/data";
 import { climbat_data } from "../../vendors/indoor_climbing/data";
 import { karting_data } from "../../vendors/indoor_karting/data";
+import { cardriving_data } from "../../vendors/cardriving/data";
+import { cooking_workshop_data } from "../../vendors/cooking_workshop/data";
+import { tapas_tour_data } from "../../vendors/tapas_tour/data";
+import { artcava_data } from "../../vendors/artcava/data";
+import { modernism_data } from "../../vendors/morenism/data";
+
 
 
 export default function AppBody() {
@@ -133,6 +139,26 @@ export default function AppBody() {
        Indoor Karting - Grand Prix
       </Typography>
       <ActivityVendor data={karting_data} />
+      <Typography variant='h4' gutterBottom id='act7'>
+       High-end car driving activity
+      </Typography>
+      <ActivityVendor data={cardriving_data} />
+      <Typography variant='h4' gutterBottom id='act8'>
+       Cooking Workshop
+      </Typography>
+      <ActivityVendor data={cooking_workshop_data} />
+      <Typography variant='h4' gutterBottom id='act9'>
+      Tapas tour Walking Tour
+      </Typography>
+      <ActivityVendor data={tapas_tour_data} />
+      <Typography variant='h4' gutterBottom id='act10'>
+      ArtCava Activities 
+      </Typography>
+      <ActivityVendor data={artcava_data} />
+      <Typography variant='h4' gutterBottom id='act11'>
+     Modernism Experience
+      </Typography>
+      <ActivityVendor data={modernism_data} />
       
 
       <Typography variant='h4' gutterBottom id='map'>
