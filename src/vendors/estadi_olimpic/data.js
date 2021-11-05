@@ -15,7 +15,7 @@ export const estadiolimpic = {
   unitcost: 14000,
   pax: 1,
   date: "8 Feb - Group Activity",
-  explanation: "It is mandatory to cntract the following services (not included in the price): 4 security staff, 1 medical service, basic cleaning service before and after the use and Technical services: PA system, scoreboard and technician to control the equipment "
+  explanation: "It is mandatory to cntract the following services: 4 security staff, 1 medical service, basic cleaning service before and after the use and Technical services: PA system, scoreboard and technician to control the equipment "
 };
 
 export const estadiolimpic_data = {
