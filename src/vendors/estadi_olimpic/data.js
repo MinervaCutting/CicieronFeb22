@@ -15,7 +15,7 @@ export const estadiolimpic = {
   unitcost: 14000,
   pax: 1,
   date: "8 Feb - Group Activity",
-  explanation: "The rental is including: 4 security staff, 1 medical service, basic cleaning service before and after the use and Technical services: PA system, scoreboard and technician to control the equipment "
+  explanation: "It is mandatory to cntract the following services (not included in the price): 4 security staff, 1 medical service, basic cleaning service before and after the use and Technical services: PA system, scoreboard and technician to control the equipment "
 };
 
 export const estadiolimpic_data = {
@@ -26,7 +26,7 @@ export const estadiolimpic_data = {
     ` In 1989 the stadium was gutted, preserving only the original façades and new grandstands were built.`,
     ` From 1997 until 2009 RCD Espanyol (the second football team of the city) used it for their first team. It also served as home for the Barcelona Dragons American Football team until 2002`,
     ` <strong>Venue Rental</strong>`,
-    `In order to rent this space, it is compulsory to contract some basic services that we are including in the rental cost:
+    `In order to rent this space, it is compulsory to contract some basic services:
     <ul>
     <li>Medical service (including a driver, a doctor and a nurse).</li>
     <li>Cleaning service before and after the rental</li>
